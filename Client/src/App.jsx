@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from "react";
-
-
-
-
-
-
+import React from "react";
+import LiveSoonPage from "./liveSoon/livesoonPage";
 
 
 /*  Main App */
 function App() {
-  return (
-    <h1>Live soon...... and noe puch in main then in a production</h1>
-  );
+  return <LiveSoonPage />;
 }
 
 export default App;
