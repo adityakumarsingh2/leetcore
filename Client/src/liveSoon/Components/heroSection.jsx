@@ -374,8 +374,8 @@ export default function LeetCore() {
         {/* Mobile dropdown */}
         {menuOpen && isMobile && (
           <div className="mobile-menu">
-            <span style={{ fontFamily: "'DM Mono',monospace", fontSize: "0.62rem", color: "rgba(200,175,90,0.65)", letterSpacing: "0.08em" }}>+00 123 456 789</span>
-            <span style={{ fontFamily: "'DM Mono',monospace", fontSize: "0.62rem", color: "rgba(200,175,90,0.65)", letterSpacing: "0.08em" }}>hello@leetcore.dev</span>
+            <span style={{ fontFamily: "'DM Mono',monospace", fontSize: "0.62rem", color: "rgba(200,175,90,0.65)", letterSpacing: "0.08em" }}>+91 9057164791</span>
+            <span style={{ fontFamily: "'DM Mono',monospace", fontSize: "0.62rem", color: "rgba(200,175,90,0.65)", letterSpacing: "0.08em" }}>mohitgodara816@gmail.com</span>
             <div style={{ display: "flex", gap: "1.2rem", marginTop: "0.3rem" }}>
               {["PRIVACY", "TERMS", "CONTACT"].map(l => <span key={l} className="nav-link">{l}</span>)}
             </div>
