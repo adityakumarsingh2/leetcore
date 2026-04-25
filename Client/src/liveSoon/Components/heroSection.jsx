@@ -278,7 +278,7 @@ export default function ComingSoon() {
           opacity: 0,
         }}
       >
-        LeetCore
+        Leetcore
       </div>
 
       {/* Top rule */}
