@@ -5,8 +5,10 @@ import Milestone from "./components/milestone";
 import ConsistencyBar from "./components/consistencybar";
 import ContestRating from "./components/contestrating";
 import Suggestion from "./components/suggestion";
+import { useAuth } from "../../context/AuthContext";
 
 function Profile() {
+    const { user } = useAuth();
 
     return (
         <div
@@ -78,11 +80,10 @@ function Profile() {
                 <div
                     className="
                         w-full
-                        rounded-2xl
                         bg-white/8
                     "
                 >
-                    <ConsistencyBar />
+                    <ConsistencyBar userId={user?._id} />
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
                     <Suggestion />

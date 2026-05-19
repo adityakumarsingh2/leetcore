@@ -1,7 +1,10 @@
 import express from "express";
 import LoginRouter from "./routes/Login.route.js";
+import badgeRouter from "./routes/badge.route.js";
+import activityRouter from "./routes/activity.route.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import errorMiddleware from "./middleware/error.middleware.js";
 
 const app = express();
 
@@ -31,6 +34,21 @@ app.use(express.json());
 
 // app.use("/v1/api", LoginRouter);
 app.use("/api/v1", LoginRouter);
+app.use("/api/v1/badges", badgeRouter);
+app.use("/api/v1/activity", activityRouter);
+
+// Compatibility aliases for clients following the unversioned route examples.
+app.use("/api/badges", badgeRouter);
+app.use("/api/activity", activityRouter);
+
+app.use((req, res) => {
+    res.status(404).json({
+        success: false,
+        message: "Route not found",
+    });
+});
+
+app.use(errorMiddleware);
 
 
 export default app;

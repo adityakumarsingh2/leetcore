@@ -1,22 +1,83 @@
-function ConsistencyBar() {
+import { useEffect, useMemo, useState } from "react";
+import { useAuth } from "../../../context/AuthContext";
+import { consistencyService } from "../../../services/consistencyService";
+
+function ConsistencyBar({ userId: userIdProp }) {
+    const { user } = useAuth();
+    const userId = userIdProp || user?._id;
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(Boolean(userId));
+
+    useEffect(() => {
+        if (!userId) {
+            setLoading(false);
+            return;
+        }
+
+        let mounted = true;
+
+        const fetchConsistency = async () => {
+            setLoading(true);
+
+            try {
+                const response = await consistencyService.getConsistencyData(userId, { days: 365 });
+
+                if (mounted) {
+                    setData(response.data);
+                }
+            } catch (error) {
+                console.error("Failed to load consistency:", error);
+
+                if (mounted) {
+                    setData(null);
+                }
+            } finally {
+                if (mounted) {
+                    setLoading(false);
+                }
+            }
+        };
+
+        fetchConsistency();
+
+        return () => {
+            mounted = false;
+        };
+    }, [userId]);
 
     const months = [
         "May", "Jun", "Jul", "Aug",
         "Sep", "Oct", "Nov", "Dec",
-        "Jan", "Feb", "Mar", "Apr", "May"
+        "Jan", "Feb", "Mar", "Apr", "May",
     ];
 
-    const getActivity = (monthIndex, dayIndex) => {
-        const levels = [
-            "bg-white/10",
-            "bg-green-900",
-            "bg-green-700",
-            "bg-green-500",
-            "bg-green-300",
-        ];
+    const activityDays = useMemo(() => {
+        const heatmap = data?.heatmap || [];
+        const totalCells = months.length * 28;
 
-        return levels[(monthIndex * 7 + dayIndex * 3) % levels.length];
+        return Array.from({ length: totalCells }, (_, index) => {
+            const day = heatmap[index];
+
+            return {
+                key: day?.date || `empty-${index}`,
+                solved: (day?.problemsSolved || 0) > 0,
+            };
+        });
+    }, [data?.heatmap, months.length]);
+
+    const getActivity = (monthIndex, dayIndex) => {
+        const day = activityDays[(monthIndex * 28) + dayIndex];
+
+        if (loading) {
+            return "bg-white/10 animate-pulse";
+        }
+
+        return day?.solved ? "bg-green-500" : "bg-white/10";
     };
+
+    const totalSolved = data?.heatmap?.reduce((total, day) => total + (day.problemsSolved || 0), 0) || 0;
+    const totalActiveDays = user?.stats?.totalActiveDays || data?.activeDays || 0;
+    const maxStreak = user?.stats?.maxStreak || 0;
 
     return (
 
@@ -33,8 +94,6 @@ function ConsistencyBar() {
                 min-h-[220px]
             "
         >
-
-
 
             {/* Header */}
             <div
@@ -61,7 +120,7 @@ function ConsistencyBar() {
                             text-white
                         "
                     >
-                        893
+                        {loading ? "--" : totalSolved}
                         <span
                             className="
                                 text-gray-400
@@ -70,7 +129,7 @@ function ConsistencyBar() {
                                 ml-2
                             "
                         >
-                            submissions in the past one year
+                            problems solved in the past one year
                         </span>
                     </h1>
 
@@ -92,17 +151,16 @@ function ConsistencyBar() {
                     <p>
                         Total active days:
                         <span className="text-white font-semibold ml-2">
-                            193
+                            {loading ? "--" : totalActiveDays}
                         </span>
                     </p>
 
                     <p>
                         Max streak:
                         <span className="text-white font-semibold ml-2">
-                            85
+                            {loading ? "--" : maxStreak}
                         </span>
                     </p>
-
 
                 </div>
 
@@ -122,7 +180,7 @@ function ConsistencyBar() {
                 {months.map((month, monthIndex) => (
 
                     <div
-                        key={monthIndex}
+                        key={month}
                         className="
                             flex
                             flex-col
@@ -144,7 +202,7 @@ function ConsistencyBar() {
                             {[...Array(28)].map((_, index) => (
 
                                 <div
-                                    key={index}
+                                    key={activityDays[(monthIndex * 28) + index]?.key || `${month}-${index}`}
                                     className={`
                                         w-3
                                         h-3

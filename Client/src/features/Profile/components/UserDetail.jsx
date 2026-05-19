@@ -1,8 +1,10 @@
 import { CalendarDays, ExternalLink, Mail, MapPin, Trophy, User } from "lucide-react";
 import { useAuth } from "../../../context/AuthContext";
+import { useDashboardStats } from "../../gamification/hooks/useDashboardStats";
 
 function UserDetail() {
     const { user } = useAuth();
+    const { data } = useDashboardStats(user?._id);
 
     const displayName = user?.name || user?.username || "LeetCore Coder";
     const username = user?.username ? `@${user.username}` : "@leetcore";
@@ -13,10 +15,11 @@ function UserDetail() {
         })
         : "This season";
 
+    const profileStats = data?.stats || user?.stats || {};
     const stats = [
-        { label: "Problems", value: "225" },
-        { label: "Streak", value: "85d" },
-        { label: "Rank", value: "Top 8%" },
+        { label: "Problems", value: profileStats.totalProblemsSolved || 0 },
+        { label: "Streak", value: `${profileStats.currentStreak || 0}d` },
+        { label: "Level", value: data?.stats?.level || user?.level || 1 },
     ];
 
 
