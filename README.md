@@ -1,4 +1,4 @@
-# 🚀 LeetCore
+# LeetCore
 
 > Master the Core of Data Structures & Algorithms
 
@@ -6,7 +6,7 @@ LeetCore is a full-stack DSA learning and practice platform designed to provide 
 
 ---
 
-## 🧠 Overview
+## Overview
 
 LeetCore aims to bridge the gap between learning and implementation by combining:
 
@@ -20,7 +20,7 @@ This platform is designed to simulate a real-world coding environment while help
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 React (Frontend UI)
@@ -93,15 +93,15 @@ leetcore/
 
 ---
 
-## ✨ Features
+##  Features
 
-### 📌 Learning System
+###  Learning System
 
 * Structured DSA roadmap
 * Topic-wise explanations
 * Pattern-based learning
 
-### 💻 Built-in IDE
+###  Built-in IDE
 
 * Code editor with syntax highlighting
 * Input/output console
@@ -113,20 +113,20 @@ leetcore/
 * Fast and efficient processing
 * Supports custom inputs
 
-### 📊 Progress Tracking
+### Progress Tracking
 
 * Track solved problems
 * Topic completion status
 * Performance insights
 
-### 🎬 Visualization (Upcoming)
+### Visualization (Upcoming)
 
 * Step-by-step algorithm visualization
 * Interactive execution flow
 
 ---
 
-## 🔁 Execution Flow
+##  Execution Flow
 
 ### Code Execution:
 
@@ -144,9 +144,9 @@ Output returned to frontend
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
-### 1️⃣ Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone https://github.com/MOHITGODARA1/leetcore.git
@@ -155,7 +155,7 @@ cd leetcore
 
 ---
 
-### 2️⃣ Setup Frontend
+###  Setup Frontend
 
 ```bash
 cd client
@@ -165,7 +165,7 @@ npm run dev
 
 ---
 
-### 3️⃣ Setup Backend
+###  Setup Backend
 
 ```bash
 cd server
@@ -175,7 +175,7 @@ npm run dev
 
 ---
 
-### 4️⃣ Setup C++ Engine
+###  Setup C++ Engine
 
 Ensure you have g++ installed:
 
@@ -192,7 +192,7 @@ g++ main.cpp -o engine
 
 ---
 
-## 🔐 Future Improvements
+##  Future Improvements
 
 * Docker-based secure code execution
 * Multi-language support (Python, Java)
@@ -202,7 +202,7 @@ g++ main.cpp -o engine
 
 ---
 
-## 🎯 Goals
+##  Goals
 
 * Build strong DSA fundamentals
 * Provide an all-in-one coding platform
@@ -211,7 +211,7 @@ g++ main.cpp -o engine
 
 ---
 
-## 🤝 Contribution
+##  Contribution
 
 Contributions are welcome!
 
@@ -222,19 +222,19 @@ Contributions are welcome!
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
 ---
 
-## ⭐ Acknowledgment
+##  Acknowledgment
 
 Inspired by modern coding platforms and built to provide a more structured and efficient DSA learning experience.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Mohit Godara**
 Full Stack Developer | Problem Solver
