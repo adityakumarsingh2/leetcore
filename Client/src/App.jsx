@@ -8,6 +8,7 @@ import ReportBugPage from "./features/dashboard/reportbug";
 import BecomeSponsorPage from "./features/dashboard/becomesponsor";
 import OnlineAssessmentPage from "./features/dashboard/onlineassessment";
 import ContestPage from "./features/dashboard/contest";
+import ArrayDocs from "./features/topics/arraydocs.jsx";
 
 /*  Main App */
 function App() {
@@ -77,6 +78,14 @@ function App() {
           element={
             <ProtectedRoute>
               <ContestPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/dsa/arrays/arrayStart"
+          element={
+            <ProtectedRoute>
+              <ArrayDocs />
             </ProtectedRoute>
           }
         />

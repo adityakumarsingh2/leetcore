@@ -1,87 +1,345 @@
-import { AlertTriangle, Bug, CheckCircle2, Send } from "lucide-react";
+import { useState, useRef } from "react";
+import {
+    Bug, Send, CheckCircle2, AlertTriangle, Upload, X,
+    Paperclip, Monitor, Smartphone, Tablet, CheckCircle
+} from "lucide-react";
 import DashboardPageShell from "./components/DashboardPageShell";
 
-function ReportBugPage() {
+const BUG_AREAS = [
+    { value: "profile", label: "Profile" },
+    { value: "dashboard", label: "Dashboard" },
+    { value: "auth", label: "Login / Logout" },
+    { value: "practice", label: "Practice questions" },
+    { value: "editor", label: "Code editor" },
+    { value: "other", label: "Other" },
+];
+
+const PRIORITIES = [
+    { value: "normal", label: "Normal", color: "text-blue-400", border: "border-blue-400/40", bg: "bg-blue-400/10", dot: "bg-blue-400", desc: "Minor visual glitch or cosmetic issue" },
+    { value: "high", label: "High", color: "text-yellow-400", border: "border-yellow-400/40", bg: "bg-yellow-400/10", dot: "bg-yellow-400", desc: "Feature broken, workaround exists" },
+    { value: "critical", label: "Critical", color: "text-red-400", border: "border-red-400/40", bg: "bg-red-400/10", dot: "bg-red-400", desc: "Blocks core functionality entirely" },
+];
+
+const DEVICES = [
+    { value: "desktop", label: "Desktop", icon: Monitor },
+    { value: "tablet", label: "Tablet", icon: Tablet },
+    { value: "mobile", label: "Mobile", icon: Smartphone },
+];
+
+const MAX_CHARS = 1000;
+
+function SuccessState({ onReset }) {
+    return (
+        <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
+            <div className="w-16 h-16 rounded-full bg-green-400/10 flex items-center justify-center">
+                <CheckCircle size={32} className="text-green-400" />
+            </div>
+            <h2 className="text-xl font-semibold text-white">Bug report submitted!</h2>
+            <p className="text-sm text-white/50 max-w-xs leading-6">
+                Our team will investigate and may follow up via your account email. Thanks for helping make LeetCore better.
+            </p>
+            <button onClick={onReset} className="mt-2 text-sm text-[#F46717] hover:underline">
+                Submit another report
+            </button>
+        </div>
+    );
+}
+
+export default function ReportBugPage() {
+    const [area, setArea] = useState("dashboard");
+    const [priority, setPriority] = useState("normal");
+    const [device, setDevice] = useState("desktop");
+    const [title, setTitle] = useState("");
+    const [steps, setSteps] = useState("");
+    const [expected, setExpected] = useState("");
+    const [attachments, setAttachments] = useState([]);
+    const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const fileRef = useRef();
+
+    const charsLeft = MAX_CHARS - steps.length;
+    const canSubmit = title.trim().length > 3 && steps.trim().length > 10 && !loading;
+
+    const selectedPriority = PRIORITIES.find((p) => p.value === priority);
+
+    const handleFiles = (e) => {
+        const files = Array.from(e.target.files || []);
+        setAttachments((prev) => [...prev, ...files].slice(0, 3));
+    };
+
+    const removeFile = (i) => setAttachments((prev) => prev.filter((_, idx) => idx !== i));
+
+    const handleSubmit = () => {
+        if (!canSubmit) return;
+        setLoading(true);
+        setTimeout(() => { setLoading(false); setSubmitted(true); }, 1400);
+    };
+
+    const handleReset = () => {
+        setSubmitted(false);
+        setTitle("");
+        setSteps("");
+        setExpected("");
+        setAttachments([]);
+        setArea("dashboard");
+        setPriority("normal");
+        setDevice("desktop");
+    };
+
+    // Progress: title + steps + expected = 3 segments
+    const progress = Math.round(
+        ((title.trim().length > 3 ? 34 : 0) +
+        (steps.trim().length > 10 ? 33 : 0) +
+        (expected.trim().length > 3 ? 33 : 0))
+    );
+
     return (
         <DashboardPageShell>
             <div className="p-5 sm:p-8 text-white">
+                {/* Header */}
                 <div className="max-w-5xl">
-                    <p className="text-sm text-[#F46717] font-semibold">Report Bug</p>
-                    <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-normal">
+                    <p className="text-sm text-[#F46717] font-semibold tracking-wide uppercase">Report Bug</p>
+                    <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight">
                         Found something broken?
                     </h1>
-                    <p className="mt-3 max-w-2xl text-white/55 leading-7">
-                        Share the issue and the steps to reproduce it so it can be fixed quickly.
+                    <p className="mt-3 max-w-2xl text-white/50 leading-7">
+                        Share the issue and steps to reproduce so we can fix it fast. The more detail, the better.
                     </p>
                 </div>
 
                 <div className="mt-8 grid grid-cols-1 xl:grid-cols-[1fr_360px] gap-5">
-                    <form className="rounded-2xl border border-white/8 bg-[#111113] p-5 sm:p-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <label className="block">
-                                <span className="text-sm text-white/65">Bug area</span>
-                                <select className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-[#F46717]">
-                                    <option className="bg-[#111113]">Profile</option>
-                                    <option className="bg-[#111113]">Dashboard</option>
-                                    <option className="bg-[#111113]">Login or logout</option>
-                                    <option className="bg-[#111113]">Practice questions</option>
-                                    <option className="bg-[#111113]">Other</option>
-                                </select>
-                            </label>
-
-                            <label className="block">
-                                <span className="text-sm text-white/65">Priority</span>
-                                <select className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-[#F46717]">
-                                    <option className="bg-[#111113]">Normal</option>
-                                    <option className="bg-[#111113]">High</option>
-                                    <option className="bg-[#111113]">Critical</option>
-                                </select>
-                            </label>
+                    {/* Form card */}
+                    <div className="rounded-2xl border border-white/8 bg-[#111113] overflow-hidden">
+                        {/* Progress bar */}
+                        <div className="h-0.5 bg-white/5">
+                            <div
+                                className="h-full bg-[#F46717] transition-all duration-500"
+                                style={{ width: `${progress}%` }}
+                            />
                         </div>
 
-                        <label className="mt-5 block">
-                            <span className="text-sm text-white/65">Title</span>
-                            <input
-                                placeholder="Example: Profile cards overlap on mobile"
-                                className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-[#F46717]"
-                            />
-                        </label>
+                        <div className="p-5 sm:p-7">
+                            {submitted ? (
+                                <SuccessState onReset={handleReset} />
+                            ) : (
+                                <div className="space-y-7">
 
-                        <label className="mt-5 block">
-                            <span className="text-sm text-white/65">Steps to reproduce</span>
-                            <textarea
-                                rows="7"
-                                placeholder="1. Open... 2. Click... 3. See..."
-                                className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-[#F46717]"
-                            />
-                        </label>
+                                    {/* Area + Device row */}
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                        <div>
+                                            <p className="text-sm text-white/55 mb-2">Bug area</p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {BUG_AREAS.map(({ value, label }) => (
+                                                    <button
+                                                        key={value}
+                                                        type="button"
+                                                        onClick={() => setArea(value)}
+                                                        className={`px-3 py-1.5 rounded-xl border text-sm transition-all ${
+                                                            area === value
+                                                                ? "border-[#F46717] bg-[#F46717]/10 text-white"
+                                                                : "border-white/10 bg-white/4 text-white/50 hover:border-white/20 hover:text-white"
+                                                        }`}
+                                                    >
+                                                        {label}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
 
-                        <div className="mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                            <p className="text-sm text-white/45">Screenshots can be added when bug storage is connected.</p>
-                            <button type="button" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#F46717] px-5 py-3 font-semibold text-white hover:bg-[#ff7d34] transition">
-                                <Send size={18} />
-                                Submit report
-                            </button>
+                                        <div>
+                                            <p className="text-sm text-white/55 mb-2">Device</p>
+                                            <div className="flex gap-2">
+                                                {DEVICES.map(({ value, label, icon: Icon }) => (
+                                                    <button
+                                                        key={value}
+                                                        type="button"
+                                                        onClick={() => setDevice(value)}
+                                                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-sm transition-all ${
+                                                            device === value
+                                                                ? "border-[#F46717] bg-[#F46717]/10 text-white"
+                                                                : "border-white/10 bg-white/4 text-white/50 hover:border-white/20 hover:text-white"
+                                                        }`}
+                                                    >
+                                                        <Icon size={13} />
+                                                        {label}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Priority picker */}
+                                    <div>
+                                        <p className="text-sm text-white/55 mb-3">Priority</p>
+                                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                                            {PRIORITIES.map((p) => (
+                                                <button
+                                                    key={p.value}
+                                                    type="button"
+                                                    onClick={() => setPriority(p.value)}
+                                                    className={`text-left p-3 rounded-xl border transition-all ${
+                                                        priority === p.value
+                                                            ? `${p.border} ${p.bg}`
+                                                            : "border-white/8 bg-white/3 hover:border-white/15"
+                                                    }`}
+                                                >
+                                                    <div className="flex items-center gap-2 mb-1">
+                                                        <span className={`w-2 h-2 rounded-full ${p.dot}`} />
+                                                        <span className={`text-sm font-medium ${priority === p.value ? p.color : "text-white/70"}`}>
+                                                            {p.label}
+                                                        </span>
+                                                    </div>
+                                                    <p className="text-xs text-white/35 leading-4">{p.desc}</p>
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Title */}
+                                    <div>
+                                        <p className="text-sm text-white/55 mb-2">Bug title <span className="text-red-400">*</span></p>
+                                        <input
+                                            value={title}
+                                            onChange={(e) => setTitle(e.target.value)}
+                                            placeholder="e.g. Profile cards overlap on mobile"
+                                            className="w-full rounded-2xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none focus:border-[#F46717] transition-colors"
+                                        />
+                                    </div>
+
+                                    {/* Steps to reproduce */}
+                                    <div>
+                                        <div className="flex items-center justify-between mb-2">
+                                            <p className="text-sm text-white/55">Steps to reproduce <span className="text-red-400">*</span></p>
+                                            <span className={`text-xs tabular-nums ${charsLeft < 100 ? "text-red-400" : "text-white/25"}`}>
+                                                {charsLeft} left
+                                            </span>
+                                        </div>
+                                        <textarea
+                                            rows={5}
+                                            maxLength={MAX_CHARS}
+                                            value={steps}
+                                            onChange={(e) => setSteps(e.target.value)}
+                                            placeholder={"1. Go to...\n2. Click on...\n3. See the error"}
+                                            className="w-full resize-none rounded-2xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none focus:border-[#F46717] transition-colors font-mono"
+                                        />
+                                    </div>
+
+                                    {/* Expected behaviour */}
+                                    <div>
+                                        <p className="text-sm text-white/55 mb-2">Expected behaviour</p>
+                                        <textarea
+                                            rows={3}
+                                            value={expected}
+                                            onChange={(e) => setExpected(e.target.value)}
+                                            placeholder="What should have happened instead?"
+                                            className="w-full resize-none rounded-2xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none focus:border-[#F46717] transition-colors"
+                                        />
+                                    </div>
+
+                                    {/* Screenshot upload */}
+                                    <div>
+                                        <p className="text-sm text-white/55 mb-2">
+                                            Screenshots <span className="text-white/30">(up to 3)</span>
+                                        </p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {attachments.map((file, i) => (
+                                                <div key={i} className="flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-white/4 text-sm text-white/60">
+                                                    <Paperclip size={13} className="text-[#F46717]" />
+                                                    <span className="max-w-[140px] truncate">{file.name}</span>
+                                                    <button type="button" onClick={() => removeFile(i)} className="text-white/30 hover:text-white">
+                                                        <X size={13} />
+                                                    </button>
+                                                </div>
+                                            ))}
+                                            {attachments.length < 3 && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() => fileRef.current?.click()}
+                                                    className="flex items-center gap-2 px-3 py-2 rounded-xl border border-dashed border-white/15 text-sm text-white/40 hover:border-white/30 hover:text-white/60 transition-all"
+                                                >
+                                                    <Upload size={13} />
+                                                    Add image
+                                                </button>
+                                            )}
+                                        </div>
+                                        <input ref={fileRef} type="file" accept="image/*" multiple className="hidden" onChange={handleFiles} />
+                                    </div>
+
+                                    {/* Footer */}
+                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2 border-t border-white/6">
+                                        <p className="text-xs text-white/35 leading-5 max-w-xs">
+                                            Reports are linked to your account. We may follow up if we need more info.
+                                        </p>
+                                        <button
+                                            type="button"
+                                            onClick={handleSubmit}
+                                            disabled={!canSubmit}
+                                            className={`inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition-all ${
+                                                canSubmit
+                                                    ? "bg-[#F46717] text-white hover:bg-[#ff7d34] active:scale-95"
+                                                    : "bg-white/5 text-white/25 cursor-not-allowed"
+                                            }`}
+                                        >
+                                            {loading ? (
+                                                <span className="flex items-center gap-2">
+                                                    <span className="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin" />
+                                                    Submitting…
+                                                </span>
+                                            ) : (
+                                                <><Send size={15} />Submit report</>
+                                            )}
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
                         </div>
-                    </form>
+                    </div>
 
+                    {/* Sidebar */}
                     <aside className="space-y-4">
-                        <div className="rounded-2xl border border-white/8 bg-white/6 p-5">
-                            <div className="w-11 h-11 rounded-2xl bg-red-500/15 text-red-300 flex items-center justify-center">
-                                <Bug size={20} />
+                        {/* Tips */}
+                        <div className="rounded-2xl border border-white/8 bg-[#111113] p-5">
+                            <div className="w-10 h-10 rounded-xl bg-red-500/12 text-red-300 flex items-center justify-center mb-4">
+                                <Bug size={18} />
                             </div>
-                            <h2 className="mt-4 text-lg font-semibold">A useful bug report includes</h2>
-                            <div className="mt-4 space-y-3 text-sm text-white/60">
-                                <p className="flex gap-2"><CheckCircle2 size={17} className="text-green-300 flex-shrink-0" /> The page or route where it happened.</p>
-                                <p className="flex gap-2"><CheckCircle2 size={17} className="text-green-300 flex-shrink-0" /> Device size and browser if layout is involved.</p>
-                                <p className="flex gap-2"><CheckCircle2 size={17} className="text-green-300 flex-shrink-0" /> The exact behavior you expected.</p>
+                            <h2 className="text-base font-semibold mb-3">A useful bug report includes</h2>
+                            <div className="space-y-3">
+                                {[
+                                    "The exact page or route where it happened",
+                                    "Your browser and device size if layout-related",
+                                    "The behaviour you expected vs. what occurred",
+                                    "A screenshot or screen recording if possible",
+                                ].map((tip) => (
+                                    <div key={tip} className="flex items-start gap-2.5">
+                                        <CheckCircle2 size={15} className="text-green-400 mt-0.5 shrink-0" />
+                                        <p className="text-sm text-white/55 leading-5">{tip}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                        <div className="rounded-2xl border border-yellow-300/15 bg-yellow-300/8 p-5">
-                            <AlertTriangle className="text-yellow-300" size={22} />
-                            <p className="mt-3 text-sm leading-6 text-white/60">
-                                For account access issues, log out and sign in again after submitting the report.
+
+                        {/* Warning */}
+                        <div className="rounded-2xl border border-yellow-300/15 bg-yellow-300/6 p-5">
+                            <AlertTriangle size={20} className="text-yellow-300 mb-3" />
+                            <p className="text-sm text-white/55 leading-6">
+                                For account access issues, try signing out and back in before submitting. This resolves most auth-related bugs.
                             </p>
+                        </div>
+
+                        {/* Priority legend */}
+                        <div className="rounded-2xl border border-white/8 bg-[#111113] p-5">
+                            <h2 className="text-base font-semibold mb-3">Priority guide</h2>
+                            <div className="space-y-3">
+                                {PRIORITIES.map((p) => (
+                                    <div key={p.value} className="flex items-start gap-2.5">
+                                        <span className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${p.dot}`} />
+                                        <div>
+                                            <p className={`text-sm font-medium ${p.color}`}>{p.label}</p>
+                                            <p className="text-xs text-white/40 mt-0.5">{p.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </aside>
                 </div>
@@ -89,5 +347,3 @@ function ReportBugPage() {
         </DashboardPageShell>
     );
 }
-
-export default ReportBugPage;
