@@ -5,6 +5,7 @@ import activityRouter from "./routes/activity.route.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import errorMiddleware from "./middleware/error.middleware.js";
+import mongoose from "mongoose";
 
 const app = express();
 
@@ -29,6 +30,12 @@ app.use(cors({
 app.use(express.json());
 
 
+app.get("/api/v1/health", (req, res) => {
+    res.status(200).json({
+        success: true,
+        database: mongoose.connection.readyState === 1 ? "connected" : "disconnected",
+    });
+});
 
 //route handling
 

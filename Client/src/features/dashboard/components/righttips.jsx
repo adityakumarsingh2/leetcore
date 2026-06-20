@@ -27,13 +27,15 @@ function RightTips() {
             className="
                 relative
                 w-[94%]
+                mx-auto
                 rounded-3xl
                 border
                 border-white/10
-                bg-white
-                dark:bg-neutral-900
-                p-6
+                bg-[#111113]
+                p-5
+                sm:p-6
                 overflow-hidden
+                shadow-[0_16px_45px_rgba(0,0,0,0.18)]
             "
         >
 
@@ -46,8 +48,7 @@ function RightTips() {
                     className="
                         text-xl
                         font-semibold
-                        text-black
-                        dark:text-white
+                        text-white
                     "
                 >
                     Run Your Ads
@@ -82,7 +83,8 @@ function RightTips() {
                         text-white
                         transition-all
                         duration-300
-                        hover:scale-[1.02]
+                        hover:bg-[#ff7d34]
+                        active:scale-[0.98]
                         cursor-pointer
                     "
                 >

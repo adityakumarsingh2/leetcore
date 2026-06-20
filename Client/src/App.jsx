@@ -8,7 +8,9 @@ import ReportBugPage from "./features/dashboard/reportbug";
 import BecomeSponsorPage from "./features/dashboard/becomesponsor";
 import OnlineAssessmentPage from "./features/dashboard/onlineassessment";
 import ContestPage from "./features/dashboard/contest";
-import ArrayDocs from "./features/topics/arraydocs.jsx";
+import Docomentation from "./features/topics/Docomentation";
+import Practice from "./features/topics/Practice";
+import PatternQuestions from "./features/topics/PatternQuestions";
 
 /*  Main App */
 function App() {
@@ -82,10 +84,26 @@ function App() {
           }
         />
         <Route
-          path="/dashboard/dsa/arrays/arrayStart"
+          path="/dashboard/dsa/Docs/:topic"
           element={
             <ProtectedRoute>
-              <ArrayDocs />
+              <Docomentation />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/dsa/Practice/:topic"
+          element={
+            <ProtectedRoute>
+              <Practice />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/dsa/Practice/:topic/:pattern"
+          element={
+            <ProtectedRoute>
+              <PatternQuestions />
             </ProtectedRoute>
           }
         />

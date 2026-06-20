@@ -1,54 +1,39 @@
 import { Link } from "react-router-dom";
 
 function Topics() {
+    const getTopicPath = (section, topicName) => {
+        const encodedTopic = encodeURIComponent(topicName);
+        return `/dashboard/dsa/${section}/${encodedTopic}`;
+    };
 
     const dsaTopics = [
 
         // FOUNDATION
         {
-            title: "Arrays",
-            start: "/dashboard/dsa/arrays/arrayStart",
-            practice: "/dashboard/dsa/arrays/arrayPractice",
+            title: "Arrays & Vectors",
+            topic: "Array",
             description:
                 "Learn traversal, prefix sums, sliding window and more.",
         },
 
         {
             title: "Strings",
-            start: "/dashboard/dsa/strings/stringStart",
-            practice: "/dashboard/dsa/strings/stringPractice",
+            topic: "String",
             description:
                 "Master string traversal, patterns and manipulations.",
         },
 
         {
             title: "Hashing",
-            start: "/dashboard/dsa/hashing/hashingStart",
-            practice: "/dashboard/dsa/hashing/hashingPractice",
+            topic: "Hashing",
             description:
                 "Solve problems using maps, sets and frequency counting.",
         },
-
-        {
-            title: "Two Pointers",
-            start: "/dashboard/dsa/two-pointers/twoPointerStart",
-            practice: "/dashboard/dsa/two-pointers/twoPointerPractice",
-            description:
-                "Optimize array and string problems efficiently.",
-        },
-
-        {
-            title: "Sliding Window",
-            start: "/dashboard/dsa/sliding-window/slidingWindowStart",
-            practice: "/dashboard/dsa/sliding-window/slidingWindowPractice",
-            description:
-                "Handle subarrays and substrings with optimized windows.",
-        },
+        
 
         {
             title: "Binary Search",
-            start: "/dashboard/dsa/binary-search/binarySearchStart",
-            practice: "/dashboard/dsa/binary-search/binarySearchPractice",
+            topic: "Binary Search",
             description:
                 "Master searching techniques and optimization problems.",
         },
@@ -56,24 +41,21 @@ function Topics() {
         // LINKED LIST + STACKS
         {
             title: "Linked List",
-            start: "/dashboard/dsa/linked-list/linkedListStart",
-            practice: "/dashboard/dsa/linked-list/linkedListPractice",
+            topic: "Linked List",
             description:
                 "Understand pointers, fast-slow patterns and operations.",
         },
 
         {
             title: "Stack",
-            start: "/dashboard/dsa/stack/stackStart",
-            practice: "/dashboard/dsa/stack/stackPractice",
+            topic: "Stack",
             description:
                 "Solve monotonic stack and expression problems.",
         },
 
         {
             title: "Queue",
-            start: "/dashboard/dsa/queue/queueStart",
-            practice: "/dashboard/dsa/queue/queuePractice",
+            topic: "Queue",
             description:
                 "Learn queues, dequeues and BFS foundations.",
         },
@@ -81,16 +63,14 @@ function Topics() {
         // RECURSION
         {
             title: "Recursion",
-            start: "/dashboard/dsa/recursion/recursionStart",
-            practice: "/dashboard/dsa/recursion/recursionPractice",
+            topic: "Recursion",
             description:
                 "Build recursive thinking and divide problems elegantly.",
         },
 
         {
             title: "Backtracking",
-            start: "/dashboard/dsa/backtracking/backtrackingStart",
-            practice: "/dashboard/dsa/backtracking/backtrackingPractice",
+            topic: "Backtracking",
             description:
                 "Generate combinations, permutations and search spaces.",
         },
@@ -98,24 +78,21 @@ function Topics() {
         // TREES
         {
             title: "Trees",
-            start: "/dashboard/dsa/trees/treesStart",
-            practice: "/dashboard/dsa/trees/treesPractice",
+            topic: "Trees",
             description:
                 "Learn traversals, depth, height and recursive trees.",
         },
 
         {
             title: "Binary Search Tree",
-            start: "/dashboard/dsa/bst/bstStart",
-            practice: "/dashboard/dsa/bst/bstPractice",
+            topic: "Binary Search Tree",
             description:
                 "Master ordered trees and efficient searching.",
         },
 
         {
             title: "Heap / Priority Queue",
-            start: "/dashboard/dsa/heap/heapStart",
-            practice: "/dashboard/dsa/heap/heapPractice",
+            topic: "Heap / Priority Queue",
             description:
                 "Solve top-k and priority-based problems efficiently.",
         },
@@ -123,16 +100,14 @@ function Topics() {
         // GRAPHS
         {
             title: "Graphs",
-            start: "/dashboard/dsa/graphs/graphsStart",
-            practice: "/dashboard/dsa/graphs/graphsPractice",
+            topic: "Graphs",
             description:
                 "Understand BFS, DFS and graph traversal techniques.",
         },
 
         {
             title: "Trie",
-            start: "/dashboard/dsa/trie/trieStart",
-            practice: "/dashboard/dsa/trie/triePractice",
+            topic: "Trie",
             description:
                 "Efficiently solve prefix and dictionary problems.",
         },
@@ -140,24 +115,21 @@ function Topics() {
         // ADVANCED
         {
             title: "Greedy",
-            start: "/dashboard/dsa/greedy/greedyStart",
-            practice: "/dashboard/dsa/greedy/greedyPractice",
+            topic: "Greedy",
             description:
                 "Learn local optimization strategies for interview problems.",
         },
 
         {
-            title: "Dynamic Programm..",
-            start: "/dashboard/dsa/dp/dpStart",
-            practice: "/dashboard/dsa/dp/dpPractice",
+            title: "Dynamic Programming",
+            topic: "Dynamic Programming",
             description:
                 "Master memoization, tabulation and optimization patterns.",
         },
 
         {
             title: "Bit Manipulation",
-            start: "/dashboard/dsa/bit-manipulation/bitManipulationStart",
-            practice: "/dashboard/dsa/bit-manipulation/bitManipulationPractice",
+            topic: "Bit Manipulation",
             description:
                 "Solve problems using binary operations efficiently.",
         },
@@ -169,37 +141,37 @@ function Topics() {
     const sections = [
         {
             title: "Operating System",
-            cardColor: "bg-[#c1af7f]",
+            cardColor: "from-[#c1af7f] to-[#7a5534]",
             buttonColor: "bg-[#dbcba1]",
-            textColor: "text-[#5f4a00]",
+            textColor: "text-[#fff6de]",
             glow: "bg-[#fff0c8]/20",
         },
         {
             title: "Computer Networks",
-            cardColor: "bg-[#96c792]",
+            cardColor: "from-[#96c792] to-[#496f43]",
             buttonColor: "bg-[#b9d7b7]",
-            textColor: "text-[#05660f]",
+            textColor: "text-[#efffed]",
             glow: "bg-[#d9ffd6]/20",
         },
         {
             title: "Database Management System",
-            cardColor: "bg-[#73c8d1]",
+            cardColor: "from-[#73c8d1] to-[#315d64]",
             buttonColor: "bg-[#abd0d5]",
-            textColor: "text-[#083c47]",
+            textColor: "text-[#eaffff]",
             glow: "bg-[#d5f7ff]/20",
         },
         {
             title: "Object Oriented Programming",
-            cardColor: "bg-[#d7cf59]",
+            cardColor: "from-[#d7cf59] to-[#746c24]",
             buttonColor: "bg-[#e3dc8f]",
-            textColor: "text-[#5f5400]",
+            textColor: "text-[#fffbd1]",
             glow: "bg-[#fff8bf]/20",
         },
     ];
 
     return (
 
-        <div className="min-h-screen text-white px-6 py-8">
+        <div className="min-h-screen text-white px-4 sm:px-6 py-6 sm:py-8">
 
             {/* DSA Section */}
             <section
@@ -208,10 +180,7 @@ function Topics() {
             >
 
                 <h1
-                    className="
-                        text-xl
-                        mb-8
-                    "
+                    className="text-xl font-semibold mb-5 sm:mb-6 lc-safe-text"
                 >
                     Data Structure and Algorithms <span className="text-zinc-300 font-medium">(Follow the Flow)</span>
                 </h1>
@@ -220,12 +189,11 @@ function Topics() {
                 <div
                     className="
                         flex
-                        gap-8
-                        overflow-x-auto
-                        scrollbar-hide
+                        gap-4
+                        sm:gap-5
+                        lc-scroll-x
                         snap-x
-                        snap-mandatory
-                        pb-4
+                        snap-proximity
                     "
                 >
 
@@ -235,19 +203,22 @@ function Topics() {
                             key={index}
                             className="
                                 relative
-                                w-[250px]
-                                h-[160px]
+                                w-[244px]
+                                sm:w-[240px]
+                                min-h-[152px]
                                 flex-shrink-0
                                 snap-center
-                                rounded-[20px]
-                                bg-[#cf8a75]
+                                rounded-2xl
+                                bg-gradient-to-br
+                                from-[#cf8a75]
+                                to-[#8f4f39]
                                 overflow-hidden
                                 p-5
                                 flex
                                 flex-col
                                 justify-between
-                                border
-                                border-white/10
+                                
+                                
                             "
                         >
 
@@ -270,8 +241,9 @@ function Topics() {
                                 <h2
                                     className="
                                         text-xl
-                                        font-semibold
-                                        text-black
+                                        font-bold
+                                        text-white
+                                        lc-safe-text
                                     "
                                 >
                                     {topic.title}
@@ -280,7 +252,7 @@ function Topics() {
                                 <p
                                     className="
                                         text-xs
-                                        text-black/70
+                                        text-white/72
                                         mt-1
                                         leading-relaxed
                                     "
@@ -291,24 +263,28 @@ function Topics() {
                             </div>
 
                             {/* Buttons */}
-                            <div className="flex gap-4">
-                                <Link to={topic.start} className="
+                            <div className="flex gap-3">
+                                <Link to={getTopicPath("Docs", topic.topic)} className="
                                         relative
                                         z-10
-                                        w-[46%]
-                                        h-[35px]
-                                        rounded-[8px]
+                                        flex-1
+                                        min-w-0
+                                        h-8
+                                        mt-2
+                                        rounded-md
                                         text-sm
+                                        font-semibold
                                         flex
                                         items-center
                                         justify-center
                                         border
-                                        border-black/50
-                                        bg-[#deab99]
+                                        border-white/20
+                                        bg-white
                                         text-black
                                         transition-all
                                         duration-300
-                                        hover:scale-[1.02]
+                                        hover:bg-orange-50
+                                        active:scale-[0.98]
                                         cursor-pointer
                                     ">
 
@@ -316,23 +292,27 @@ function Topics() {
 
                                 </Link>
 
-                                <Link to={topic.practice} className="
+                                <Link to={getTopicPath("Practice", topic.topic)} className="
                                         relative
                                         z-10
-                                        w-[46%]
-                                        h-[35px]
-                                        rounded-[8px]
+                                        flex-1
+                                        min-w-0
+                                        h-8
+                                        mt-2
+                                        rounded-md
                                         text-sm
+                                        font-semibold
                                         flex
                                         items-center
                                         justify-center
                                         border
-                                        border-black/50
-                                        bg-[#deab99]
-                                        text-black
+                                        border-white/20
+                                        bg-white/14
+                                        text-white
                                         transition-all
                                         duration-300
-                                        hover:scale-[1.02]
+                                        hover:bg-white/20
+                                        active:scale-[0.98]
                                         cursor-pointer
                                     ">
 
@@ -356,15 +336,12 @@ function Topics() {
                 <section
                     key={index}
                     id={section.title.toLowerCase().replaceAll(" ", "-")}
-                    className="mb-16"
+                    className="mb-14 sm:mb-16"
                 >
 
                     {/* Title */}
                     <h2
-                        className="
-                            text-xl
-                            mb-8
-                        "
+                        className="text-xl font-semibold mb-5 sm:mb-6 lc-safe-text"
                     >
                         {section.title}
                     </h2>
@@ -373,12 +350,11 @@ function Topics() {
                     <div
                         className="
                             flex
-                            gap-8
-                            overflow-x-auto
-                            scrollbar-hide
+                            gap-4
+                            sm:gap-5
+                            lc-scroll-x
                             snap-x
-                            snap-mandatory
-                            pb-4
+                            snap-proximity
                         "
                     >
 
@@ -388,11 +364,12 @@ function Topics() {
                                 key={item}
                                 className={`
                                     relative
-                                    w-[260px]
-                                    h-[190px]
+                                    w-[250px]
+                                    sm:w-[280px]
+                                    min-h-[196px]
                                     flex-shrink-0
                                     snap-center
-                                    rounded-[28px]
+                                    rounded-2xl
                                     overflow-hidden
                                     p-5
                                     flex
@@ -400,7 +377,10 @@ function Topics() {
                                     justify-between
                                     border
                                     border-white/10
+                                    bg-gradient-to-br
                                     ${section.cardColor}
+                                    shadow-[0_16px_45px_rgba(0,0,0,0.2)]
+                                    lc-interactive
                                 `}
                             >
 
@@ -467,7 +447,7 @@ function Topics() {
 
                                     <h3
                                         className="
-                                            text-lg
+                                            text-base
                                             font-bold
                                             text-white
                                         "
@@ -494,9 +474,10 @@ function Topics() {
 
                                     <h2
                                         className={`
-                                            text-2xl
+                                            text-xl
                                             font-bold
                                             ${section.textColor}
+                                            lc-safe-text
                                         `}
                                     >
                                         {section.title}
@@ -507,8 +488,7 @@ function Topics() {
                                             text-sm
                                             mt-3
                                             leading-relaxed
-                                            ${section.textColor}
-                                            opacity-80
+                                            text-white/74
                                         `}
                                     >
                                         Build strong fundamentals and prepare for interviews.
@@ -523,14 +503,16 @@ function Topics() {
                                         relative
                                         z-10
                                         w-full
-                                        h-[45px]
-                                        rounded-[14px]
-                                        text-base
+                                        min-h-11
+                                        rounded-xl
+                                        text-sm
                                         font-semibold
-                                        opacity-60
+                                        opacity-70
                                         cursor-not-allowed
+                                        border
+                                        border-white/10
                                         ${section.buttonColor}
-                                        ${section.textColor}
+                                        text-black/80
                                     `}
                                 >
                                     Coming Soon

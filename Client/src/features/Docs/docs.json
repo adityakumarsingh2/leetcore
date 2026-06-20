@@ -1,0 +1,284 @@
+{
+  "array": {
+    "topic": "Array",
+    "title": "Array Documentation",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "1. Introduction",
+        "type": "paragraph",
+        "content": [
+          "Array ek linear data structure hai jisme same type ke multiple elements ek sequence me store hote hain.",
+          "Array ka use tab hota hai jab hume data ko index ke through fast access karna ho.",
+          "DSA me arrays searching, sorting, sliding window, prefix sum aur two pointer jaise patterns ki foundation hain.",
+          "Real projects me arrays lists, tables, buffers aur collections ko represent karne ke kaam aate hain."
+        ]
+      },
+      {
+        "id": "definition",
+        "title": "2. One Line Definition",
+        "type": "callout",
+        "content": "Array ek linear data structure hai jo elements ko contiguous memory locations me store karta hai."
+      },
+      {
+        "id": "real-life-example",
+        "title": "3. Real Life Example",
+        "type": "example",
+        "content": [
+          "Array ko cinema hall ki ek row ki seats ki tarah samjho.",
+          "Har seat ka ek number hota hai, jaise arr[0], arr[1], arr[2].",
+          "Agar seat number pata hai, to directly us seat par pahunch sakte ho."
+        ],
+        "diagram": "Index:  0      1      2      3\\nValue: [10]   [20]   [30]   [40]"
+      },
+      {
+        "id": "why-learn",
+        "title": "4. Why We Learn This?",
+        "type": "list",
+        "items": [
+          "Array DSA ka sabse basic aur important topic hai.",
+          "Most algorithms me input array ke form me milta hai.",
+          "Interview me array se two pointer, sliding window, prefix sum jaise patterns test hote hain.",
+          "Competitive programming me arrays fast access aur simple memory layout ki wajah se useful hote hain.",
+          "Real-world apps me arrays product lists, marks, logs, matrix rows aur batches store karne me use hote hain."
+        ]
+      },
+      {
+        "id": "visualization",
+        "title": "5. Visualization",
+        "type": "visualization",
+        "diagram": "arr = [5, 8, 12, 20]\\n\\nMemory blocks:\\n+------+  +------+  +------+  +------+\\n|  5   |  |  8   |  |  12  |  |  20  |\\n+------+  +------+  +------+  +------+\\n 1000     1004     1008     1012",
+        "code": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    int arr[4] = {5, 8, 12, 20};\\n\\n    for (int i = 0; i < 4; i++) {\\n        cout << \"Index \" << i << \" -> Value \" << arr[i]\\n             << \" -> Address \" << &arr[i] << endl;\\n    }\\n\\n    return 0;\\n}"
+      },
+      {
+        "id": "internal-working",
+        "title": "6. Internal Working",
+        "type": "internal",
+        "content": [
+          "Array memory me contiguous blocks me store hota hai, matlab elements ek ke baad ek rakhe jaate hain.",
+          "Agar int ka size 4 bytes hai aur arr[0] ka address 1000 hai, to next element ka address 1004 hoga.",
+          "Index access fast hota hai kyunki formula hota hai: address = base_address + index * element_size.",
+          "Isliye arr[2] ke liye CPU direct 1000 + 2 * 4 = 1008 par ja sakta hai."
+        ],
+        "memory": [
+          "arr[0] -> 1000",
+          "arr[1] -> 1004",
+          "arr[2] -> 1008",
+          "arr[3] -> 1012"
+        ],
+        "structure": "Array -> Contiguous Memory Blocks"
+      },
+      {
+        "id": "basic-operations",
+        "title": "7. Basic Operations",
+        "type": "operations",
+        "items": [
+          {
+            "name": "Access",
+            "stl": "v[i]",
+            "visual": "[10, 20, 30] -> v[1] = 20",
+            "code": "vector<int> v = {10, 20, 30};\\ncout << v[1];"
+          },
+          {
+            "name": "Insert at end",
+            "stl": "push_back()",
+            "visual": "[10, 20] -> push_back(30) -> [10, 20, 30]",
+            "code": "vector<int> v = {10, 20};\\nv.push_back(30);"
+          },
+          {
+            "name": "Delete from end",
+            "stl": "pop_back()",
+            "visual": "[10, 20, 30] -> pop_back() -> [10, 20]",
+            "code": "vector<int> v = {10, 20, 30};\\nv.pop_back();"
+          },
+          {
+            "name": "Insert at middle",
+            "stl": "insert()",
+            "visual": "[10, 30] -> insert 20 -> [10, 20, 30]",
+            "code": "vector<int> v = {10, 30};\\nv.insert(v.begin() + 1, 20);"
+          },
+          {
+            "name": "Erase",
+            "stl": "erase()",
+            "visual": "[10, 20, 30] -> erase index 1 -> [10, 30]",
+            "code": "vector<int> v = {10, 20, 30};\\nv.erase(v.begin() + 1);"
+          },
+          {
+            "name": "Size",
+            "stl": "size()",
+            "visual": "[10, 20, 30] -> size = 3",
+            "code": "vector<int> v = {10, 20, 30};\\ncout << v.size();"
+          },
+          {
+            "name": "Clear",
+            "stl": "clear()",
+            "visual": "[10, 20, 30] -> clear() -> []",
+            "code": "vector<int> v = {10, 20, 30};\\nv.clear();"
+          }
+        ]
+      },
+      {
+        "id": "syntax",
+        "title": "8. Syntax",
+        "type": "syntax",
+        "snippets": [
+          {
+            "label": "Basic Declaration",
+            "code": "int arr[5];"
+          },
+          {
+            "label": "Initialization",
+            "code": "int arr[5] = {1, 2, 3, 4, 5};"
+          },
+          {
+            "label": "Accessing Elements",
+            "code": "cout << arr[0];\\narr[1] = 10;"
+          },
+          {
+            "label": "STL Vector Implementation",
+            "code": "#include <vector>\\nvector<int> v = {1, 2, 3};\\nv.push_back(4);"
+          },
+          {
+            "label": "Custom Traversal",
+            "code": "for (int i = 0; i < n; i++) {\\n    cout << arr[i] << \" \";\\n}"
+          }
+        ]
+      },
+      {
+        "id": "complexity",
+        "title": "9. Time & Space Complexity Summary",
+        "type": "complexity",
+        "rows": [
+          { "operation": "Access by index", "time": "O(1)", "space": "O(1)" },
+          { "operation": "Search", "time": "O(n)", "space": "O(1)" },
+          { "operation": "Insert at end", "time": "O(1) amortized", "space": "O(1)" },
+          { "operation": "Insert at middle", "time": "O(n)", "space": "O(1)" },
+          { "operation": "Delete at end", "time": "O(1)", "space": "O(1)" },
+          { "operation": "Delete at middle", "time": "O(n)", "space": "O(1)" },
+          { "operation": "Traverse", "time": "O(n)", "space": "O(1)" }
+        ]
+      },
+      {
+        "id": "common-mistakes",
+        "title": "10. Common Mistakes",
+        "type": "mistakes",
+        "items": [
+          {
+            "title": "Out of bounds access",
+            "wrong": "int arr[3] = {1, 2, 3};\\ncout << arr[3];",
+            "correct": "int arr[3] = {1, 2, 3};\\ncout << arr[2];",
+            "why": "Array ka last valid index n - 1 hota hai. arr[3] invalid hai jab size 3 ho."
+          },
+          {
+            "title": "Nested loop use karna jab optimized pattern possible ho",
+            "wrong": "for (int i = 0; i < n; i++) {\\n    for (int j = i + 1; j < n; j++) {\\n        if (arr[i] + arr[j] == target) cout << i << \" \" << j;\\n    }\\n}",
+            "correct": "unordered_map<int, int> mp;\\nfor (int i = 0; i < n; i++) {\\n    int need = target - arr[i];\\n    if (mp.count(need)) cout << mp[need] << \" \" << i;\\n    mp[arr[i]] = i;\\n}",
+            "why": "Brute force O(n^2) hai, hashmap se same kaam O(n) me ho sakta hai."
+          }
+        ]
+      },
+      {
+        "id": "interview-questions",
+        "title": "11. Interview Questions",
+        "type": "questions",
+        "total": 30,
+        "categories": [
+          {
+            "name": "Basics",
+            "questions": [
+              { "name": "Build Array from Permutation", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/build-array-from-permutation/", "pattern": "Basics" },
+              { "name": "Concatenation of Array", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/concatenation-of-array/", "pattern": "Basics" },
+              { "name": "Running Sum of 1d Array", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/running-sum-of-1d-array/", "pattern": "Basics" },
+              { "name": "Find Pivot Index", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/find-pivot-index/", "pattern": "Basics" },
+              { "name": "Largest Element in Array", "platform": "GFG", "difficulty": "Easy", "link": "https://www.geeksforgeeks.org/problems/largest-element-in-array4009/", "pattern": "Basics" }
+            ]
+          },
+          {
+            "name": "Two Pointer",
+            "questions": [
+              { "name": "Two Sum II", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/", "pattern": "Two Pointer" },
+              { "name": "Move Zeroes", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/move-zeroes/", "pattern": "Two Pointer" },
+              { "name": "Remove Duplicates from Sorted Array", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/", "pattern": "Two Pointer" },
+              { "name": "Container With Most Water", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/container-with-most-water/", "pattern": "Two Pointer" },
+              { "name": "3Sum", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/3sum/", "pattern": "Two Pointer" }
+            ]
+          },
+          {
+            "name": "Sliding Window",
+            "questions": [
+              { "name": "Maximum Average Subarray I", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/maximum-average-subarray-i/", "pattern": "Sliding Window" },
+              { "name": "Max Consecutive Ones III", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/max-consecutive-ones-iii/", "pattern": "Sliding Window" },
+              { "name": "Minimum Size Subarray Sum", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/minimum-size-subarray-sum/", "pattern": "Sliding Window" },
+              { "name": "Fruit Into Baskets", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/fruit-into-baskets/", "pattern": "Sliding Window" },
+              { "name": "Sliding Window Maximum", "platform": "LeetCode", "difficulty": "Hard", "link": "https://leetcode.com/problems/sliding-window-maximum/", "pattern": "Sliding Window" }
+            ]
+          },
+          {
+            "name": "Prefix Sum",
+            "questions": [
+              { "name": "Range Sum Query Immutable", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/range-sum-query-immutable/", "pattern": "Prefix Sum" },
+              { "name": "Subarray Sum Equals K", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/subarray-sum-equals-k/", "pattern": "Prefix Sum" },
+              { "name": "Product of Array Except Self", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/product-of-array-except-self/", "pattern": "Prefix Sum" },
+              { "name": "Find the Highest Altitude", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/find-the-highest-altitude/", "pattern": "Prefix Sum" },
+              { "name": "Continuous Subarray Sum", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/continuous-subarray-sum/", "pattern": "Prefix Sum" }
+            ]
+          },
+          {
+            "name": "Binary Search",
+            "questions": [
+              { "name": "Binary Search", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/binary-search/", "pattern": "Binary Search" },
+              { "name": "Search Insert Position", "platform": "LeetCode", "difficulty": "Easy", "link": "https://leetcode.com/problems/search-insert-position/", "pattern": "Binary Search" },
+              { "name": "Find First and Last Position", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/", "pattern": "Binary Search" },
+              { "name": "Search in Rotated Sorted Array", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/", "pattern": "Binary Search" },
+              { "name": "Median of Two Sorted Arrays", "platform": "LeetCode", "difficulty": "Hard", "link": "https://leetcode.com/problems/median-of-two-sorted-arrays/", "pattern": "Binary Search" }
+            ]
+          },
+          {
+            "name": "Advanced Problems",
+            "questions": [
+              { "name": "Maximum Subarray", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/maximum-subarray/", "pattern": "Kadane" },
+              { "name": "Merge Intervals", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/merge-intervals/", "pattern": "Sorting" },
+              { "name": "Set Matrix Zeroes", "platform": "LeetCode", "difficulty": "Medium", "link": "https://leetcode.com/problems/set-matrix-zeroes/", "pattern": "Matrix" },
+              { "name": "Trapping Rain Water", "platform": "LeetCode", "difficulty": "Hard", "link": "https://leetcode.com/problems/trapping-rain-water/", "pattern": "Two Pointer" },
+              { "name": "First Missing Positive", "platform": "LeetCode", "difficulty": "Hard", "link": "https://leetcode.com/problems/first-missing-positive/", "pattern": "Index Placement" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "quick-revision",
+        "title": "12. Quick Revision",
+        "type": "list",
+        "items": [
+          "Array contiguous memory me store hota hai.",
+          "Index access O(1) hota hai.",
+          "Insert/delete middle me O(n) lagta hai because shifting hoti hai.",
+          "Array patterns: two pointer, sliding window, prefix sum, binary search.",
+          "Out of bounds access avoid karna sabse important hai."
+        ]
+      },
+      {
+        "id": "practice-roadmap",
+        "title": "14. Practice Roadmap",
+        "type": "roadmap",
+        "groups": [
+          {
+            "level": "Beginner",
+            "count": 5,
+            "questions": ["Build Array from Permutation", "Concatenation of Array", "Running Sum of 1d Array", "Largest Element in Array", "Move Zeroes"]
+          },
+          {
+            "level": "Intermediate",
+            "count": 10,
+            "questions": ["Two Sum II", "Remove Duplicates from Sorted Array", "Find Pivot Index", "Maximum Average Subarray I", "Minimum Size Subarray Sum", "Range Sum Query Immutable", "Subarray Sum Equals K", "Product of Array Except Self", "Search Insert Position", "Search in Rotated Sorted Array"]
+          },
+          {
+            "level": "Advanced",
+            "count": 15,
+            "questions": ["3Sum", "Container With Most Water", "Max Consecutive Ones III", "Sliding Window Maximum", "Continuous Subarray Sum", "Find First and Last Position", "Median of Two Sorted Arrays", "Maximum Subarray", "Merge Intervals", "Set Matrix Zeroes", "Trapping Rain Water", "First Missing Positive", "Fruit Into Baskets", "Product of Array Except Self", "Subarray Sum Equals K"]
+          }
+        ]
+      }
+    ]
+  }
+}

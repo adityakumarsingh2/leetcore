@@ -1,6 +1,7 @@
 import User from "../models/User.models.js";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
 
 const DEFAULT_CLIENT_URL = "http://localhost:5174";
 
@@ -42,10 +43,12 @@ const githubLogin = (req, res) => {
 
 };
 const registerUser = async (req, res) => {
+    let authStep = "starting GitHub authentication";
 
     try {
 
         // Get code from GitHub
+        authStep = "reading GitHub callback code";
         const code = req.query.code;
 
         if (!code) {
@@ -60,6 +63,7 @@ const registerUser = async (req, res) => {
         const jwtSecret = requiredEnv("JWT_SECRET");
 
         // Exchange code for access token
+        authStep = "exchanging GitHub code for access token";
         const tokenResponse = await axios.post(
             "https://github.com/login/oauth/access_token",
             {
@@ -80,11 +84,14 @@ const registerUser = async (req, res) => {
         if (!accessToken) {
             return res.status(401).json({
                 success: false,
-                message: tokenResponse.data.error_description || "GitHub did not return an access token",
+                message: "Authentication failed",
+                step: authStep,
+                error: tokenResponse.data.error_description || "GitHub did not return an access token",
             });
         }
 
         // Fetch GitHub user
+        authStep = "fetching GitHub user profile";
         const githubUser = await axios.get(
             "https://api.github.com/user",
             {
@@ -95,6 +102,7 @@ const registerUser = async (req, res) => {
         );
 
         // Fetch email
+        authStep = "fetching GitHub email";
         const emailResponse = await axios.get(
             "https://api.github.com/user/emails",
             {
@@ -136,22 +144,30 @@ const registerUser = async (req, res) => {
             ],
         };
 
+        if (mongoose.connection.readyState !== 1) {
+            throw new Error("Database is not connected");
+        }
+
         // Find existing user
+        authStep = "finding existing user";
         let user = await User.findOne(existingUserQuery);
 
         // Create user if not exists
         if (!user) {
 
+            authStep = "creating user";
             user = await User.create(userData);
 
         } else {
 
+            authStep = "updating user";
             user.set(userData);
             await user.save();
 
         }
 
         // Generate JWT
+        authStep = "creating JWT";
         const token = jwt.sign(
             {
                 id: user._id,
@@ -176,11 +192,22 @@ const registerUser = async (req, res) => {
 
     } catch (error) {
 
-        console.log("GitHub Auth Error:", error);
+        const statusCode = error.response?.status || 500;
+        const providerMessage = error.response?.data?.error_description
+            || error.response?.data?.message
+            || error.message;
 
-        return res.status(500).json({
+        console.error("GitHub Auth Error:", {
+            step: authStep,
+            status: statusCode,
+            message: providerMessage,
+        });
+
+        return res.status(statusCode >= 400 && statusCode < 500 ? statusCode : 500).json({
             success: false,
             message: "Authentication failed",
+            step: authStep,
+            error: process.env.NODE_ENV === "production" ? undefined : providerMessage,
         });
 
     }

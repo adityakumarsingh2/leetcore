@@ -19,7 +19,7 @@ function LandingNavbar({ onLoginClick }) {
           max-w-5xl
           min-h-[58px]
           mx-auto
-          rounded-[24px]
+          rounded-2xl
           flex
           items-center
           justify-between
@@ -30,13 +30,14 @@ function LandingNavbar({ onLoginClick }) {
           bg-[#111113]/90
           backdrop-blur-2xl
           border border-white/12
+          shadow-[0_18px_50px_rgba(0,0,0,0.22)]
 
         "
             >
                 {/* Logo */}
                 <div className="flex items-center cursor-pointer shrink-0">
 
-                    <img src="/leetcorelogo.png" alt="LeetcoreLogo" className="h-20 sm:h-24 -my-5" />
+                    <img src="/leetcorelogo.png" alt="Leetcore Logo" className="h-16 sm:h-20 -my-4 object-contain" />
                 </div>
 
                 {/* Right Side */}
@@ -55,9 +56,11 @@ function LandingNavbar({ onLoginClick }) {
               text-white
               rounded-xl
               font-semibold
+              shadow-[0_12px_32px_rgba(244,103,23,0.24)]
 
-              
-
+              hover:bg-[#ff7d34]
+              hover:shadow-[0_16px_42px_rgba(244,103,23,0.34)]
+              active:scale-[0.98]
               transition-all
               duration-300
             "

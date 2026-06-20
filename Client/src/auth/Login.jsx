@@ -8,21 +8,22 @@ function Login({ isOpen, onClose }) {
     };
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/72 backdrop-blur-md p-4">
             {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#F46717]/20 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F46717]/18 blur-[110px] pointer-events-none sm:h-[420px] sm:w-[420px]" />
 
             <div className="relative z-10 w-full max-w-md">
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute -top-12 right-0 text-white hover:text-[#F46717] text-xl font-bold transition-colors"
+                    aria-label="Close login"
+                    className="absolute -top-12 right-0 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/6 text-white transition-colors hover:border-orange-200/30 hover:text-[#F46717] active:scale-95"
                 >
-                    ✕
+                    x
                 </button>
 
                 {/* Login Card */}
-                <div className="bg-[#111113] border border-white/10 rounded-3xl p-7 sm:p-10 shadow-2xl backdrop-blur-xl flex flex-col items-center">
+                <div className="bg-[#111113] border border-white/10 rounded-3xl p-6 sm:p-9 shadow-2xl backdrop-blur-xl flex flex-col items-center">
 
                     {/* Logo & Header */}
                     <img src="/leetcorelogo.png" alt="LeetCore Logo" className="h-26 mb-1" />
@@ -51,6 +52,8 @@ function Login({ isOpen, onClose }) {
                             transition-all
                             duration-300
                             shadow-lg
+                            hover:bg-orange-50
+                            active:scale-[0.98]
                         "
                     >
                         {/* GitHub Icon */}

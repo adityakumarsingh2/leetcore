@@ -45,34 +45,37 @@ function Dashmainnavbar() {
     };
 
     return (
-        <div className="w-full text-white p-6">
+        <div className="w-full text-white p-4 sm:p-6">
 
             {/* Heading */}
-            <h1 className="text-xl mb-6 font-semibold font-monospace tracking-wide">
+            <h1 className="text-xl mb-5 font-semibold tracking-wide">
                 Categories
             </h1>
 
             {/* Cards */}
-            <div className="flex gap-6 overflow-x-auto scrollbar-hide">
+            <div className="flex gap-4 sm:gap-5 lc-scroll-x">
                 {categories.map((item, index) => (
-                    <div
+                    <button
+                        type="button"
                         onClick={() => scrollToCategory(item.targetId)}
                         key={index}
                         className="
-              min-w-[170px]
-              h-[150px]
-              bg-white/9
+              min-w-[138px]
+              sm:min-w-[160px]
+              h-[136px]
+              sm:h-[148px]
+              bg-white/[0.045]
               border
-              border-white/9
-              rounded-[40px]
+              border-white/10
+              rounded-2xl
               flex
               flex-col
               items-center
               justify-center
-              shadow-lg
-              transition-all
-              duration-300
-              
+              shadow-[0_14px_40px_rgba(0,0,0,0.18)]
+              lc-interactive
+              hover:border-[#F46717]/35
+              hover:bg-white/[0.07]
               cursor-pointer
             "
                     >
@@ -81,8 +84,9 @@ function Dashmainnavbar() {
                             className={`
                 ${item.bg}
                 w-[90%]
-                h-[90px]
-                rounded-[40px]
+                h-[78px]
+                sm:h-[86px]
+                rounded-2xl
                 flex
                 
                 items-center
@@ -95,10 +99,10 @@ function Dashmainnavbar() {
                         </div>
 
                         {/* Title */}
-                        <h2 className="text-lg tracking-wide mt-2">
+                        <h2 className="text-base sm:text-lg font-semibold tracking-wide mt-2">
                             {item.title}
                         </h2>
-                    </div>
+                    </button>
                 ))}
             </div>
         </div>

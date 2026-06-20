@@ -82,7 +82,7 @@ function DashLeftNavBar() {
                 rounded-2xl
                 w-full
                 md:w-[85px]
-                bg-white/8
+                bg-[#111113]/88
                 border
                 border-white/10
                 flex
@@ -95,6 +95,7 @@ function DashLeftNavBar() {
                 md:px-0
                 md:py-6
                 relative
+                shadow-[0_16px_48px_rgba(0,0,0,0.18)]
             "
         >
 
@@ -102,12 +103,12 @@ function DashLeftNavBar() {
             <div className="flex md:flex-col items-center w-auto md:w-full">
 
                 {/* Logo */}
-                <Link to="/dashboard" className="mr-4 md:mr-0 md:mb-8">
+                <Link to="/dashboard" className="mr-3 md:mr-0 md:mb-8 shrink-0">
 
                     <div
                         className="
-                            w-8
-                            h-8
+                            w-9
+                            h-9
                             rounded-2xl
                             bg-[#111]
                             flex
@@ -136,7 +137,7 @@ function DashLeftNavBar() {
                 />
 
                 {/* Navigation */}
-                <div className="flex md:flex-col items-center gap-2 md:gap-7">
+                <div className="flex md:flex-col items-center gap-1.5 sm:gap-2 md:gap-7 overflow-x-auto md:overflow-visible scrollbar-hide max-w-full">
 
                     {navItems.map((item, index) => {
 
@@ -150,8 +151,9 @@ function DashLeftNavBar() {
                                 key={index}
                                 className={`
                                     relative
-                                    w-[56px]
-                                    h-[56px]
+                                    min-w-[54px]
+                                    w-[54px]
+                                    h-[54px]
                                     md:w-[60px]
                                     md:h-[63px]
                                     rounded-xl
@@ -164,11 +166,13 @@ function DashLeftNavBar() {
                                     md:gap-2
                                     transition-all
                                     duration-300
+                                    active:scale-[0.97]
 
                                     ${isActive
                                         ? `
                                             bg-[#111]
                                             text-white
+                                            shadow-[0_12px_30px_rgba(244,103,23,0.12)]
                                           `
                                         : `
                                             text-gray-400
@@ -250,8 +254,9 @@ function DashLeftNavBar() {
                         cursor-pointer
                         border-white/10
                         hover:scale-105
-                        transition
+                        transition-all
                         overflow-hidden
+                        active:scale-95
                     "
                 >
 
@@ -294,7 +299,7 @@ function DashLeftNavBar() {
                 bg-[#161616]
                 border
                 border-white/10
-                shadow-2xl
+                shadow-[0_24px_70px_rgba(0,0,0,0.4)]
                 z-50
                 overflow-hidden
                 backdrop-blur-xl
@@ -314,7 +319,7 @@ function DashLeftNavBar() {
                     text-sm
                     text-white
                     hover:bg-white/5
-                    transition
+                    transition-colors
                 "
                             >
                                 <User size={18} />
@@ -334,7 +339,7 @@ function DashLeftNavBar() {
                     text-sm
                     text-white
                     hover:bg-white/5
-                    transition
+                    transition-colors
                 "
                             >
                                 <MessageSquare size={18} />
@@ -354,7 +359,7 @@ function DashLeftNavBar() {
                     text-sm
                     text-white
                     hover:bg-white/5
-                    transition
+                    transition-colors
                 "
                             >
                                 <Flag size={18} />
@@ -374,7 +379,7 @@ function DashLeftNavBar() {
                     text-sm
                     text-white
                     hover:bg-white/5
-                    transition
+                    transition-colors
                 "
                             >
                                 <HeartHandshake size={18} />
@@ -397,7 +402,7 @@ function DashLeftNavBar() {
                     text-sm
                     text-red-400
                     hover:bg-red-500/10
-                    transition
+                    transition-colors
                 "
                             >
                                 <LogOut size={18} />
