@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 
 const DEFAULT_CLIENT_URL = "http://localhost:5174";
+const DEFAULT_SERVER_URL = "http://localhost:4000";
 
 const requiredEnv = (key) => {
     const value = process.env[key];
@@ -15,9 +16,19 @@ const requiredEnv = (key) => {
     return value;
 };
 
-const getGithubCallbackUrl = () => (
-    process.env.GITHUB_CALLBACK_URL || "http://localhost:4000/api/v1/auth/github/callback"
-);
+const trimTrailingSlash = (url) => url?.replace(/\/$/, "");
+
+const getGithubCallbackUrl = () => {
+    if (process.env.GITHUB_CALLBACK_URL) {
+        return process.env.GITHUB_CALLBACK_URL;
+    }
+
+    const serverUrl = trimTrailingSlash(
+        process.env.PUBLIC_API_URL || process.env.RENDER_EXTERNAL_URL || DEFAULT_SERVER_URL
+    );
+
+    return `${serverUrl}/api/v1/auth/github/callback`;
+};
 
 const getPrimaryEmail = (emails = []) => {
     const primaryVerifiedEmail = emails.find(email => email.primary && email.verified)?.email;
@@ -186,9 +197,9 @@ const registerUser = async (req, res) => {
             maxAge: 7 * 24 * 60 * 60 * 1000,
         });
 
-        const clientUrl = (process.env.CLIENT_URL || DEFAULT_CLIENT_URL).replace(/\/$/, "");
+        const clientUrl = trimTrailingSlash(process.env.CLIENT_URL || DEFAULT_CLIENT_URL);
 
-        return res.redirect(`${clientUrl}/dashboard`);
+        return res.redirect(`${clientUrl}/#/dashboard`);
 
     } catch (error) {
 
