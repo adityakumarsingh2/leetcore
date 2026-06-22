@@ -7,6 +7,7 @@ function ConsistencyBar({ userId: userIdProp }) {
     const userId = userIdProp || user?._id;
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(Boolean(userId));
+    const [selectedYear, setSelectedYear] = useState("current"); // "current" or "previous"
 
     useEffect(() => {
         if (!userId) {
@@ -20,7 +21,12 @@ function ConsistencyBar({ userId: userIdProp }) {
             setLoading(true);
 
             try {
-                const response = await consistencyService.getConsistencyData(userId, { days: 365 });
+                const params = { days: 365 };
+                if (selectedYear === "previous") {
+                    const prevYear = new Date().getFullYear() - 1;
+                    params.year = prevYear;
+                }
+                const response = await consistencyService.getConsistencyData(userId, params);
 
                 if (mounted) {
                     setData(response.data);
@@ -43,20 +49,30 @@ function ConsistencyBar({ userId: userIdProp }) {
         return () => {
             mounted = false;
         };
-    }, [userId]);
+    }, [userId, selectedYear]);
 
-    const months = [
-        "May", "Jun", "Jul", "Aug",
-        "Sep", "Oct", "Nov", "Dec",
-        "Jan", "Feb", "Mar", "Apr", "May",
-    ];
+    const months = useMemo(() => {
+        const result = [];
+        const date = new Date();
+        if (selectedYear === "previous") {
+            date.setFullYear(new Date().getFullYear() - 1);
+            date.setMonth(11); // December of previous year
+        }
+        for (let i = 12; i >= 0; i--) {
+            const d = new Date(date.getFullYear(), date.getMonth() - i, 1);
+            const label = d.toLocaleDateString("en-US", { month: "short" });
+            result.push(label);
+        }
+        return result;
+    }, [selectedYear]);
 
     const activityDays = useMemo(() => {
         const heatmap = data?.heatmap || [];
         const totalCells = months.length * 28;
 
         return Array.from({ length: totalCells }, (_, index) => {
-            const day = heatmap[index];
+            const heatmapIndex = heatmap.length - totalCells + index;
+            const day = heatmapIndex >= 0 ? heatmap[heatmapIndex] : null;
 
             return {
                 key: day?.date || `empty-${index}`,
@@ -80,7 +96,6 @@ function ConsistencyBar({ userId: userIdProp }) {
     const maxStreak = user?.stats?.maxStreak || 0;
 
     return (
-
         <div
             className="
                 w-full
@@ -94,7 +109,6 @@ function ConsistencyBar({ userId: userIdProp }) {
                 min-h-[220px]
             "
         >
-
             {/* Header */}
             <div
                 className="
@@ -109,10 +123,8 @@ function ConsistencyBar({ userId: userIdProp }) {
                     z-10
                 "
             >
-
                 {/* Left */}
                 <div>
-
                     <h1
                         className="
                             text-md
@@ -129,24 +141,42 @@ function ConsistencyBar({ userId: userIdProp }) {
                                 ml-2
                             "
                         >
-                            problems solved in the past one year
+                            problems solved in the selected period
                         </span>
                     </h1>
-
                 </div>
 
-                {/* Right Stats */}
+                {/* Right Year Toggle & Stats */}
                 <div
                     className="
                         flex
                         items-center
-                        gap-10
+                        gap-6
                         flex-wrap
                         text-gray-400
                         text-sm
                         font-light
                     "
                 >
+                    {/* Year selection toggle tabs */}
+                    <div className="flex gap-1.5 bg-white/5 border border-white/10 p-1 rounded-xl">
+                        <button
+                            onClick={() => setSelectedYear("current")}
+                            className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+                                selectedYear === "current" ? "bg-orange-500 text-white" : "text-white/60 hover:text-white"
+                            }`}
+                        >
+                            Current Year
+                        </button>
+                        <button
+                            onClick={() => setSelectedYear("previous")}
+                            className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+                                selectedYear === "previous" ? "bg-orange-500 text-white" : "text-white/60 hover:text-white"
+                            }`}
+                        >
+                            Previous Year ({new Date().getFullYear() - 1})
+                        </button>
+                    </div>
 
                     <p>
                         Total active days:
@@ -161,9 +191,7 @@ function ConsistencyBar({ userId: userIdProp }) {
                             {loading ? "--" : maxStreak}
                         </span>
                     </p>
-
                 </div>
-
             </div>
 
             {/* Heatmap */}
@@ -176,9 +204,7 @@ function ConsistencyBar({ userId: userIdProp }) {
                     z-10
                 "
             >
-
                 {months.map((month, monthIndex) => (
-
                     <div
                         key={month}
                         className="
@@ -189,7 +215,6 @@ function ConsistencyBar({ userId: userIdProp }) {
                             flex-shrink-0
                         "
                     >
-
                         {/* Grid */}
                         <div
                             className="
@@ -198,9 +223,7 @@ function ConsistencyBar({ userId: userIdProp }) {
                                 gap-[5px]
                             "
                         >
-
                             {[...Array(28)].map((_, index) => (
-
                                 <div
                                     key={activityDays[(monthIndex * 28) + index]?.key || `${month}-${index}`}
                                     className={`
@@ -210,9 +233,7 @@ function ConsistencyBar({ userId: userIdProp }) {
                                         ${getActivity(monthIndex, index)}
                                     `}
                                 />
-
                             ))}
-
                         </div>
 
                         {/* Month */}
@@ -225,17 +246,11 @@ function ConsistencyBar({ userId: userIdProp }) {
                         >
                             {month}
                         </p>
-
                     </div>
-
                 ))}
-
             </div>
-
         </div>
-
     );
-
 }
 
 export default ConsistencyBar;

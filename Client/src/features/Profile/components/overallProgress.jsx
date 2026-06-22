@@ -1,52 +1,56 @@
-function OverallProgress() {
+import { useEffect, useState } from "react";
+import { Loader2 } from "lucide-react";
+import apiClient from "../../../services/apiClient";
+import { useAuth } from "../../../context/AuthContext";
 
-    const topics = [
-        {
-            name: "Arrays",
-            solved: 34,
-            total: 120,
-            color: "#cf8a75",
-            bg: "#cf8a75",
-        },
-        {
-            name: "Strings",
-            solved: 21,
-            total: 95,
-            color: "#cf8a75",
-            bg: "bg-yellow-400",
-        },
-        {
-            name: "Linked List",
-            solved: 14,
-            total: 60,
-            color: "#cf8a75",
-            bg: "bg-red-400",
-        },
-        {
-            name: "Binary",
-            solved: 14,
-            total: 60,
-            color: "#cf8a75",
-            bg: "bg-red-400",
-        },
-        {
-            name: "Stack",
-            solved: 14,
-            total: 60,
-            color: "#cf8a75",
-            bg: "bg-red-400",
-        },
-        {
-            name: "Queue",
-            solved: 14,
-            total: 60,
-            color: "#cf8a75",
-            bg: "bg-red-400",
-        },
-    ];
+function OverallProgress() {
+    const { user } = useAuth();
+    const [progressData, setProgressData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        let isMounted = true;
+        const fetchProgress = async () => {
+            try {
+                const response = await apiClient.get("/questions/progress");
+                if (isMounted && response.data?.success) {
+                    setProgressData(response.data);
+                }
+            } catch (err) {
+                console.error("Failed to fetch overall progress:", err);
+            } finally {
+                if (isMounted) {
+                    setLoading(false);
+                }
+            }
+        };
+
+        fetchProgress();
+        return () => {
+            isMounted = false;
+        };
+    }, [user]);
+
+    const totalSolved = progressData?.totalSolved || 0;
+    const totalQuestions = progressData?.totalQuestions || 3060;
+    const percentage = totalQuestions > 0 ? Math.round((totalSolved / totalQuestions) * 100) : 0;
+
+    // SVG circle math
+    // Radius = 95, Circumference = 2 * PI * r = 2 * 3.14159 * 95 = 596.9 (approx 597)
+    const strokeDasharray = 597;
+    const strokeDashoffset = strokeDasharray - (strokeDasharray * percentage) / 100;
+
+    if (loading) {
+        return (
+            <div className="w-full min-h-[320px] flex items-center justify-center text-white">
+                <Loader2 className="w-8 h-8 text-orange-500 animate-spin" />
+            </div>
+        );
+    }
+
+    const topics = progressData?.topics || [];
 
     return (
-
         <div
             className="
                 w-full
@@ -56,20 +60,16 @@ function OverallProgress() {
                 lg:flex-row
                 items-center
                 justify-between
-                gap-6
+                gap-8
                 px-5
                 sm:px-8
                 py-6
                 relative
                 overflow-hidden
+                text-white
             "
         >
-
-
-
-
-
-            {/* Left Side */}
+            {/* Left Side Progress Ring */}
             <div
                 className="
                     relative
@@ -77,38 +77,33 @@ function OverallProgress() {
                     flex
                     items-center
                     justify-center
-                    flex-1
+                    flex-shrink-0
                 "
             >
-
                 <div className="relative w-[180px] h-[180px] sm:w-[200px] sm:h-[200px]">
-
-                    {/* Ring */}
-                    <svg viewBox="0 0 300 300">
-
-                        {/* Background */}
+                    <svg viewBox="0 0 300 300" className="transform -rotate-90">
+                        {/* Background Ring */}
                         <circle
                             cx="150"
                             cy="150"
                             r="95"
                             fill="none"
-                            stroke="rgba(255,255,255,0.08)"
-                            strokeWidth="12"
+                            stroke="rgba(255,255,255,0.06)"
+                            strokeWidth="14"
                         />
-
-                        {/* Progress */}
+                        {/* Gradient Progress */}
                         <circle
                             cx="150"
                             cy="150"
                             r="95"
                             fill="none"
                             stroke="#F46717"
-                            strokeWidth="12"
+                            strokeWidth="14"
                             strokeLinecap="round"
-                            strokeDasharray="597"
-                            strokeDashoffset="200"
+                            strokeDasharray={strokeDasharray}
+                            strokeDashoffset={strokeDashoffset}
+                            className="transition-all duration-700 ease-out"
                         />
-
                     </svg>
 
                     {/* Center Content */}
@@ -122,118 +117,121 @@ function OverallProgress() {
                             justify-center
                         "
                     >
-
                         <h1
                             className="
-                                text-md
-                                font-bold
+                                text-2xl
+                                font-black
                                 text-white
+                                tracking-tight
                             "
                         >
-                            225
+                            {totalSolved}
                             <span
                                 className="
-                                    text-md
-                                    text-gray-300
+                                    text-sm
+                                    text-gray-400
+                                    font-medium
+                                    ml-0.5
                                 "
                             >
-                                /3930
+                                /{totalQuestions}
                             </span>
                         </h1>
-
                         <p
                             className="
-                                text-sm
-                                text-gray-300
-                                mt-2
+                                text-[11px]
+                                font-bold
+                                uppercase
+                                tracking-widest
+                                text-orange-400
+                                mt-1
                             "
                         >
-                            ✓ Solved
+                            Solved ({percentage}%)
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
 
-            {/* Right Side */}
+            {/* Right Side Topic List Grid */}
             <div
                 className="
-        relative
-        z-10
-        grid
-        grid-cols-2
-        sm:grid-cols-3
-        gap-3
-
-        w-full
-        lg:w-[350px]
-    "
-            >
-
-                {topics.map((topic, index) => (
-
-                    <div
-                        key={index}
-                        className="
-                rounded-2xl
-                bg-white/10
-                
-                px-3
-                py-3
-                flex
-                
-                flex-col
-                items-center
-                justify-center
-                text-center
-                h-[60px]
-            "
-                    >
-
-                        <h2
-                            className={`
-                    text-xs
-                    font-bold
-                    mb-1
-                    leading-tight
-                    text-green-500
-                `}
-                        >
-                            {topic.name}
-                        </h2>
-
-                        <p
-                            className="
-                    text-xs
-                    font-semibold
-                    text-white
+                    relative
+                    z-10
+                    grid
+                    grid-cols-2
+                    sm:grid-cols-3
+                    gap-2
+                    w-full
+                    lg:max-w-[480px]
+                    max-h-[280px]
+                    overflow-y-auto
+                    pr-2
                 "
+                style={{
+                    scrollbarWidth: "thin",
+                    scrollbarColor: "rgba(255,255,255,0.1) transparent"
+                }}
+            >
+                {topics.map((topic, index) => {
+                    const solvedPct = topic.total > 0 ? Math.round((topic.solved / topic.total) * 100) : 0;
+                    return (
+                        <div
+                            key={index}
+                            className="
+                                rounded-xl
+                                bg-white/5
+                                border border-white/5
+                                px-3
+                                py-2.5
+                                flex
+                                flex-col
+                                items-center
+                                justify-center
+                                text-center
+                                h-[65px]
+                                hover:bg-white/10
+                                hover:border-orange-500/20
+                                transition-all
+                                duration-200
+                            "
                         >
-                            {topic.solved}
-
-                            <span
+                            <h2
                                 className="
-                        text-gray-400
-                        text-xs
-                    "
+                                    text-[10px]
+                                    font-bold
+                                    text-orange-400
+                                    mb-0.5
+                                    truncate
+                                    w-full
+                                "
                             >
-                                /{topic.total}
-                            </span>
-
-                        </p>
-
-                    </div>
-
-                ))}
-
+                                {topic.name}
+                            </h2>
+                            <p
+                                className="
+                                    text-xs
+                                    font-extrabold
+                                    text-white
+                                "
+                            >
+                                {topic.solved}
+                                <span className="text-white/40 font-normal text-[10px]">
+                                    /{topic.total}
+                                </span>
+                            </p>
+                            <div className="w-full bg-white/10 h-[2px] rounded-full mt-1 overflow-hidden">
+                                <div
+                                    className="bg-orange-500 h-full transition-all duration-300"
+                                    style={{ width: `${solvedPct}%` }}
+                                />
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
-
         </div>
-
     );
-
 }
 
 export default OverallProgress;

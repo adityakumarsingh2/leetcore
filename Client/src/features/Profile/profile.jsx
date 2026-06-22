@@ -85,10 +85,6 @@ function Profile() {
                 >
                     <ConsistencyBar userId={user?._id} />
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
-                    <Suggestion />
-                    <ContestRating />
-                </div>
 
             </div>
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Award } from "lucide-react";
+import { Award, ArrowRight } from "lucide-react";
 import { badgeService } from "../../../services/badgeService";
 import BadgeGrid from "./BadgeGrid";
 import BadgeModal from "./BadgeModal";
@@ -46,31 +46,33 @@ function UserBadges({ userId, compact = false }) {
         };
     }, [userId]);
 
-    const visibleBadges = compact ? badges.slice(0, 3) : badges;
+    const visibleBadges = compact ? badges.slice(0, 10) : badges;
 
     return (
-        <section className="w-full rounded-lg border border-white/8 bg-[#1F1F22] p-5 text-white">
+        <section className="w-full text-white bg-transparent">
             <div className="mb-4 flex items-start justify-between gap-4">
                 <div>
-                    <div className="flex items-center gap-2 text-white/55">
-                        <Award size={17} className="text-[#F46717]" />
-                        <p className="text-sm font-medium">Badges</p>
+                    <div className="flex items-center gap-2 text-white/50">
+                        <Award size={16} className="text-orange-500" />
+                        <p className="text-xs font-bold uppercase tracking-wider">Badges Earned</p>
                     </div>
-                    <h2 className="mt-2 text-2xl font-semibold">{badges.length}</h2>
+                    <h2 className="mt-1 text-2xl font-black">{badges.length}</h2>
                 </div>
-                <button
-                    type="button"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/8 text-white/70 transition hover:bg-white/15 hover:text-white"
-                    aria-label="View badges"
-                >
-                    <ArrowRight size={20} />
-                </button>
+                {badges.length > 10 && compact && (
+                    <button
+                        type="button"
+                        className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-all cursor-pointer"
+                        aria-label="View badges"
+                    >
+                        <ArrowRight size={16} />
+                    </button>
+                )}
             </div>
 
             <BadgeGrid
                 badges={visibleBadges}
                 loading={loading}
-                emptyLabel="Complete daily activity, solve problems, and build streaks to earn badges."
+                emptyLabel="Solve all problems in a topic or build streaks to earn master badges!"
                 onBadgeClick={setSelectedBadge}
             />
 
