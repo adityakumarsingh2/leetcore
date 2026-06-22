@@ -66,10 +66,12 @@ The long-term product direction is an all-in-one preparation platform with pract
 - Contest page.
 - Responsive dashboard shell and left navigation.
 - Build and lint scripts.
+- DSA topic Practice route pages (dynamically loaded patterns and curated practice sets).
+- Progress tracking (real-time marking solved, XP accumulation, daily streaks, level calculations).
 
 ### Partially Implemented or Placeholder
 
-- Topic `Start` and `Practice` links exist in the DSA topic cards, but matching route pages are not currently implemented.
+- Topic `Start` link exists in the DSA topic cards, but matching route page is not currently implemented.
 - Operating System, Computer Networks, DBMS, and OOP cards are marked as work in progress.
 - Online Assessment and Contest pages are UI screens only; they do not currently submit or fetch real assessment/contest data.
 - Feedback, Report Bug, and Sponsor forms are UI-only; they do not currently submit to backend endpoints.
@@ -81,7 +83,6 @@ The long-term product direction is an all-in-one preparation platform with pract
 - Real problem pages.
 - Real practice editor.
 - Code execution integration.
-- Persistent progress tracking.
 - Backend APIs for feedback, bug reports, sponsor requests, contests, and assessments.
 - Admin dashboard.
 - Multi-language execution support.
@@ -415,6 +416,8 @@ POST /api/v1/auth/logout
 | `/dashboard/become-sponsor` | Protected | BecomeSponsorPage | Sponsor request UI |
 | `/dashboard/online-assessment` | Protected | OnlineAssessmentPage | OA practice UI |
 | `/dashboard/contest` | Protected | ContestPage | Contest UI |
+| `/dashboard/dsa/Practice/:topic` | Protected | Practice | Load pattern cards and solve progress for a topic |
+| `/dashboard/dsa/Practice/:topic/:pattern` | Protected | PatternQuestions | Curated practice questions with real-time solve toggling |
 
 ### Backend Routes
 
@@ -424,6 +427,9 @@ POST /api/v1/auth/logout
 | `GET` | `/api/v1/auth/github/callback` | No | Handle GitHub OAuth callback |
 | `POST` | `/api/v1/auth/logout` | No | Clear auth cookie |
 | `GET` | `/api/v1/auth/me` | Yes | Return logged-in user |
+| `GET` | `/api/v1/questions/patterns` | Optional | Get pattern titles, descriptions, and solve metrics for a topic |
+| `GET` | `/api/v1/questions` | Optional | Get annotated questions for a topic and pattern |
+| `POST` | `/api/v1/questions/toggle-solve` | Yes | Toggle solved status of a problem, adjust XP (+15 XP) and user streaks |
 
 ## Dashboard Pages
 
@@ -515,8 +521,8 @@ Each DSA topic card has:
 
 Important note:
 
-- The topic card links currently point to future pages.
-- Matching route components are not implemented yet.
+- The `Practice` links now route dynamically to the `/dashboard/dsa/Practice/:topic` view, loading pattern progress and specific question sheets.
+- The `Start` links currently point to future pages.
 
 ### Left Navigation
 
@@ -1074,6 +1080,28 @@ Indexes:
 - `username`
 - `email`
 
+### SolvedProblem Model
+
+File:
+
+```text
+Server/src/models/SolvedProblem.models.js
+```
+
+Schema fields:
+
+| Field | Type | Required | Notes |
+|---|---|---|---|
+| `userId` | ObjectId | Yes | Reference to the User |
+| `problemId` | String | Yes | ID of the solved problem (e.g. `arr_tp_001`) |
+| `topic` | String | Yes | Topic name normalized (e.g. `array`) |
+| `pattern` | String | Yes | Pattern name normalized (e.g. `two-pointers`) |
+| `solvedAt` | Date | No | Solved timestamp |
+
+Indexes:
+
+- `{ userId: 1, problemId: 1 }` (Unique compound index)
+
 ## API Endpoints
 
 ### Start GitHub Login
@@ -1252,14 +1280,13 @@ End-to-end:
 
 1. Many dashboard metrics are static demo values.
 2. Feedback, Report Bug, Sponsor, Online Assessment, and Contest pages do not submit to backend yet.
-3. DSA topic Start/Practice route pages are not implemented yet.
+3. DSA topic `Start` route pages are not implemented yet.
 4. C++ engine is not implemented.
-5. Server does not currently expose APIs for progress tracking.
-6. Server does not currently expose APIs for contests or assessments.
-7. Server test script is placeholder.
-8. Frontend route protection depends on successful `/auth/me` response.
-9. CORS allowed origins must match the exact frontend dev URL.
-10. GitHub OAuth requires correct callback configuration.
+5. Server does not currently expose APIs for contests or assessments.
+6. Server test script is placeholder.
+7. Frontend route protection depends on successful `/auth/me` response.
+8. CORS allowed origins must match the exact frontend dev URL.
+9. GitHub OAuth requires correct callback configuration.
 
 ## Future Improvements
 

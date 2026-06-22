@@ -1,7 +1,11 @@
 import { getDateRangeKeys, getYesterdayKey, toDateKey } from "./date.utils.js";
 
-export const calculateLevel = (xp = 0) => {
-    return Math.max(1, Math.floor(Math.sqrt(Math.max(xp, 0) / 100)) + 1);
+export const calculateLevel = (xp = 0, problemsSolved = 0) => {
+    let level = 1;
+    while (5 * level * (level + 1) <= problemsSolved) {
+        level++;
+    }
+    return level;
 };
 
 export const calculateActivityXp = ({ studyMinutes = 0, problemsSolved = 0, topicsLearned = [] }) => {

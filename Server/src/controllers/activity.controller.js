@@ -106,7 +106,7 @@ export const markDailyActivity = asyncHandler(async (req, res) => {
     user.stats.totalStudyMinutes += payload.studyMinutes;
     user.stats.totalProblemsSolved += payload.problemsSolved;
     user.xp += xpEarned;
-    user.level = calculateLevel(user.xp);
+    user.level = calculateLevel(user.xp, user.stats.totalProblemsSolved);
 
     const { startDate, endDate } = getRangeBounds(30, date);
     const activeDaysInWindow = await UserActivity.countDocuments({
@@ -151,7 +151,14 @@ export const getUserActivity = asyncHandler(async (req, res) => {
 export const getConsistencyData = asyncHandler(async (req, res) => {
     const userId = req.params.userId || req.user?.id;
     const days = Math.min(Math.max(Number(req.query.days) || 30, 1), 365);
-    const { startDate, endDate } = getRangeBounds(days);
+    
+    let endDateKey = toDateKey();
+    const year = Number(req.query.year);
+    if (year && year < new Date().getFullYear()) {
+        endDateKey = `${year}-12-31`;
+    }
+    
+    const { startDate, endDate } = getRangeBounds(days, endDateKey);
 
     const user = await getUserOrThrow(userId);
     const activities = await UserActivity.find({

@@ -87,7 +87,7 @@ export const awardBadgeToUser = asyncHandler(async (req, res) => {
 
     user.badges.push({ badgeId });
     user.xp += badge.xpReward || 0;
-    user.level = calculateLevel(user.xp);
+    user.level = calculateLevel(user.xp, user.stats.totalProblemsSolved);
     await user.save();
 
     const updatedUser = await User.findById(userId)
@@ -144,7 +144,7 @@ export const removeBadgeFromUser = asyncHandler(async (req, res) => {
     }
 
     user.xp = Math.max(0, user.xp - (badge.xpReward || 0));
-    user.level = calculateLevel(user.xp);
+    user.level = calculateLevel(user.xp, user.stats.totalProblemsSolved);
     await user.save();
 
     return res.status(200).json({

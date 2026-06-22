@@ -7,7 +7,8 @@ import authMiddleware from "../middleware/auth.middleware.js";
 import SolvedProblem from "../models/SolvedProblem.models.js";
 import User from "../models/User.models.js";
 import UserActivity from "../models/useractivity.models.js";
-import { toDateKey, getRangeBounds } from "../utils/date.utils.js";
+import Badge from "../models/Badge.models.js";
+import { toDateKey, getRangeBounds, getYesterdayKey } from "../utils/date.utils.js";
 import { calculateDailyConsistencyScore, getNextStreak, calculateLevel } from "../utils/gamification.utils.js";
 
 const router = express.Router();
@@ -83,6 +84,97 @@ const patternMetadata = {
     }
 };
 
+// Helper function to check and award badges to the user
+async function checkAndAwardBadges(user, topic, pattern) {
+    const userId = user._id;
+    const normalizedTopic = normalizeTopicName(topic);
+
+    // 1. Check Topic Completion Badge
+    try {
+        const jsonPath = path.join(__dirname, "..", "data", "questions", `${normalizedTopic}question.json`);
+        if (fs.existsSync(jsonPath)) {
+            const totalCount = JSON.parse(fs.readFileSync(jsonPath, "utf-8")).length;
+            const solvedCount = await SolvedProblem.countDocuments({ userId, topic: normalizedTopic });
+
+            if (solvedCount === totalCount && totalCount > 0) {
+                // User has completed the topic!
+                const badgeSlug = `${normalizedTopic}-completion`;
+                let badge = await Badge.findOne({ slug: badgeSlug });
+                if (!badge) {
+                    const topicTitle = topic.charAt(0).toUpperCase() + topic.slice(1);
+                    badge = await Badge.create({
+                        name: `${topicTitle} Master`,
+                        slug: badgeSlug,
+                        description: `Completed all curated problems in the ${topicTitle} topic!`,
+                        category: "problem-solving",
+                        rarity: "epic",
+                        xpReward: 500,
+                        image: `/badges/${normalizedTopic}-master.png`
+                    });
+                }
+
+                // Award to user if not already earned
+                const alreadyEarned = user.badges.some(b => b.badgeId.toString() === badge._id.toString());
+                if (!alreadyEarned) {
+                    user.badges.push({ badgeId: badge._id, earnedAt: new Date() });
+                    user.xp += badge.xpReward || 0;
+                    console.log(`Awarded topic completion badge "${badge.name}" to ${user.username}`);
+                }
+            }
+        }
+    } catch (err) {
+        console.error("Error awarding topic completion badge:", err);
+    }
+
+    // 2. Check Streak Badges (7 days, 50 days)
+    const currentStreak = user.stats?.currentStreak || 0;
+    try {
+        if (currentStreak >= 7) {
+            let badge = await Badge.findOne({ slug: "streak-7-days" });
+            if (!badge) {
+                badge = await Badge.create({
+                    name: "7 Days Streak",
+                    slug: "streak-7-days",
+                    description: "Stay active and solve questions for 7 days in a row!",
+                    category: "streak",
+                    rarity: "rare",
+                    xpReward: 250,
+                    image: "/badges/seven-day-flame.png"
+                });
+            }
+            const alreadyEarned = user.badges.some(b => b.badgeId.toString() === badge._id.toString());
+            if (!alreadyEarned) {
+                user.badges.push({ badgeId: badge._id, earnedAt: new Date() });
+                user.xp += badge.xpReward || 0;
+                console.log(`Awarded 7 Days Streak badge to ${user.username}`);
+            }
+        }
+
+        if (currentStreak >= 50) {
+            let badge = await Badge.findOne({ slug: "streak-50-days" });
+            if (!badge) {
+                badge = await Badge.create({
+                    name: "50 Days Streak",
+                    slug: "streak-50-days",
+                    description: "Incredible dedication! Stay active and solve questions for 50 days in a row!",
+                    category: "streak",
+                    rarity: "legendary",
+                    xpReward: 1000,
+                    image: "/badges/streak-50-days.png"
+                });
+            }
+            const alreadyEarned = user.badges.some(b => b.badgeId.toString() === badge._id.toString());
+            if (!alreadyEarned) {
+                user.badges.push({ badgeId: badge._id, earnedAt: new Date() });
+                user.xp += badge.xpReward || 0;
+                console.log(`Awarded 50 Days Streak badge to ${user.username}`);
+            }
+        }
+    } catch (err) {
+        console.error("Error awarding streak badges:", err);
+    }
+}
+
 // Route to get list of patterns and counts for a topic
 router.get("/patterns", optionalAuth, async (req, res) => {
     try {
@@ -140,6 +232,83 @@ router.get("/patterns", optionalAuth, async (req, res) => {
 
     } catch (error) {
         console.error("Error in get patterns:", error);
+        return res.status(500).json({ success: false, message: "Internal server error" });
+    }
+});
+
+// Route to get topic progress for profile dashboard
+router.get("/progress", optionalAuth, async (req, res) => {
+    try {
+        const userId = req.user?.id;
+
+        // Perform active daily streak reset check if user is logged in
+        if (userId) {
+            const user = await User.findById(userId);
+            if (user && user.stats) {
+                const today = toDateKey();
+                const yesterday = getYesterdayKey(today);
+                if (user.stats.lastActiveDate && user.stats.lastActiveDate !== today && user.stats.lastActiveDate !== yesterday) {
+                    user.stats.currentStreak = 0;
+                    await user.save();
+                }
+            }
+        }
+
+        const topics = [
+            { name: "Arrays", topic: "Array" },
+            { name: "Strings", topic: "String" },
+            { name: "Hashing", topic: "Hashing" },
+            { name: "Binary Search", topic: "Binary Search" },
+            { name: "Linked List", topic: "Linked List" },
+            { name: "Stack", topic: "Stack" },
+            { name: "Queue", topic: "Queue" },
+            { name: "Recursion", topic: "Recursion" },
+            { name: "Backtracking", topic: "Backtracking" },
+            { name: "Trees", topic: "Trees" },
+            { name: "Binary Search Tree", topic: "Binary Search Tree" },
+            { name: "Heap / PQ", topic: "Heap / Priority Queue" },
+            { name: "Graphs", topic: "Graphs" },
+            { name: "Trie", topic: "Trie" },
+            { name: "Greedy", topic: "Greedy" },
+            { name: "Dynamic Programming", topic: "Dynamic Programming" },
+            { name: "Bit Manipulation", topic: "Bit Manipulation" }
+        ];
+
+        const results = [];
+        let totalQuestionsAll = 0;
+        let totalSolvedAll = 0;
+
+        for (const t of topics) {
+            const normTopic = normalizeTopicName(t.topic);
+            const jsonPath = path.join(__dirname, "..", "data", "questions", `${normTopic}question.json`);
+            let total = 180; // default fallback
+            if (fs.existsSync(jsonPath)) {
+                total = JSON.parse(fs.readFileSync(jsonPath, "utf-8")).length;
+            }
+            totalQuestionsAll += total;
+
+            let solved = 0;
+            if (userId) {
+                solved = await SolvedProblem.countDocuments({ userId, topic: normTopic });
+            }
+            totalSolvedAll += solved;
+
+            results.push({
+                name: t.name,
+                topic: t.topic,
+                solved,
+                total
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            topics: results,
+            totalQuestions: totalQuestionsAll,
+            totalSolved: totalSolvedAll
+        });
+    } catch (err) {
+        console.error("Error in progress:", err);
         return res.status(500).json({ success: false, message: "Internal server error" });
     }
 });
@@ -279,7 +448,14 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
 
         user.stats.totalProblemsSolved = Math.max((user.stats.totalProblemsSolved || 0) + deltaSolved, 0);
         user.xp = Math.max((user.xp || 0) + xpDelta, 0);
-        user.level = calculateLevel(user.xp);
+
+        // Call checkAndAwardBadges to award topic-completion or streak badges
+        if (solved) {
+            await checkAndAwardBadges(user, topic, pattern);
+        }
+
+        // Recalculate user level using the problemsSolved formula
+        user.level = calculateLevel(user.xp, user.stats.totalProblemsSolved);
 
         // Recalculate 30-day consistency window
         const { startDate, endDate } = getRangeBounds(30, date);
