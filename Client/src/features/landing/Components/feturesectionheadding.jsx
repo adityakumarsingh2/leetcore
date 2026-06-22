@@ -32,7 +32,7 @@ function FeatureHeading() {
 
                             <br />
 
-                            <span className="text-[#F46717]">
+                            <span className="text-orange-400">
                                 Zyada Ab Real
                             </span>
 
@@ -73,7 +73,7 @@ function FeatureHeading() {
 
                             <div className="rounded-2xl  p-4">
                                 <h3 className="text-white text-3xl sm:text-4xl font-bold">
-                                    10K+
+                                    40+
                                 </h3>
 
                                 <p className="text-[#8f8f9a] mt-2 text-sm sm:text-base">

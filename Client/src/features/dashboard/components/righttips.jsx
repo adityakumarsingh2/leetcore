@@ -1,101 +1,63 @@
-import {
-    Play,
-    Flame,
-    Trophy,
-} from "lucide-react";
+import { Megaphone } from "lucide-react";
 
-function RightTips() {
-
-    const runs = [
-        {
-            icon: Play,
-            text: "Start solving your first DSA question today.",
-        },
-        {
-            icon: Flame,
-            text: "Maintain your daily coding streak consistently.",
-        },
-        {
-            icon: Trophy,
-            text: "Complete challenges and unlock achievements.",
-        }
-    ];
-
+function RightAds() {
     return (
-
         <div
             className="
-                relative
                 w-[94%]
                 mx-auto
                 rounded-3xl
                 border
                 border-white/10
                 bg-[#111113]
-                p-5
-                sm:p-6
-                overflow-hidden
+                p-6
                 shadow-[0_16px_45px_rgba(0,0,0,0.18)]
             "
         >
-
-
-
-            {/* Heading */}
-            <div className="relative z-10 mb-6">
-
-                <h2
-                    className="
-                        text-xl
-                        font-semibold
-                        text-white
-                    "
-                >
-                    Run Your Ads
-                </h2>
-
-
-
-            </div>
+            {/* Icon */}
+            {/* <div className="w-12 h-12 rounded-2xl bg-[#F46717]/10 flex items-center justify-center mb-5">
+                <Megaphone
+                    size={22}
+                    className="text-[#F46717]"
+                />
+            </div> */}
 
             {/* Content */}
-            <div
+            <div className="space-y-2">
+                <h2 className="text-lg font-semibold text-white">
+                    Advertise on LeetCore
+                </h2>
+
+                <p className="text-sm leading-relaxed text-neutral-400">
+                    Reach students preparing for placements,
+                    interviews, and technical careers.
+                </p>
+            </div>
+
+            {/* CTA */}
+            <button
                 className="
-                    relative
-                    z-10
-                    flex
-                    flex-col
-                    gap-3
+                    mt-6
+                    w-full
+                    rounded-2xl
+                    bg-orange-400
+                    text-black
+                    font-semibold
+                    py-3
+                    text-sm
+                    font-medium
+                    
+                    transition-all
+                    duration-300
+                    
+                    active:scale-[0.98]
+                    cursor-pointer
                 "
             >
-
-
-                {/* CTA Button */}
-                <button
-                    className="
-                        mt-2
-                        w-full
-                        rounded-2xl
-                        bg-[#F46717]
-                        py-3
-                        text-md
-                        font-medium
-                        text-white
-                        transition-all
-                        duration-300
-                        hover:bg-[#ff7d34]
-                        active:scale-[0.98]
-                        cursor-pointer
-                    "
-                >
-                    Run Your Ad
-                </button>
-
-            </div>
+                Run Your Advertise
+            </button>
         </div>
-
     );
-
 }
 
-export default RightTips;
+export default RightAds;

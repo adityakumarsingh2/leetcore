@@ -5,6 +5,7 @@ import activityRouter from "./routes/activity.route.js";
 import feedbackRouter from "./routes/feedback.route.js";
 import bugRouter from "./routes/bug.route.js";
 import sponsorshipRouter from "./routes/sponsorship.route.js";
+import questionRouter from "./routes/question.route.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import errorMiddleware from "./middleware/error.middleware.js";
@@ -49,6 +50,7 @@ app.use("/api/v1/activity", activityRouter);
 app.use("/api/v1/feedback", feedbackRouter);
 app.use("/api/v1/bugs", bugRouter);
 app.use("/api/v1/sponsorship", sponsorshipRouter);
+app.use("/api/v1/questions", questionRouter);
 
 // Compatibility aliases for clients following the unversioned route examples.
 app.use("/api/badges", badgeRouter);
@@ -56,6 +58,7 @@ app.use("/api/activity", activityRouter);
 app.use("/api/feedback", feedbackRouter);
 app.use("/api/bugs", bugRouter);
 app.use("/api/sponsorship", sponsorshipRouter);
+app.use("/api/questions", questionRouter);
 
 app.use((req, res) => {
     res.status(404).json({

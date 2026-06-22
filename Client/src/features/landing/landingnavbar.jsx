@@ -16,10 +16,10 @@ function LandingNavbar({ onLoginClick }) {
             <div
                 className="
           w-full
-          max-w-5xl
+          max-w-6xl
           min-h-[58px]
           mx-auto
-          rounded-2xl
+          rounded-xl
           flex
           items-center
           justify-between
@@ -45,16 +45,16 @@ function LandingNavbar({ onLoginClick }) {
                     <button
                         onClick={onLoginClick}
                         className="
-              bg-[#F46717]
+              bg-orange-400
               cursor-pointer
-              min-w-[104px]
-              sm:min-w-[140px]
+              min-w-[100px]
+              sm:min-w-[130px]
               h-11
               flex
               items-center
               justify-center
-              text-white
-              rounded-xl
+              text-black
+              rounded-lg
               font-semibold
               active:scale-[0.98]
               transition-all

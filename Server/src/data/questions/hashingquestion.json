@@ -1,0 +1,3423 @@
+[
+  {
+    "_id": "hash_tp_001",
+    "title": "Minimum Cost Two Pointers for Hashing 1",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2838,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-hashing-1/",
+    "companies": [
+      "Twitter",
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_tp_002",
+    "title": "K-th Distance Two Pointers for Hashing 2",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2017,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-two-pointers-for-hashing-2/",
+    "companies": [
+      "Bloomberg",
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_tp_003",
+    "title": "Optimal Two Pointers for Hashing 3",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2606,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-two-pointers-for-hashing-3/",
+    "companies": [
+      "Twitter",
+      "Uber",
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_tp_004",
+    "title": "Minimum Cost Two Pointers for Hashing 4",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1583,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-hashing-4/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_tp_005",
+    "title": "Optimal Two Pointers for Hashing 5",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2237,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-two-pointers-for-hashing-5/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_tp_006",
+    "title": "Cyclic Two Pointers for Hashing 6",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1777,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-two-pointers-for-hashing-6/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_tp_007",
+    "title": "Subarray Two Pointers for Hashing 7",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1556,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-two-pointers-for-hashing-7/",
+    "companies": [
+      "Stripes",
+      "Atlassian",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_tp_008",
+    "title": "K-th Distance Two Pointers for Hashing 8",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2668,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-two-pointers-for-hashing-8/",
+    "companies": [
+      "Bloomberg",
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_tp_009",
+    "title": "Optimal Two Pointers for Hashing 9",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1628,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-two-pointers-for-hashing-9/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_tp_010",
+    "title": "Longest Two Pointers for Hashing 10",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2272,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-two-pointers-for-hashing-10/",
+    "companies": [
+      "Meta",
+      "Stripes",
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_tp_011",
+    "title": "Minimum Cost Two Pointers for Hashing 11",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2170,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-hashing-11/",
+    "companies": [
+      "Meta",
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_tp_012",
+    "title": "K-th Distance Two Pointers for Hashing 12",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2779,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-two-pointers-for-hashing-12/",
+    "companies": [
+      "Amazon",
+      "Salesforce",
+      "Uber"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_tp_013",
+    "title": "Optimal Two Pointers for Hashing 13",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2892,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-two-pointers-for-hashing-13/",
+    "companies": [
+      "Stripes",
+      "Google",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_tp_014",
+    "title": "Shortest Two Pointers for Hashing 14",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2830,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-two-pointers-for-hashing-14/",
+    "companies": [
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_tp_015",
+    "title": "Count of Two Pointers for Hashing 15",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1742,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-two-pointers-for-hashing-15/",
+    "companies": [
+      "Salesforce",
+      "Google",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_tp_016",
+    "title": "Subsequence Two Pointers for Hashing 16",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1291,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-two-pointers-for-hashing-16/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_tp_017",
+    "title": "Count of Two Pointers for Hashing 17",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2592,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-two-pointers-for-hashing-17/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_tp_018",
+    "title": "Merge Two Pointers for Hashing 18",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1433,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-pointers-for-hashing-18/",
+    "companies": [
+      "Stripes",
+      "Salesforce",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_tp_019",
+    "title": "Maximal Two Pointers for Hashing 19",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2237,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-two-pointers-for-hashing-19/",
+    "companies": [
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_tp_020",
+    "title": "Subsequence Two Pointers for Hashing 20",
+    "topic": "hashing",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2571,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-two-pointers-for-hashing-20/",
+    "companies": [
+      "LinkedIn",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_sw_001",
+    "title": "Search Sliding Window for Hashing 1",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1003,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-hashing-1/",
+    "companies": [
+      "Adobe",
+      "Atlassian",
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_sw_002",
+    "title": "Subsequence Sliding Window for Hashing 2",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2190,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-sliding-window-for-hashing-2/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_sw_003",
+    "title": "Merge Sliding Window for Hashing 3",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2203,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-sliding-window-for-hashing-3/",
+    "companies": [
+      "Atlassian",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_sw_004",
+    "title": "Shortest Sliding Window for Hashing 4",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2570,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sliding-window-for-hashing-4/",
+    "companies": [
+      "Apple",
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_sw_005",
+    "title": "Validate Sliding Window for Hashing 5",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2785,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-sliding-window-for-hashing-5/",
+    "companies": [
+      "Oracle",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_sw_006",
+    "title": "Shortest Sliding Window for Hashing 6",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2256,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sliding-window-for-hashing-6/",
+    "companies": [
+      "Amazon",
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_sw_007",
+    "title": "K-th Distance Sliding Window for Hashing 7",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2899,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sliding-window-for-hashing-7/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_sw_008",
+    "title": "Validate Sliding Window for Hashing 8",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2957,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-sliding-window-for-hashing-8/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_sw_009",
+    "title": "Merge Sliding Window for Hashing 9",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1017,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-sliding-window-for-hashing-9/",
+    "companies": [
+      "Stripes",
+      "Apple",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_sw_010",
+    "title": "Maximal Sliding Window for Hashing 10",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1227,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-hashing-10/",
+    "companies": [
+      "Microsoft",
+      "Atlassian",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_sw_011",
+    "title": "Maximal Sliding Window for Hashing 11",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1347,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-hashing-11/",
+    "companies": [
+      "Bloomberg",
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_sw_012",
+    "title": "Maximal Sliding Window for Hashing 12",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1998,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-hashing-12/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_sw_013",
+    "title": "Cyclic Sliding Window for Hashing 13",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2482,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sliding-window-for-hashing-13/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_sw_014",
+    "title": "Shortest Sliding Window for Hashing 14",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2196,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sliding-window-for-hashing-14/",
+    "companies": [
+      "Stripes",
+      "Uber",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_sw_015",
+    "title": "Minimum Cost Sliding Window for Hashing 15",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2372,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sliding-window-for-hashing-15/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_sw_016",
+    "title": "K-th Distance Sliding Window for Hashing 16",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2657,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sliding-window-for-hashing-16/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_sw_017",
+    "title": "Count of Sliding Window for Hashing 17",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2437,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sliding-window-for-hashing-17/",
+    "companies": [
+      "Bloomberg",
+      "Amazon",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_sw_018",
+    "title": "Cyclic Sliding Window for Hashing 18",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1417,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sliding-window-for-hashing-18/",
+    "companies": [
+      "Meta",
+      "Bloomberg",
+      "Uber"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_sw_019",
+    "title": "Search Sliding Window for Hashing 19",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1247,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-hashing-19/",
+    "companies": [
+      "Meta",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_sw_020",
+    "title": "Balanced Sliding Window for Hashing 20",
+    "topic": "hashing",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2900,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sliding-window-for-hashing-20/",
+    "companies": [
+      "Netflix",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ps_001",
+    "title": "Balanced Prefix Sum for Hashing 1",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2920,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-prefix-sum-for-hashing-1/",
+    "companies": [
+      "Google",
+      "Tencent",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ps_002",
+    "title": "Shortest Prefix Sum for Hashing 2",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2557,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-prefix-sum-for-hashing-2/",
+    "companies": [
+      "Salesforce",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ps_003",
+    "title": "Cyclic Prefix Sum for Hashing 3",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1446,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-prefix-sum-for-hashing-3/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_ps_004",
+    "title": "Validate Prefix Sum for Hashing 4",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2080,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-prefix-sum-for-hashing-4/",
+    "companies": [
+      "Twilio",
+      "Meta",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ps_005",
+    "title": "Search Prefix Sum for Hashing 5",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1482,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-hashing-5/",
+    "companies": [
+      "Adobe",
+      "Microsoft",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_ps_006",
+    "title": "K-th Distance Prefix Sum for Hashing 6",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2243,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-prefix-sum-for-hashing-6/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ps_007",
+    "title": "Search Prefix Sum for Hashing 7",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1231,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-hashing-7/",
+    "companies": [
+      "Twitter",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_ps_008",
+    "title": "Optimal Prefix Sum for Hashing 8",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2182,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-hashing-8/",
+    "companies": [
+      "Meta",
+      "Apple",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_ps_009",
+    "title": "Subarray Prefix Sum for Hashing 9",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2960,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-prefix-sum-for-hashing-9/",
+    "companies": [
+      "Microsoft",
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ps_010",
+    "title": "Search Prefix Sum for Hashing 10",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1310,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-hashing-10/",
+    "companies": [
+      "Google",
+      "Twilio"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ps_011",
+    "title": "Subsequence Prefix Sum for Hashing 11",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2941,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-prefix-sum-for-hashing-11/",
+    "companies": [
+      "Apple",
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ps_012",
+    "title": "Optimal Prefix Sum for Hashing 12",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1245,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-hashing-12/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ps_013",
+    "title": "Merge Prefix Sum for Hashing 13",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2188,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-prefix-sum-for-hashing-13/",
+    "companies": [
+      "Tencent",
+      "Airbnb",
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ps_014",
+    "title": "K-th Distance Prefix Sum for Hashing 14",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1412,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-prefix-sum-for-hashing-14/",
+    "companies": [
+      "Bloomberg",
+      "Twilio"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ps_015",
+    "title": "Count of Prefix Sum for Hashing 15",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2664,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-prefix-sum-for-hashing-15/",
+    "companies": [
+      "Adobe",
+      "Stripes",
+      "Uber"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_ps_016",
+    "title": "Optimal Prefix Sum for Hashing 16",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2101,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-hashing-16/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ps_017",
+    "title": "Merge Prefix Sum for Hashing 17",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1708,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-prefix-sum-for-hashing-17/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_ps_018",
+    "title": "Optimal Prefix Sum for Hashing 18",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1531,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-hashing-18/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_ps_019",
+    "title": "Optimal Prefix Sum for Hashing 19",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2323,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-hashing-19/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ps_020",
+    "title": "Search Prefix Sum for Hashing 20",
+    "topic": "hashing",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1246,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-hashing-20/",
+    "companies": [
+      "Microsoft",
+      "Oracle",
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_bs_001",
+    "title": "Continuous Binary Search for Hashing 1",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1480,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-binary-search-for-hashing-1/",
+    "companies": [
+      "Stripes",
+      "Twitter"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_bs_002",
+    "title": "Optimal Binary Search for Hashing 2",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2501,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-binary-search-for-hashing-2/",
+    "companies": [
+      "Atlassian",
+      "Google"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_bs_003",
+    "title": "K-th Distance Binary Search for Hashing 3",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2573,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-binary-search-for-hashing-3/",
+    "companies": [
+      "Airbnb",
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_bs_004",
+    "title": "Maximal Binary Search for Hashing 4",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1837,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-binary-search-for-hashing-4/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_bs_005",
+    "title": "Minimum Cost Binary Search for Hashing 5",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2016,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-binary-search-for-hashing-5/",
+    "companies": [
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_bs_006",
+    "title": "Subsequence Binary Search for Hashing 6",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2433,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-binary-search-for-hashing-6/",
+    "companies": [
+      "Stripes",
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_bs_007",
+    "title": "Validate Binary Search for Hashing 7",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2072,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-binary-search-for-hashing-7/",
+    "companies": [
+      "Meta",
+      "Microsoft",
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_bs_008",
+    "title": "Optimal Binary Search for Hashing 8",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1026,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-binary-search-for-hashing-8/",
+    "companies": [
+      "Bloomberg",
+      "Amazon",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_bs_009",
+    "title": "Subsequence Binary Search for Hashing 9",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1769,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-binary-search-for-hashing-9/",
+    "companies": [
+      "Apple",
+      "Meta",
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_bs_010",
+    "title": "Subsequence Binary Search for Hashing 10",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1161,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-binary-search-for-hashing-10/",
+    "companies": [
+      "Adobe",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_bs_011",
+    "title": "Merge Binary Search for Hashing 11",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1946,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-binary-search-for-hashing-11/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_bs_012",
+    "title": "Search Binary Search for Hashing 12",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2775,
+    "leetcodeUrl": "https://leetcode.com/problems/search-binary-search-for-hashing-12/",
+    "companies": [
+      "Airbnb",
+      "Twilio",
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_bs_013",
+    "title": "Optimal Binary Search for Hashing 13",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2029,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-binary-search-for-hashing-13/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_bs_014",
+    "title": "Longest Binary Search for Hashing 14",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1329,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-binary-search-for-hashing-14/",
+    "companies": [
+      "Amazon",
+      "Meta",
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_bs_015",
+    "title": "Continuous Binary Search for Hashing 15",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2364,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-binary-search-for-hashing-15/",
+    "companies": [
+      "Microsoft",
+      "Salesforce",
+      "Uber"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_bs_016",
+    "title": "Merge Binary Search for Hashing 16",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2706,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-binary-search-for-hashing-16/",
+    "companies": [
+      "Twitter",
+      "Google"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_bs_017",
+    "title": "Cyclic Binary Search for Hashing 17",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2998,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-binary-search-for-hashing-17/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_bs_018",
+    "title": "Minimum Cost Binary Search for Hashing 18",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2737,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-binary-search-for-hashing-18/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_bs_019",
+    "title": "K-th Distance Binary Search for Hashing 19",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1194,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-binary-search-for-hashing-19/",
+    "companies": [
+      "LinkedIn",
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_bs_020",
+    "title": "Maximal Binary Search for Hashing 20",
+    "topic": "hashing",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2982,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-binary-search-for-hashing-20/",
+    "companies": [
+      "Meta",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_mt_001",
+    "title": "Merge Matrix for Hashing 1",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2890,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-matrix-for-hashing-1/",
+    "companies": [
+      "Amazon",
+      "ByteDance",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_mt_002",
+    "title": "Minimum Cost Matrix for Hashing 2",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2106,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-matrix-for-hashing-2/",
+    "companies": [
+      "Tencent",
+      "Meta",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_mt_003",
+    "title": "K-th Distance Matrix for Hashing 3",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1662,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-matrix-for-hashing-3/",
+    "companies": [
+      "Microsoft",
+      "Oracle",
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_mt_004",
+    "title": "Minimum Cost Matrix for Hashing 4",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1577,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-matrix-for-hashing-4/",
+    "companies": [
+      "Meta",
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_mt_005",
+    "title": "Longest Matrix for Hashing 5",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2380,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-matrix-for-hashing-5/",
+    "companies": [
+      "Adobe",
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_mt_006",
+    "title": "Merge Matrix for Hashing 6",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1851,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-matrix-for-hashing-6/",
+    "companies": [
+      "Twitter"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_mt_007",
+    "title": "K-th Distance Matrix for Hashing 7",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1639,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-matrix-for-hashing-7/",
+    "companies": [
+      "Airbnb",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_mt_008",
+    "title": "Minimum Cost Matrix for Hashing 8",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2550,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-matrix-for-hashing-8/",
+    "companies": [
+      "Stripes",
+      "Bloomberg",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_mt_009",
+    "title": "Search Matrix for Hashing 9",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2889,
+    "leetcodeUrl": "https://leetcode.com/problems/search-matrix-for-hashing-9/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_mt_010",
+    "title": "Shortest Matrix for Hashing 10",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2746,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-matrix-for-hashing-10/",
+    "companies": [
+      "Twitter",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_mt_011",
+    "title": "Merge Matrix for Hashing 11",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1446,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-matrix-for-hashing-11/",
+    "companies": [
+      "Microsoft",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_mt_012",
+    "title": "Optimal Matrix for Hashing 12",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1434,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-matrix-for-hashing-12/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_mt_013",
+    "title": "Search Matrix for Hashing 13",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1387,
+    "leetcodeUrl": "https://leetcode.com/problems/search-matrix-for-hashing-13/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_mt_014",
+    "title": "Balanced Matrix for Hashing 14",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2616,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-matrix-for-hashing-14/",
+    "companies": [
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_mt_015",
+    "title": "Search Matrix for Hashing 15",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2160,
+    "leetcodeUrl": "https://leetcode.com/problems/search-matrix-for-hashing-15/",
+    "companies": [
+      "Oracle",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_mt_016",
+    "title": "Optimal Matrix for Hashing 16",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2036,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-matrix-for-hashing-16/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_mt_017",
+    "title": "Validate Matrix for Hashing 17",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1675,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-matrix-for-hashing-17/",
+    "companies": [
+      "Amazon",
+      "Salesforce",
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_mt_018",
+    "title": "Count of Matrix for Hashing 18",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1313,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-matrix-for-hashing-18/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_mt_019",
+    "title": "Shortest Matrix for Hashing 19",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2877,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-matrix-for-hashing-19/",
+    "companies": [
+      "ByteDance",
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_mt_020",
+    "title": "Count of Matrix for Hashing 20",
+    "topic": "hashing",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2252,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-matrix-for-hashing-20/",
+    "companies": [
+      "Meta",
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_srt_001",
+    "title": "Minimum Cost Sorting for Hashing 1",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2385,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sorting-for-hashing-1/",
+    "companies": [
+      "Google",
+      "ByteDance",
+      "Twitter"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_srt_002",
+    "title": "Count of Sorting for Hashing 2",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2009,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sorting-for-hashing-2/",
+    "companies": [
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_srt_003",
+    "title": "Minimum Cost Sorting for Hashing 3",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2324,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sorting-for-hashing-3/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_srt_004",
+    "title": "Count of Sorting for Hashing 4",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2843,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sorting-for-hashing-4/",
+    "companies": [
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_srt_005",
+    "title": "Shortest Sorting for Hashing 5",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1194,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sorting-for-hashing-5/",
+    "companies": [
+      "Twitter",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_006",
+    "title": "Minimum Cost Sorting for Hashing 6",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2365,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sorting-for-hashing-6/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_srt_007",
+    "title": "Search Sorting for Hashing 7",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2616,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sorting-for-hashing-7/",
+    "companies": [
+      "Oracle",
+      "Netflix",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_008",
+    "title": "Cyclic Sorting for Hashing 8",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1318,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sorting-for-hashing-8/",
+    "companies": [
+      "Netflix",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_009",
+    "title": "Count of Sorting for Hashing 9",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1645,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sorting-for-hashing-9/",
+    "companies": [
+      "Twilio",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_srt_010",
+    "title": "Shortest Sorting for Hashing 10",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2390,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sorting-for-hashing-10/",
+    "companies": [
+      "Microsoft",
+      "LinkedIn",
+      "ByteDance"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_011",
+    "title": "Count of Sorting for Hashing 11",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2729,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sorting-for-hashing-11/",
+    "companies": [
+      "LinkedIn",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_srt_012",
+    "title": "Validate Sorting for Hashing 12",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1627,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-sorting-for-hashing-12/",
+    "companies": [
+      "Tencent",
+      "Twilio"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_srt_013",
+    "title": "Continuous Sorting for Hashing 13",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1463,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sorting-for-hashing-13/",
+    "companies": [
+      "LinkedIn",
+      "Apple",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_014",
+    "title": "Merge Sorting for Hashing 14",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2377,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-sorting-for-hashing-14/",
+    "companies": [
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_015",
+    "title": "Continuous Sorting for Hashing 15",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1743,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sorting-for-hashing-15/",
+    "companies": [
+      "Apple",
+      "ByteDance",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_srt_016",
+    "title": "Optimal Sorting for Hashing 16",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1795,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sorting-for-hashing-16/",
+    "companies": [
+      "Uber",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_017",
+    "title": "Optimal Sorting for Hashing 17",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1507,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sorting-for-hashing-17/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_srt_018",
+    "title": "Continuous Sorting for Hashing 18",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2424,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sorting-for-hashing-18/",
+    "companies": [
+      "Twilio",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_srt_019",
+    "title": "Subarray Sorting for Hashing 19",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1719,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-sorting-for-hashing-19/",
+    "companies": [
+      "Salesforce",
+      "Twitter"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_srt_020",
+    "title": "Continuous Sorting for Hashing 20",
+    "topic": "hashing",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1114,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sorting-for-hashing-20/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_kd_001",
+    "title": "Merge Kadane’s Algorithm for Hashing 1",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2485,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-kadane-s-algorithm-for-hashing-1/",
+    "companies": [
+      "Google",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_kd_002",
+    "title": "Count of Kadane’s Algorithm for Hashing 2",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1808,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-kadane-s-algorithm-for-hashing-2/",
+    "companies": [
+      "Meta",
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_kd_003",
+    "title": "Minimum Cost Kadane’s Algorithm for Hashing 3",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2050,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-kadane-s-algorithm-for-hashing-3/",
+    "companies": [
+      "Twitter",
+      "ByteDance",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_kd_004",
+    "title": "K-th Distance Kadane’s Algorithm for Hashing 4",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2968,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-kadane-s-algorithm-for-hashing-4/",
+    "companies": [
+      "Microsoft",
+      "Atlassian",
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_kd_005",
+    "title": "Longest Kadane’s Algorithm for Hashing 5",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2323,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-kadane-s-algorithm-for-hashing-5/",
+    "companies": [
+      "ByteDance",
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_kd_006",
+    "title": "Search Kadane’s Algorithm for Hashing 6",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2892,
+    "leetcodeUrl": "https://leetcode.com/problems/search-kadane-s-algorithm-for-hashing-6/",
+    "companies": [
+      "Netflix",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_kd_007",
+    "title": "Subarray Kadane’s Algorithm for Hashing 7",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2797,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-kadane-s-algorithm-for-hashing-7/",
+    "companies": [
+      "LinkedIn",
+      "Atlassian",
+      "Salesforce"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_kd_008",
+    "title": "Count of Kadane’s Algorithm for Hashing 8",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2674,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-kadane-s-algorithm-for-hashing-8/",
+    "companies": [
+      "LinkedIn",
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_kd_009",
+    "title": "K-th Distance Kadane’s Algorithm for Hashing 9",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1055,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-kadane-s-algorithm-for-hashing-9/",
+    "companies": [
+      "ByteDance",
+      "Adobe",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_kd_010",
+    "title": "Subarray Kadane’s Algorithm for Hashing 10",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2422,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-kadane-s-algorithm-for-hashing-10/",
+    "companies": [
+      "Tencent",
+      "Bloomberg",
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_kd_011",
+    "title": "Count of Kadane’s Algorithm for Hashing 11",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2690,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-kadane-s-algorithm-for-hashing-11/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_kd_012",
+    "title": "Maximal Kadane’s Algorithm for Hashing 12",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2195,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-kadane-s-algorithm-for-hashing-12/",
+    "companies": [
+      "ByteDance",
+      "Meta",
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_kd_013",
+    "title": "K-th Distance Kadane’s Algorithm for Hashing 13",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2958,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-kadane-s-algorithm-for-hashing-13/",
+    "companies": [
+      "Adobe",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_kd_014",
+    "title": "Optimal Kadane’s Algorithm for Hashing 14",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2823,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-kadane-s-algorithm-for-hashing-14/",
+    "companies": [
+      "LinkedIn",
+      "Stripes",
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_kd_015",
+    "title": "Cyclic Kadane’s Algorithm for Hashing 15",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2725,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-kadane-s-algorithm-for-hashing-15/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_kd_016",
+    "title": "Continuous Kadane’s Algorithm for Hashing 16",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1249,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-kadane-s-algorithm-for-hashing-16/",
+    "companies": [
+      "Adobe",
+      "Microsoft"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_kd_017",
+    "title": "Subsequence Kadane’s Algorithm for Hashing 17",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1372,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-kadane-s-algorithm-for-hashing-17/",
+    "companies": [
+      "Salesforce",
+      "Uber",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_kd_018",
+    "title": "Longest Kadane’s Algorithm for Hashing 18",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1444,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-kadane-s-algorithm-for-hashing-18/",
+    "companies": [
+      "Twitter"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_kd_019",
+    "title": "Shortest Kadane’s Algorithm for Hashing 19",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2022,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-kadane-s-algorithm-for-hashing-19/",
+    "companies": [
+      "Twilio",
+      "Bloomberg",
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_kd_020",
+    "title": "Maximal Kadane’s Algorithm for Hashing 20",
+    "topic": "hashing",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1117,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-kadane-s-algorithm-for-hashing-20/",
+    "companies": [
+      "Twitter"
+    ],
+    "tags": [
+      "Hashing",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_hs_001",
+    "title": "Longest Hashing for Hashing 1",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2414,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-hashing-for-hashing-1/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_hs_002",
+    "title": "Continuous Hashing for Hashing 2",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1430,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-hashing-for-hashing-2/",
+    "companies": [
+      "Tencent",
+      "Uber",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_hs_003",
+    "title": "Merge Hashing for Hashing 3",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2198,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-hashing-for-hashing-3/",
+    "companies": [
+      "Microsoft",
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_hs_004",
+    "title": "K-th Distance Hashing for Hashing 4",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1325,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-hashing-for-hashing-4/",
+    "companies": [
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_hs_005",
+    "title": "Balanced Hashing for Hashing 5",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2113,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-hashing-for-hashing-5/",
+    "companies": [
+      "Uber",
+      "Airbnb",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_hs_006",
+    "title": "Validate Hashing for Hashing 6",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1436,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-hashing-for-hashing-6/",
+    "companies": [
+      "Tencent",
+      "Amazon",
+      "Google"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_hs_007",
+    "title": "Continuous Hashing for Hashing 7",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1665,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-hashing-for-hashing-7/",
+    "companies": [
+      "Apple",
+      "Twitter",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_hs_008",
+    "title": "Count of Hashing for Hashing 8",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2145,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-hashing-for-hashing-8/",
+    "companies": [
+      "Adobe",
+      "Airbnb",
+      "Uber"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_hs_009",
+    "title": "Longest Hashing for Hashing 9",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1526,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-hashing-for-hashing-9/",
+    "companies": [
+      "Google",
+      "LinkedIn",
+      "Uber"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_hs_010",
+    "title": "Search Hashing for Hashing 10",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2178,
+    "leetcodeUrl": "https://leetcode.com/problems/search-hashing-for-hashing-10/",
+    "companies": [
+      "Atlassian",
+      "Stripes",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_hs_011",
+    "title": "Minimum Cost Hashing for Hashing 11",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2262,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-hashing-for-hashing-11/",
+    "companies": [
+      "Microsoft",
+      "ByteDance",
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_hs_012",
+    "title": "Merge Hashing for Hashing 12",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2664,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-hashing-for-hashing-12/",
+    "companies": [
+      "Netflix",
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_hs_013",
+    "title": "Maximal Hashing for Hashing 13",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1303,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-hashing-for-hashing-13/",
+    "companies": [
+      "Twilio",
+      "Google"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_hs_014",
+    "title": "K-th Distance Hashing for Hashing 14",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2853,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-hashing-for-hashing-14/",
+    "companies": [
+      "Meta",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_hs_015",
+    "title": "Continuous Hashing for Hashing 15",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2656,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-hashing-for-hashing-15/",
+    "companies": [
+      "Microsoft",
+      "Meta",
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_hs_016",
+    "title": "Validate Hashing for Hashing 16",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2517,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-hashing-for-hashing-16/",
+    "companies": [
+      "Netflix",
+      "Uber",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_hs_017",
+    "title": "Count of Hashing for Hashing 17",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2366,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-hashing-for-hashing-17/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_hs_018",
+    "title": "Search Hashing for Hashing 18",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1676,
+    "leetcodeUrl": "https://leetcode.com/problems/search-hashing-for-hashing-18/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_hs_019",
+    "title": "Shortest Hashing for Hashing 19",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2359,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-hashing-for-hashing-19/",
+    "companies": [
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_hs_020",
+    "title": "Subarray Hashing for Hashing 20",
+    "topic": "hashing",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2859,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-hashing-for-hashing-20/",
+    "companies": [
+      "Google",
+      "Oracle",
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ms_001",
+    "title": "Count of Monotonic Stack for Hashing 1",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1855,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-hashing-1/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ms_002",
+    "title": "Minimum Cost Monotonic Stack for Hashing 2",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2768,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-monotonic-stack-for-hashing-2/",
+    "companies": [
+      "Meta",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ms_003",
+    "title": "Shortest Monotonic Stack for Hashing 3",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2962,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-monotonic-stack-for-hashing-3/",
+    "companies": [
+      "Netflix"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_ms_004",
+    "title": "Cyclic Monotonic Stack for Hashing 4",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2950,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-hashing-4/",
+    "companies": [
+      "Uber",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_ms_005",
+    "title": "Count of Monotonic Stack for Hashing 5",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2644,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-hashing-5/",
+    "companies": [
+      "Stripes",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ms_006",
+    "title": "Subarray Monotonic Stack for Hashing 6",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2196,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-monotonic-stack-for-hashing-6/",
+    "companies": [
+      "Stripes",
+      "Bloomberg",
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ms_007",
+    "title": "Subarray Monotonic Stack for Hashing 7",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1423,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-monotonic-stack-for-hashing-7/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "hash_ms_008",
+    "title": "Balanced Monotonic Stack for Hashing 8",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1645,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-monotonic-stack-for-hashing-8/",
+    "companies": [
+      "Adobe",
+      "ByteDance",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ms_009",
+    "title": "Shortest Monotonic Stack for Hashing 9",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1895,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-monotonic-stack-for-hashing-9/",
+    "companies": [
+      "Apple",
+      "Tencent"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "hash_ms_010",
+    "title": "Maximal Monotonic Stack for Hashing 10",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1786,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-monotonic-stack-for-hashing-10/",
+    "companies": [
+      "Salesforce",
+      "LinkedIn",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "hash_ms_011",
+    "title": "Optimal Monotonic Stack for Hashing 11",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2551,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-monotonic-stack-for-hashing-11/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ms_012",
+    "title": "Shortest Monotonic Stack for Hashing 12",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1189,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-monotonic-stack-for-hashing-12/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ms_013",
+    "title": "Cyclic Monotonic Stack for Hashing 13",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1182,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-hashing-13/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ms_014",
+    "title": "Merge Monotonic Stack for Hashing 14",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2942,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-monotonic-stack-for-hashing-14/",
+    "companies": [
+      "LinkedIn",
+      "Adobe",
+      "Airbnb"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ms_015",
+    "title": "Continuous Monotonic Stack for Hashing 15",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2199,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-monotonic-stack-for-hashing-15/",
+    "companies": [
+      "Bloomberg",
+      "Tencent",
+      "Atlassian"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ms_016",
+    "title": "Continuous Monotonic Stack for Hashing 16",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2518,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-monotonic-stack-for-hashing-16/",
+    "companies": [
+      "Twilio",
+      "Meta"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "hash_ms_017",
+    "title": "Subsequence Monotonic Stack for Hashing 17",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2848,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-monotonic-stack-for-hashing-17/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ms_018",
+    "title": "Balanced Monotonic Stack for Hashing 18",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2205,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-monotonic-stack-for-hashing-18/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "hash_ms_019",
+    "title": "Maximal Monotonic Stack for Hashing 19",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1997,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-monotonic-stack-for-hashing-19/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "hash_ms_020",
+    "title": "Balanced Monotonic Stack for Hashing 20",
+    "topic": "hashing",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2364,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-monotonic-stack-for-hashing-20/",
+    "companies": [
+      "Tencent",
+      "Uber"
+    ],
+    "tags": [
+      "Hashing",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  }
+]

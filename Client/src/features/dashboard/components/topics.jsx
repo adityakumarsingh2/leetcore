@@ -194,6 +194,7 @@ function Topics() {
                         lc-scroll-x
                         snap-x
                         snap-proximity
+                        cursor-default
                     "
                 >
 
@@ -204,7 +205,7 @@ function Topics() {
                             className="
                                 relative
                                 w-[244px]
-                                sm:w-[240px]
+                                sm:w-[260px]
                                 min-h-[152px]
                                 flex-shrink-0
                                 snap-center
@@ -270,7 +271,7 @@ function Topics() {
                                         flex-1
                                         min-w-0
                                         h-8
-                                        mt-2
+                                        mt-4
                                         rounded-md
                                         text-sm
                                         font-semibold
@@ -298,7 +299,7 @@ function Topics() {
                                         flex-1
                                         min-w-0
                                         h-8
-                                        mt-2
+                                        mt-4
                                         rounded-md
                                         text-sm
                                         font-semibold

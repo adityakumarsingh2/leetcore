@@ -1,6 +1,6 @@
 import Calendar from "../../../components/layout/calender"
 import Motivation from "../../../components/layout/motivation"
-import RightTips from "./righttips";
+import RightAds from "./righttips";
 function Dashrightnavbar() {
     return (
         <div >
@@ -11,7 +11,7 @@ function Dashrightnavbar() {
                 <Motivation />
             </div>
             <div className="flex justify-center item-center">
-                <RightTips />
+                <RightAds />
             </div>
         </div>
     );

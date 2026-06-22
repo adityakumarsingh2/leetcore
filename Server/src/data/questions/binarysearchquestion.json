@@ -1,0 +1,3425 @@
+[
+  {
+    "_id": "bs_tp_001",
+    "title": "Search Two Pointers for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1865,
+    "leetcodeUrl": "https://leetcode.com/problems/search-two-pointers-for-binary-search-1/",
+    "companies": [
+      "Twilio",
+      "Salesforce",
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_002",
+    "title": "Shortest Two Pointers for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2637,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-two-pointers-for-binary-search-2/",
+    "companies": [
+      "Tencent",
+      "Oracle",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_003",
+    "title": "Merge Two Pointers for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1012,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-pointers-for-binary-search-3/",
+    "companies": [
+      "Tencent",
+      "Adobe",
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_tp_004",
+    "title": "Validate Two Pointers for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2002,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-two-pointers-for-binary-search-4/",
+    "companies": [
+      "Bloomberg",
+      "Twitter",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_005",
+    "title": "Continuous Two Pointers for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2866,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-two-pointers-for-binary-search-5/",
+    "companies": [
+      "ByteDance",
+      "Adobe",
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_006",
+    "title": "Minimum Cost Two Pointers for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1774,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-binary-search-6/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_tp_007",
+    "title": "Cyclic Two Pointers for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2921,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-two-pointers-for-binary-search-7/",
+    "companies": [
+      "Uber",
+      "Oracle",
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_tp_008",
+    "title": "Search Two Pointers for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2430,
+    "leetcodeUrl": "https://leetcode.com/problems/search-two-pointers-for-binary-search-8/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_009",
+    "title": "Balanced Two Pointers for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2923,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-two-pointers-for-binary-search-9/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_010",
+    "title": "Minimum Cost Two Pointers for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1200,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-binary-search-10/",
+    "companies": [
+      "Google",
+      "Tencent",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_tp_011",
+    "title": "Cyclic Two Pointers for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2220,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-two-pointers-for-binary-search-11/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_tp_012",
+    "title": "Merge Two Pointers for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1514,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-pointers-for-binary-search-12/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_tp_013",
+    "title": "Search Two Pointers for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1276,
+    "leetcodeUrl": "https://leetcode.com/problems/search-two-pointers-for-binary-search-13/",
+    "companies": [
+      "Netflix",
+      "Atlassian"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_014",
+    "title": "Validate Two Pointers for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1084,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-two-pointers-for-binary-search-14/",
+    "companies": [
+      "Atlassian",
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_tp_015",
+    "title": "Minimum Cost Two Pointers for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2751,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-binary-search-15/",
+    "companies": [
+      "LinkedIn",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_016",
+    "title": "Count of Two Pointers for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2800,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-two-pointers-for-binary-search-16/",
+    "companies": [
+      "Meta",
+      "Salesforce"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_tp_017",
+    "title": "Merge Two Pointers for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2360,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-pointers-for-binary-search-17/",
+    "companies": [
+      "Adobe",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_tp_018",
+    "title": "Subsequence Two Pointers for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2664,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-two-pointers-for-binary-search-18/",
+    "companies": [
+      "Meta",
+      "Amazon",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_tp_019",
+    "title": "Merge Two Pointers for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2115,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-pointers-for-binary-search-19/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_tp_020",
+    "title": "Optimal Two Pointers for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1868,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-two-pointers-for-binary-search-20/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_sw_001",
+    "title": "Count of Sliding Window for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1486,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sliding-window-for-binary-search-1/",
+    "companies": [
+      "ByteDance",
+      "Oracle",
+      "Microsoft"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_sw_002",
+    "title": "Continuous Sliding Window for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2286,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sliding-window-for-binary-search-2/",
+    "companies": [
+      "Apple",
+      "Meta",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_sw_003",
+    "title": "Search Sliding Window for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2955,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-binary-search-3/",
+    "companies": [
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_sw_004",
+    "title": "Validate Sliding Window for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2684,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-sliding-window-for-binary-search-4/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_sw_005",
+    "title": "Continuous Sliding Window for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1462,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sliding-window-for-binary-search-5/",
+    "companies": [
+      "Tencent",
+      "Twitter",
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_sw_006",
+    "title": "Search Sliding Window for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2371,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-binary-search-6/",
+    "companies": [
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_sw_007",
+    "title": "Merge Sliding Window for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1099,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-sliding-window-for-binary-search-7/",
+    "companies": [
+      "Amazon",
+      "Salesforce",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_sw_008",
+    "title": "Cyclic Sliding Window for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1785,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sliding-window-for-binary-search-8/",
+    "companies": [
+      "Oracle",
+      "Microsoft",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_sw_009",
+    "title": "Count of Sliding Window for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2317,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sliding-window-for-binary-search-9/",
+    "companies": [
+      "LinkedIn",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_sw_010",
+    "title": "Maximal Sliding Window for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1398,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-binary-search-10/",
+    "companies": [
+      "Twitter",
+      "Netflix",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_sw_011",
+    "title": "Minimum Cost Sliding Window for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2336,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sliding-window-for-binary-search-11/",
+    "companies": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_sw_012",
+    "title": "Maximal Sliding Window for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2742,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-binary-search-12/",
+    "companies": [
+      "Salesforce",
+      "Bloomberg",
+      "ByteDance"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_sw_013",
+    "title": "Cyclic Sliding Window for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1467,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sliding-window-for-binary-search-13/",
+    "companies": [
+      "Airbnb",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_sw_014",
+    "title": "Continuous Sliding Window for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2684,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sliding-window-for-binary-search-14/",
+    "companies": [
+      "Stripes",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_sw_015",
+    "title": "Cyclic Sliding Window for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2193,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sliding-window-for-binary-search-15/",
+    "companies": [
+      "ByteDance",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_sw_016",
+    "title": "Search Sliding Window for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1408,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-binary-search-16/",
+    "companies": [
+      "Netflix",
+      "Apple",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_sw_017",
+    "title": "Minimum Cost Sliding Window for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2239,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sliding-window-for-binary-search-17/",
+    "companies": [
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_sw_018",
+    "title": "Shortest Sliding Window for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1135,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sliding-window-for-binary-search-18/",
+    "companies": [
+      "Bloomberg",
+      "Meta",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_sw_019",
+    "title": "Optimal Sliding Window for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1619,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sliding-window-for-binary-search-19/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_sw_020",
+    "title": "Count of Sliding Window for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1394,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sliding-window-for-binary-search-20/",
+    "companies": [
+      "Airbnb",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ps_001",
+    "title": "Continuous Prefix Sum for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2592,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-prefix-sum-for-binary-search-1/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ps_002",
+    "title": "Cyclic Prefix Sum for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1220,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-prefix-sum-for-binary-search-2/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_ps_003",
+    "title": "Shortest Prefix Sum for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1190,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-prefix-sum-for-binary-search-3/",
+    "companies": [
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ps_004",
+    "title": "Count of Prefix Sum for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1301,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-prefix-sum-for-binary-search-4/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_ps_005",
+    "title": "Search Prefix Sum for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2552,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-binary-search-5/",
+    "companies": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ps_006",
+    "title": "Optimal Prefix Sum for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2904,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-binary-search-6/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ps_007",
+    "title": "Count of Prefix Sum for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2020,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-prefix-sum-for-binary-search-7/",
+    "companies": [
+      "Amazon",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_ps_008",
+    "title": "Search Prefix Sum for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2350,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-binary-search-8/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ps_009",
+    "title": "Cyclic Prefix Sum for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1040,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-prefix-sum-for-binary-search-9/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ps_010",
+    "title": "Subarray Prefix Sum for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2213,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-prefix-sum-for-binary-search-10/",
+    "companies": [
+      "Twilio",
+      "Bloomberg",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_ps_011",
+    "title": "Merge Prefix Sum for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2554,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-prefix-sum-for-binary-search-11/",
+    "companies": [
+      "Oracle",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ps_012",
+    "title": "Count of Prefix Sum for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2592,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-prefix-sum-for-binary-search-12/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ps_013",
+    "title": "Search Prefix Sum for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2331,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-binary-search-13/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ps_014",
+    "title": "Optimal Prefix Sum for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1073,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-binary-search-14/",
+    "companies": [
+      "Stripes",
+      "Bloomberg",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ps_015",
+    "title": "Validate Prefix Sum for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1389,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-prefix-sum-for-binary-search-15/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ps_016",
+    "title": "Maximal Prefix Sum for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1821,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-prefix-sum-for-binary-search-16/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ps_017",
+    "title": "K-th Distance Prefix Sum for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2204,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-prefix-sum-for-binary-search-17/",
+    "companies": [
+      "Atlassian",
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ps_018",
+    "title": "Count of Prefix Sum for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1785,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-prefix-sum-for-binary-search-18/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_ps_019",
+    "title": "Merge Prefix Sum for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2250,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-prefix-sum-for-binary-search-19/",
+    "companies": [
+      "Meta",
+      "LinkedIn",
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ps_020",
+    "title": "Subsequence Prefix Sum for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1961,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-prefix-sum-for-binary-search-20/",
+    "companies": [
+      "Uber",
+      "Tencent",
+      "Atlassian"
+    ],
+    "tags": [
+      "Binary Search",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_bs_001",
+    "title": "Balanced Binary Search for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1697,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-binary-search-for-binary-search-1/",
+    "companies": [
+      "Airbnb",
+      "Atlassian"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_bs_002",
+    "title": "Shortest Binary Search for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1739,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-binary-search-for-binary-search-2/",
+    "companies": [
+      "Netflix",
+      "Bloomberg",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_bs_003",
+    "title": "Count of Binary Search for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1213,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-binary-search-for-binary-search-3/",
+    "companies": [
+      "Apple",
+      "Stripes",
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_bs_004",
+    "title": "Balanced Binary Search for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2360,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-binary-search-for-binary-search-4/",
+    "companies": [
+      "Google",
+      "ByteDance"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_bs_005",
+    "title": "Subsequence Binary Search for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2494,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-binary-search-for-binary-search-5/",
+    "companies": [
+      "Airbnb",
+      "Adobe",
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_bs_006",
+    "title": "Minimum Cost Binary Search for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2419,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-binary-search-for-binary-search-6/",
+    "companies": [
+      "Meta",
+      "Uber",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_bs_007",
+    "title": "Shortest Binary Search for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1754,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-binary-search-for-binary-search-7/",
+    "companies": [
+      "Adobe",
+      "Stripes",
+      "Atlassian"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_bs_008",
+    "title": "Cyclic Binary Search for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1046,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-binary-search-for-binary-search-8/",
+    "companies": [
+      "ByteDance",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_bs_009",
+    "title": "K-th Distance Binary Search for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1351,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-binary-search-for-binary-search-9/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_bs_010",
+    "title": "Subarray Binary Search for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1519,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-binary-search-for-binary-search-10/",
+    "companies": [
+      "Microsoft",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_bs_011",
+    "title": "Balanced Binary Search for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1412,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-binary-search-for-binary-search-11/",
+    "companies": [
+      "Uber",
+      "Adobe",
+      "ByteDance"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_bs_012",
+    "title": "K-th Distance Binary Search for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2248,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-binary-search-for-binary-search-12/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_bs_013",
+    "title": "Maximal Binary Search for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1645,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-binary-search-for-binary-search-13/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_bs_014",
+    "title": "Cyclic Binary Search for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2355,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-binary-search-for-binary-search-14/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_bs_015",
+    "title": "Subarray Binary Search for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1206,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-binary-search-for-binary-search-15/",
+    "companies": [
+      "Tencent",
+      "Oracle",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_bs_016",
+    "title": "Optimal Binary Search for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2405,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-binary-search-for-binary-search-16/",
+    "companies": [
+      "Netflix",
+      "ByteDance",
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_bs_017",
+    "title": "Search Binary Search for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2697,
+    "leetcodeUrl": "https://leetcode.com/problems/search-binary-search-for-binary-search-17/",
+    "companies": [
+      "Atlassian",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_bs_018",
+    "title": "Minimum Cost Binary Search for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1616,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-binary-search-for-binary-search-18/",
+    "companies": [
+      "Salesforce",
+      "Amazon",
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_bs_019",
+    "title": "Merge Binary Search for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2074,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-binary-search-for-binary-search-19/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_bs_020",
+    "title": "Search Binary Search for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1863,
+    "leetcodeUrl": "https://leetcode.com/problems/search-binary-search-for-binary-search-20/",
+    "companies": [
+      "Google",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_mt_001",
+    "title": "Cyclic Matrix for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2463,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-matrix-for-binary-search-1/",
+    "companies": [
+      "Stripes",
+      "Microsoft"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_mt_002",
+    "title": "K-th Distance Matrix for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1020,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-matrix-for-binary-search-2/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_mt_003",
+    "title": "K-th Distance Matrix for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1768,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-matrix-for-binary-search-3/",
+    "companies": [
+      "Meta",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_mt_004",
+    "title": "Merge Matrix for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1040,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-matrix-for-binary-search-4/",
+    "companies": [
+      "Microsoft",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_mt_005",
+    "title": "Longest Matrix for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2599,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-matrix-for-binary-search-5/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_mt_006",
+    "title": "Search Matrix for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2768,
+    "leetcodeUrl": "https://leetcode.com/problems/search-matrix-for-binary-search-6/",
+    "companies": [
+      "Meta",
+      "LinkedIn",
+      "Atlassian"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_mt_007",
+    "title": "Continuous Matrix for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2643,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-matrix-for-binary-search-7/",
+    "companies": [
+      "Airbnb",
+      "Oracle",
+      "Atlassian"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_mt_008",
+    "title": "Continuous Matrix for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1733,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-matrix-for-binary-search-8/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_mt_009",
+    "title": "Search Matrix for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1964,
+    "leetcodeUrl": "https://leetcode.com/problems/search-matrix-for-binary-search-9/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_mt_010",
+    "title": "Subsequence Matrix for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1157,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-matrix-for-binary-search-10/",
+    "companies": [
+      "Airbnb",
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_mt_011",
+    "title": "Optimal Matrix for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1268,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-matrix-for-binary-search-11/",
+    "companies": [
+      "Adobe",
+      "Stripes"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_mt_012",
+    "title": "Maximal Matrix for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2392,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-matrix-for-binary-search-12/",
+    "companies": [
+      "ByteDance",
+      "Microsoft"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_mt_013",
+    "title": "Maximal Matrix for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2399,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-matrix-for-binary-search-13/",
+    "companies": [
+      "Oracle",
+      "LinkedIn",
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_mt_014",
+    "title": "Minimum Cost Matrix for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2407,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-matrix-for-binary-search-14/",
+    "companies": [
+      "Uber",
+      "ByteDance",
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_mt_015",
+    "title": "Shortest Matrix for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1501,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-matrix-for-binary-search-15/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_mt_016",
+    "title": "Search Matrix for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2433,
+    "leetcodeUrl": "https://leetcode.com/problems/search-matrix-for-binary-search-16/",
+    "companies": [
+      "Google",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_mt_017",
+    "title": "Validate Matrix for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1479,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-matrix-for-binary-search-17/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_mt_018",
+    "title": "Longest Matrix for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1518,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-matrix-for-binary-search-18/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_mt_019",
+    "title": "Longest Matrix for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2068,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-matrix-for-binary-search-19/",
+    "companies": [
+      "Meta",
+      "Oracle",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_mt_020",
+    "title": "Count of Matrix for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1909,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-matrix-for-binary-search-20/",
+    "companies": [
+      "Amazon",
+      "Meta",
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_srt_001",
+    "title": "Subarray Sorting for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2400,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-sorting-for-binary-search-1/",
+    "companies": [
+      "Twilio",
+      "Oracle",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_srt_002",
+    "title": "Longest Sorting for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1395,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-sorting-for-binary-search-2/",
+    "companies": [
+      "Twilio",
+      "Stripes"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_srt_003",
+    "title": "K-th Distance Sorting for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1779,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sorting-for-binary-search-3/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_srt_004",
+    "title": "Optimal Sorting for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1407,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sorting-for-binary-search-4/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_srt_005",
+    "title": "Maximal Sorting for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2615,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sorting-for-binary-search-5/",
+    "companies": [
+      "ByteDance",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_srt_006",
+    "title": "Search Sorting for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1689,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sorting-for-binary-search-6/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_srt_007",
+    "title": "Maximal Sorting for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2689,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sorting-for-binary-search-7/",
+    "companies": [
+      "Twitter",
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_srt_008",
+    "title": "K-th Distance Sorting for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2245,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sorting-for-binary-search-8/",
+    "companies": [
+      "ByteDance",
+      "Netflix",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_srt_009",
+    "title": "Shortest Sorting for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1418,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sorting-for-binary-search-9/",
+    "companies": [
+      "Twitter",
+      "Salesforce"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_srt_010",
+    "title": "Search Sorting for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2249,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sorting-for-binary-search-10/",
+    "companies": [
+      "Oracle",
+      "Salesforce",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_srt_011",
+    "title": "Optimal Sorting for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2453,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sorting-for-binary-search-11/",
+    "companies": [
+      "LinkedIn",
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_srt_012",
+    "title": "Maximal Sorting for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1209,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sorting-for-binary-search-12/",
+    "companies": [
+      "Twilio",
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_srt_013",
+    "title": "Continuous Sorting for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2273,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sorting-for-binary-search-13/",
+    "companies": [
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_srt_014",
+    "title": "Search Sorting for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2930,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sorting-for-binary-search-14/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_srt_015",
+    "title": "Cyclic Sorting for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2127,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sorting-for-binary-search-15/",
+    "companies": [
+      "Microsoft",
+      "Oracle",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_srt_016",
+    "title": "Cyclic Sorting for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2201,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sorting-for-binary-search-16/",
+    "companies": [
+      "Adobe",
+      "Airbnb",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_srt_017",
+    "title": "Maximal Sorting for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1114,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sorting-for-binary-search-17/",
+    "companies": [
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_srt_018",
+    "title": "Cyclic Sorting for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1555,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sorting-for-binary-search-18/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_srt_019",
+    "title": "Search Sorting for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2537,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sorting-for-binary-search-19/",
+    "companies": [
+      "Adobe",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_srt_020",
+    "title": "Balanced Sorting for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2830,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sorting-for-binary-search-20/",
+    "companies": [
+      "Stripes",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_kd_001",
+    "title": "Shortest Kadane’s Algorithm for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2001,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-kadane-s-algorithm-for-binary-search-1/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_kd_002",
+    "title": "Merge Kadane’s Algorithm for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2089,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-kadane-s-algorithm-for-binary-search-2/",
+    "companies": [
+      "LinkedIn",
+      "Amazon",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_kd_003",
+    "title": "Minimum Cost Kadane’s Algorithm for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1087,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-kadane-s-algorithm-for-binary-search-3/",
+    "companies": [
+      "Adobe",
+      "Bloomberg",
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_kd_004",
+    "title": "Longest Kadane’s Algorithm for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2384,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-kadane-s-algorithm-for-binary-search-4/",
+    "companies": [
+      "Adobe",
+      "Meta",
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_kd_005",
+    "title": "Shortest Kadane’s Algorithm for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1839,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-kadane-s-algorithm-for-binary-search-5/",
+    "companies": [
+      "Microsoft",
+      "Twitter"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_kd_006",
+    "title": "Balanced Kadane’s Algorithm for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1582,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-kadane-s-algorithm-for-binary-search-6/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_kd_007",
+    "title": "Subarray Kadane’s Algorithm for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1169,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-kadane-s-algorithm-for-binary-search-7/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_kd_008",
+    "title": "Minimum Cost Kadane’s Algorithm for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1544,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-kadane-s-algorithm-for-binary-search-8/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_kd_009",
+    "title": "Subarray Kadane’s Algorithm for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2391,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-kadane-s-algorithm-for-binary-search-9/",
+    "companies": [
+      "Adobe",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_kd_010",
+    "title": "Optimal Kadane’s Algorithm for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1853,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-kadane-s-algorithm-for-binary-search-10/",
+    "companies": [
+      "Twitter",
+      "Tencent",
+      "Twilio"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_kd_011",
+    "title": "Continuous Kadane’s Algorithm for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2021,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-kadane-s-algorithm-for-binary-search-11/",
+    "companies": [
+      "Microsoft",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_kd_012",
+    "title": "Merge Kadane’s Algorithm for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2207,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-kadane-s-algorithm-for-binary-search-12/",
+    "companies": [
+      "ByteDance",
+      "Apple",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_kd_013",
+    "title": "Subsequence Kadane’s Algorithm for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2662,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-kadane-s-algorithm-for-binary-search-13/",
+    "companies": [
+      "Airbnb",
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_kd_014",
+    "title": "Subarray Kadane’s Algorithm for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1065,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-kadane-s-algorithm-for-binary-search-14/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_kd_015",
+    "title": "Count of Kadane’s Algorithm for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1271,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-kadane-s-algorithm-for-binary-search-15/",
+    "companies": [
+      "Bloomberg",
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_kd_016",
+    "title": "Subsequence Kadane’s Algorithm for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2915,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-kadane-s-algorithm-for-binary-search-16/",
+    "companies": [
+      "Salesforce",
+      "Apple",
+      "Stripes"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_kd_017",
+    "title": "Subarray Kadane’s Algorithm for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2561,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-kadane-s-algorithm-for-binary-search-17/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_kd_018",
+    "title": "Minimum Cost Kadane’s Algorithm for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2887,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-kadane-s-algorithm-for-binary-search-18/",
+    "companies": [
+      "Twitter",
+      "Oracle",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_kd_019",
+    "title": "Maximal Kadane’s Algorithm for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1564,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-kadane-s-algorithm-for-binary-search-19/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_kd_020",
+    "title": "Maximal Kadane’s Algorithm for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1079,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-kadane-s-algorithm-for-binary-search-20/",
+    "companies": [
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_hs_001",
+    "title": "Validate Hashing for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2206,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-hashing-for-binary-search-1/",
+    "companies": [
+      "Microsoft",
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_hs_002",
+    "title": "Cyclic Hashing for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2624,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-hashing-for-binary-search-2/",
+    "companies": [
+      "Oracle",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_hs_003",
+    "title": "Maximal Hashing for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1671,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-hashing-for-binary-search-3/",
+    "companies": [
+      "Adobe",
+      "Uber",
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_hs_004",
+    "title": "Balanced Hashing for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1772,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-hashing-for-binary-search-4/",
+    "companies": [
+      "Atlassian",
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_hs_005",
+    "title": "Count of Hashing for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2771,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-hashing-for-binary-search-5/",
+    "companies": [
+      "Microsoft",
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_hs_006",
+    "title": "Subsequence Hashing for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1783,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-hashing-for-binary-search-6/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_hs_007",
+    "title": "Count of Hashing for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1109,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-hashing-for-binary-search-7/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_hs_008",
+    "title": "Search Hashing for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1344,
+    "leetcodeUrl": "https://leetcode.com/problems/search-hashing-for-binary-search-8/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_hs_009",
+    "title": "Balanced Hashing for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1274,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-hashing-for-binary-search-9/",
+    "companies": [
+      "Salesforce",
+      "Twitter",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_hs_010",
+    "title": "Minimum Cost Hashing for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1987,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-hashing-for-binary-search-10/",
+    "companies": [
+      "Microsoft",
+      "Atlassian",
+      "Stripes"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_hs_011",
+    "title": "Longest Hashing for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1954,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-hashing-for-binary-search-11/",
+    "companies": [
+      "Tencent",
+      "Microsoft",
+      "Salesforce"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_hs_012",
+    "title": "Optimal Hashing for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1182,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-hashing-for-binary-search-12/",
+    "companies": [
+      "Twitter",
+      "Meta",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_hs_013",
+    "title": "Optimal Hashing for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1828,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-hashing-for-binary-search-13/",
+    "companies": [
+      "Atlassian",
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_hs_014",
+    "title": "Merge Hashing for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2046,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-hashing-for-binary-search-14/",
+    "companies": [
+      "Atlassian",
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_hs_015",
+    "title": "Longest Hashing for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1538,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-hashing-for-binary-search-15/",
+    "companies": [
+      "Airbnb",
+      "Tencent",
+      "Amazon"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_hs_016",
+    "title": "Cyclic Hashing for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1561,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-hashing-for-binary-search-16/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_hs_017",
+    "title": "Subarray Hashing for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2432,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-hashing-for-binary-search-17/",
+    "companies": [
+      "Microsoft",
+      "ByteDance",
+      "Google"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_hs_018",
+    "title": "Cyclic Hashing for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1074,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-hashing-for-binary-search-18/",
+    "companies": [
+      "Twitter",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_hs_019",
+    "title": "Shortest Hashing for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1424,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-hashing-for-binary-search-19/",
+    "companies": [
+      "ByteDance",
+      "Oracle",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_hs_020",
+    "title": "Subarray Hashing for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2618,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-hashing-for-binary-search-20/",
+    "companies": [
+      "Apple",
+      "Microsoft"
+    ],
+    "tags": [
+      "Binary Search",
+      "Hashing"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_ms_001",
+    "title": "Subarray Monotonic Stack for Binary Search 1",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2863,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-monotonic-stack-for-binary-search-1/",
+    "companies": [
+      "Apple",
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "bs_ms_002",
+    "title": "Merge Monotonic Stack for Binary Search 2",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1666,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-monotonic-stack-for-binary-search-2/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ms_003",
+    "title": "Continuous Monotonic Stack for Binary Search 3",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2882,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-monotonic-stack-for-binary-search-3/",
+    "companies": [
+      "Google",
+      "Oracle",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ms_004",
+    "title": "Subsequence Monotonic Stack for Binary Search 4",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2175,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-monotonic-stack-for-binary-search-4/",
+    "companies": [
+      "Tencent",
+      "Microsoft",
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ms_005",
+    "title": "Cyclic Monotonic Stack for Binary Search 5",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1374,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-binary-search-5/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ms_006",
+    "title": "Balanced Monotonic Stack for Binary Search 6",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1037,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-monotonic-stack-for-binary-search-6/",
+    "companies": [
+      "Amazon",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ms_007",
+    "title": "Subarray Monotonic Stack for Binary Search 7",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1077,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-monotonic-stack-for-binary-search-7/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_ms_008",
+    "title": "Subarray Monotonic Stack for Binary Search 8",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1046,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-monotonic-stack-for-binary-search-8/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ms_009",
+    "title": "Count of Monotonic Stack for Binary Search 9",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2967,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-binary-search-9/",
+    "companies": [
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ms_010",
+    "title": "Count of Monotonic Stack for Binary Search 10",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2190,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-binary-search-10/",
+    "companies": [
+      "Oracle",
+      "Apple",
+      "Salesforce"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "bs_ms_011",
+    "title": "Cyclic Monotonic Stack for Binary Search 11",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1003,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-binary-search-11/",
+    "companies": [
+      "LinkedIn",
+      "Netflix",
+      "Adobe"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ms_012",
+    "title": "Validate Monotonic Stack for Binary Search 12",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2641,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-monotonic-stack-for-binary-search-12/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "bs_ms_013",
+    "title": "Cyclic Monotonic Stack for Binary Search 13",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1908,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-binary-search-13/",
+    "companies": [
+      "Netflix"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ms_014",
+    "title": "Balanced Monotonic Stack for Binary Search 14",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1684,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-monotonic-stack-for-binary-search-14/",
+    "companies": [
+      "Netflix",
+      "LinkedIn",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ms_015",
+    "title": "Cyclic Monotonic Stack for Binary Search 15",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1147,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-binary-search-15/",
+    "companies": [
+      "Bloomberg",
+      "Oracle",
+      "Stripes"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "bs_ms_016",
+    "title": "Cyclic Monotonic Stack for Binary Search 16",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1205,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-binary-search-16/",
+    "companies": [
+      "Twilio",
+      "Oracle"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ms_017",
+    "title": "Minimum Cost Monotonic Stack for Binary Search 17",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1889,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-monotonic-stack-for-binary-search-17/",
+    "companies": [
+      "ByteDance",
+      "Microsoft",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ms_018",
+    "title": "Merge Monotonic Stack for Binary Search 18",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1308,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-monotonic-stack-for-binary-search-18/",
+    "companies": [
+      "Netflix",
+      "Microsoft",
+      "Tencent"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "bs_ms_019",
+    "title": "Shortest Monotonic Stack for Binary Search 19",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2514,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-monotonic-stack-for-binary-search-19/",
+    "companies": [
+      "Oracle",
+      "Apple"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "bs_ms_020",
+    "title": "Validate Monotonic Stack for Binary Search 20",
+    "topic": "binarysearch",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2095,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-monotonic-stack-for-binary-search-20/",
+    "companies": [
+      "Salesforce",
+      "Uber"
+    ],
+    "tags": [
+      "Binary Search",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  }
+]

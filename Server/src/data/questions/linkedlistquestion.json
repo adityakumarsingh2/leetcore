@@ -1,0 +1,3408 @@
+[
+  {
+    "_id": "ll_tp_001",
+    "title": "K-th Distance Two Pointers for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1701,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-two-pointers-for-linked-list-1/",
+    "companies": [
+      "Meta",
+      "Tencent"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_tp_002",
+    "title": "Cyclic Two Pointers for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1046,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-two-pointers-for-linked-list-2/",
+    "companies": [
+      "Microsoft",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_tp_003",
+    "title": "Optimal Two Pointers for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2558,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-two-pointers-for-linked-list-3/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_tp_004",
+    "title": "Longest Two Pointers for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2101,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-two-pointers-for-linked-list-4/",
+    "companies": [
+      "LinkedIn",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_tp_005",
+    "title": "Minimum Cost Two Pointers for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1072,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-linked-list-5/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_tp_006",
+    "title": "Minimum Cost Two Pointers for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2482,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-two-pointers-for-linked-list-6/",
+    "companies": [
+      "Meta",
+      "Apple",
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_tp_007",
+    "title": "K-th Distance Two Pointers for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2225,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-two-pointers-for-linked-list-7/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_tp_008",
+    "title": "Shortest Two Pointers for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2267,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-two-pointers-for-linked-list-8/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_tp_009",
+    "title": "Maximal Two Pointers for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2744,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-two-pointers-for-linked-list-9/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_tp_010",
+    "title": "K-th Distance Two Pointers for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1413,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-two-pointers-for-linked-list-10/",
+    "companies": [
+      "Microsoft",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_tp_011",
+    "title": "Search Two Pointers for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1553,
+    "leetcodeUrl": "https://leetcode.com/problems/search-two-pointers-for-linked-list-11/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_tp_012",
+    "title": "Search Two Pointers for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1316,
+    "leetcodeUrl": "https://leetcode.com/problems/search-two-pointers-for-linked-list-12/",
+    "companies": [
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_tp_013",
+    "title": "Count of Two Pointers for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2620,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-two-pointers-for-linked-list-13/",
+    "companies": [
+      "Oracle",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_tp_014",
+    "title": "Subsequence Two Pointers for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2529,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-two-pointers-for-linked-list-14/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_tp_015",
+    "title": "Merge Two Pointers for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1484,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-two-pointers-for-linked-list-15/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_tp_016",
+    "title": "Validate Two Pointers for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1399,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-two-pointers-for-linked-list-16/",
+    "companies": [
+      "Apple",
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_tp_017",
+    "title": "Shortest Two Pointers for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2651,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-two-pointers-for-linked-list-17/",
+    "companies": [
+      "Atlassian",
+      "Apple"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_tp_018",
+    "title": "Balanced Two Pointers for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1157,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-two-pointers-for-linked-list-18/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_tp_019",
+    "title": "Cyclic Two Pointers for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1183,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-two-pointers-for-linked-list-19/",
+    "companies": [
+      "Bloomberg"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_tp_020",
+    "title": "Subarray Two Pointers for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "two-pointers",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1640,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-two-pointers-for-linked-list-20/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_sw_001",
+    "title": "Balanced Sliding Window for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2899,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sliding-window-for-linked-list-1/",
+    "companies": [
+      "Bloomberg",
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_sw_002",
+    "title": "Maximal Sliding Window for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1246,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-linked-list-2/",
+    "companies": [
+      "Twilio",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_sw_003",
+    "title": "Shortest Sliding Window for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1645,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sliding-window-for-linked-list-3/",
+    "companies": [
+      "Salesforce",
+      "Airbnb",
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_sw_004",
+    "title": "K-th Distance Sliding Window for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2440,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sliding-window-for-linked-list-4/",
+    "companies": [
+      "Tencent",
+      "LinkedIn",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_sw_005",
+    "title": "K-th Distance Sliding Window for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1173,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sliding-window-for-linked-list-5/",
+    "companies": [
+      "Bloomberg",
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_sw_006",
+    "title": "Optimal Sliding Window for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1574,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sliding-window-for-linked-list-6/",
+    "companies": [
+      "Atlassian",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_sw_007",
+    "title": "Maximal Sliding Window for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1251,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-linked-list-7/",
+    "companies": [
+      "Amazon",
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_sw_008",
+    "title": "Balanced Sliding Window for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2765,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sliding-window-for-linked-list-8/",
+    "companies": [
+      "LinkedIn",
+      "Meta",
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_sw_009",
+    "title": "Search Sliding Window for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2508,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-linked-list-9/",
+    "companies": [
+      "Atlassian",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_sw_010",
+    "title": "Balanced Sliding Window for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2907,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sliding-window-for-linked-list-10/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_sw_011",
+    "title": "Subarray Sliding Window for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2067,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-sliding-window-for-linked-list-11/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_sw_012",
+    "title": "Search Sliding Window for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2238,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-linked-list-12/",
+    "companies": [
+      "ByteDance",
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_sw_013",
+    "title": "Merge Sliding Window for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2168,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-sliding-window-for-linked-list-13/",
+    "companies": [
+      "Salesforce",
+      "Adobe",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_sw_014",
+    "title": "Search Sliding Window for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1551,
+    "leetcodeUrl": "https://leetcode.com/problems/search-sliding-window-for-linked-list-14/",
+    "companies": [
+      "ByteDance",
+      "Atlassian",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_sw_015",
+    "title": "Cyclic Sliding Window for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2491,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-sliding-window-for-linked-list-15/",
+    "companies": [
+      "Tencent",
+      "Microsoft",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_sw_016",
+    "title": "Balanced Sliding Window for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2096,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sliding-window-for-linked-list-16/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_sw_017",
+    "title": "Continuous Sliding Window for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1824,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sliding-window-for-linked-list-17/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_sw_018",
+    "title": "Minimum Cost Sliding Window for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2561,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sliding-window-for-linked-list-18/",
+    "companies": [
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_sw_019",
+    "title": "Maximal Sliding Window for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1043,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sliding-window-for-linked-list-19/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_sw_020",
+    "title": "Optimal Sliding Window for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "sliding-window",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2039,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sliding-window-for-linked-list-20/",
+    "companies": [
+      "Google",
+      "ByteDance",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Sliding Window"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_001",
+    "title": "Minimum Cost Prefix Sum for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1992,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-prefix-sum-for-linked-list-1/",
+    "companies": [
+      "Uber",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ps_002",
+    "title": "Balanced Prefix Sum for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2137,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-prefix-sum-for-linked-list-2/",
+    "companies": [
+      "Airbnb",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_003",
+    "title": "Subsequence Prefix Sum for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2807,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-prefix-sum-for-linked-list-3/",
+    "companies": [
+      "Twilio",
+      "Atlassian",
+      "Apple"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_ps_004",
+    "title": "Minimum Cost Prefix Sum for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1315,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-prefix-sum-for-linked-list-4/",
+    "companies": [
+      "Netflix",
+      "Meta",
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_005",
+    "title": "Cyclic Prefix Sum for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2462,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-prefix-sum-for-linked-list-5/",
+    "companies": [
+      "Uber",
+      "Twilio",
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_ps_006",
+    "title": "Shortest Prefix Sum for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1047,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-prefix-sum-for-linked-list-6/",
+    "companies": [
+      "Stripes",
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_ps_007",
+    "title": "Optimal Prefix Sum for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2424,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-prefix-sum-for-linked-list-7/",
+    "companies": [
+      "Adobe",
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_ps_008",
+    "title": "Maximal Prefix Sum for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2293,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-prefix-sum-for-linked-list-8/",
+    "companies": [
+      "Microsoft",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ps_009",
+    "title": "Minimum Cost Prefix Sum for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2227,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-prefix-sum-for-linked-list-9/",
+    "companies": [
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_010",
+    "title": "Subarray Prefix Sum for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1882,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-prefix-sum-for-linked-list-10/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_011",
+    "title": "Search Prefix Sum for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2242,
+    "leetcodeUrl": "https://leetcode.com/problems/search-prefix-sum-for-linked-list-11/",
+    "companies": [
+      "Oracle",
+      "Salesforce",
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_ps_012",
+    "title": "Maximal Prefix Sum for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2720,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-prefix-sum-for-linked-list-12/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_013",
+    "title": "Maximal Prefix Sum for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2917,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-prefix-sum-for-linked-list-13/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_ps_014",
+    "title": "K-th Distance Prefix Sum for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1554,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-prefix-sum-for-linked-list-14/",
+    "companies": [
+      "ByteDance",
+      "Tencent",
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_ps_015",
+    "title": "Shortest Prefix Sum for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1865,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-prefix-sum-for-linked-list-15/",
+    "companies": [
+      "Bloomberg",
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_016",
+    "title": "Shortest Prefix Sum for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1872,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-prefix-sum-for-linked-list-16/",
+    "companies": [
+      "Atlassian",
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_ps_017",
+    "title": "Longest Prefix Sum for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1463,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-prefix-sum-for-linked-list-17/",
+    "companies": [
+      "Twilio",
+      "Adobe",
+      "Netflix"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_ps_018",
+    "title": "K-th Distance Prefix Sum for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2771,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-prefix-sum-for-linked-list-18/",
+    "companies": [
+      "LinkedIn",
+      "Amazon",
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ps_019",
+    "title": "Cyclic Prefix Sum for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1058,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-prefix-sum-for-linked-list-19/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_ps_020",
+    "title": "Longest Prefix Sum for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "prefix-sum",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1240,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-prefix-sum-for-linked-list-20/",
+    "companies": [
+      "Adobe",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Prefix Sum"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_bs_001",
+    "title": "Merge Binary Search for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2655,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-binary-search-for-linked-list-1/",
+    "companies": [
+      "Adobe",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_bs_002",
+    "title": "Optimal Binary Search for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2550,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-binary-search-for-linked-list-2/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_bs_003",
+    "title": "Continuous Binary Search for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2742,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-binary-search-for-linked-list-3/",
+    "companies": [
+      "Netflix",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_004",
+    "title": "Subsequence Binary Search for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2052,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-binary-search-for-linked-list-4/",
+    "companies": [
+      "Oracle",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_005",
+    "title": "Count of Binary Search for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1678,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-binary-search-for-linked-list-5/",
+    "companies": [
+      "Uber",
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_006",
+    "title": "Subarray Binary Search for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1147,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-binary-search-for-linked-list-6/",
+    "companies": [
+      "Atlassian",
+      "Amazon",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_007",
+    "title": "Merge Binary Search for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1051,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-binary-search-for-linked-list-7/",
+    "companies": [
+      "Adobe",
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_008",
+    "title": "Optimal Binary Search for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1633,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-binary-search-for-linked-list-8/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_009",
+    "title": "Merge Binary Search for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1750,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-binary-search-for-linked-list-9/",
+    "companies": [
+      "Uber",
+      "Oracle",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_010",
+    "title": "Balanced Binary Search for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1971,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-binary-search-for-linked-list-10/",
+    "companies": [
+      "Salesforce",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_011",
+    "title": "Maximal Binary Search for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2295,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-binary-search-for-linked-list-11/",
+    "companies": [
+      "Stripes",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_bs_012",
+    "title": "Continuous Binary Search for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2332,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-binary-search-for-linked-list-12/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_bs_013",
+    "title": "Subsequence Binary Search for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1257,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-binary-search-for-linked-list-13/",
+    "companies": [
+      "Microsoft",
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_014",
+    "title": "Optimal Binary Search for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1653,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-binary-search-for-linked-list-14/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_bs_015",
+    "title": "Longest Binary Search for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1936,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-binary-search-for-linked-list-15/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_bs_016",
+    "title": "Count of Binary Search for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2589,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-binary-search-for-linked-list-16/",
+    "companies": [
+      "Amazon",
+      "Google",
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_017",
+    "title": "Shortest Binary Search for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1538,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-binary-search-for-linked-list-17/",
+    "companies": [
+      "Salesforce",
+      "ByteDance",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_bs_018",
+    "title": "Balanced Binary Search for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2390,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-binary-search-for-linked-list-18/",
+    "companies": [
+      "ByteDance",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_bs_019",
+    "title": "Count of Binary Search for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2201,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-binary-search-for-linked-list-19/",
+    "companies": [
+      "Apple",
+      "ByteDance"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_bs_020",
+    "title": "K-th Distance Binary Search for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "binary-search",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1711,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-binary-search-for-linked-list-20/",
+    "companies": [
+      "Meta",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Binary Search"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_mt_001",
+    "title": "Minimum Cost Matrix for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2300,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-matrix-for-linked-list-1/",
+    "companies": [
+      "Uber",
+      "Adobe",
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_mt_002",
+    "title": "Subarray Matrix for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1766,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-matrix-for-linked-list-2/",
+    "companies": [
+      "Twilio",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_mt_003",
+    "title": "K-th Distance Matrix for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2506,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-matrix-for-linked-list-3/",
+    "companies": [
+      "Bloomberg",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_mt_004",
+    "title": "Subarray Matrix for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2893,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-matrix-for-linked-list-4/",
+    "companies": [
+      "Google",
+      "Stripes",
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_mt_005",
+    "title": "Balanced Matrix for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2912,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-matrix-for-linked-list-5/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_mt_006",
+    "title": "Subarray Matrix for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2713,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-matrix-for-linked-list-6/",
+    "companies": [
+      "Adobe",
+      "Apple"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_mt_007",
+    "title": "Maximal Matrix for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2763,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-matrix-for-linked-list-7/",
+    "companies": [
+      "ByteDance",
+      "Tencent"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_mt_008",
+    "title": "Maximal Matrix for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2248,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-matrix-for-linked-list-8/",
+    "companies": [
+      "Salesforce",
+      "LinkedIn",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_mt_009",
+    "title": "Subsequence Matrix for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1111,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-matrix-for-linked-list-9/",
+    "companies": [
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_mt_010",
+    "title": "Balanced Matrix for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1692,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-matrix-for-linked-list-10/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_mt_011",
+    "title": "Count of Matrix for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2818,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-matrix-for-linked-list-11/",
+    "companies": [
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_mt_012",
+    "title": "Subarray Matrix for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2457,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-matrix-for-linked-list-12/",
+    "companies": [
+      "Apple",
+      "Google",
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_mt_013",
+    "title": "Count of Matrix for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1192,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-matrix-for-linked-list-13/",
+    "companies": [
+      "Google",
+      "LinkedIn",
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_mt_014",
+    "title": "Longest Matrix for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2934,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-matrix-for-linked-list-14/",
+    "companies": [
+      "Microsoft",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_mt_015",
+    "title": "Validate Matrix for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1737,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-matrix-for-linked-list-15/",
+    "companies": [
+      "Salesforce",
+      "Uber",
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_mt_016",
+    "title": "Validate Matrix for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2314,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-matrix-for-linked-list-16/",
+    "companies": [
+      "Apple",
+      "Twitter",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_mt_017",
+    "title": "Subarray Matrix for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2842,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-matrix-for-linked-list-17/",
+    "companies": [
+      "Tencent",
+      "Oracle",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_mt_018",
+    "title": "Search Matrix for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1827,
+    "leetcodeUrl": "https://leetcode.com/problems/search-matrix-for-linked-list-18/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_mt_019",
+    "title": "Subarray Matrix for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1146,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-matrix-for-linked-list-19/",
+    "companies": [
+      "Atlassian",
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_mt_020",
+    "title": "Shortest Matrix for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "matrix",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2378,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-matrix-for-linked-list-20/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Matrix"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_srt_001",
+    "title": "K-th Distance Sorting for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2111,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sorting-for-linked-list-1/",
+    "companies": [
+      "Bloomberg",
+      "Stripes",
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_srt_002",
+    "title": "Balanced Sorting for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1182,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sorting-for-linked-list-2/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_srt_003",
+    "title": "Subarray Sorting for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2016,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-sorting-for-linked-list-3/",
+    "companies": [
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_srt_004",
+    "title": "Maximal Sorting for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1072,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sorting-for-linked-list-4/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_srt_005",
+    "title": "Balanced Sorting for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2446,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sorting-for-linked-list-5/",
+    "companies": [
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_srt_006",
+    "title": "Count of Sorting for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2722,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-sorting-for-linked-list-6/",
+    "companies": [
+      "Oracle",
+      "Google",
+      "Netflix"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_srt_007",
+    "title": "Continuous Sorting for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1511,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-sorting-for-linked-list-7/",
+    "companies": [
+      "Oracle",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_srt_008",
+    "title": "Optimal Sorting for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2376,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sorting-for-linked-list-8/",
+    "companies": [
+      "Bloomberg"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_srt_009",
+    "title": "Subsequence Sorting for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2232,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-sorting-for-linked-list-9/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_srt_010",
+    "title": "Maximal Sorting for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2421,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-sorting-for-linked-list-10/",
+    "companies": [
+      "Tencent",
+      "Microsoft",
+      "Atlassian"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_srt_011",
+    "title": "Longest Sorting for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2839,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-sorting-for-linked-list-11/",
+    "companies": [
+      "Netflix",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_srt_012",
+    "title": "Subsequence Sorting for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2614,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-sorting-for-linked-list-12/",
+    "companies": [
+      "Apple",
+      "Amazon",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_srt_013",
+    "title": "K-th Distance Sorting for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1434,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-sorting-for-linked-list-13/",
+    "companies": [
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_srt_014",
+    "title": "Balanced Sorting for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1732,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-sorting-for-linked-list-14/",
+    "companies": [
+      "Oracle",
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_srt_015",
+    "title": "Minimum Cost Sorting for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2090,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-sorting-for-linked-list-15/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_srt_016",
+    "title": "Shortest Sorting for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2515,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sorting-for-linked-list-16/",
+    "companies": [
+      "Netflix",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_srt_017",
+    "title": "Shortest Sorting for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1733,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-sorting-for-linked-list-17/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_srt_018",
+    "title": "Optimal Sorting for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1882,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-sorting-for-linked-list-18/",
+    "companies": [
+      "Amazon",
+      "Twilio",
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_srt_019",
+    "title": "Subsequence Sorting for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2320,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-sorting-for-linked-list-19/",
+    "companies": [
+      "Salesforce",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_srt_020",
+    "title": "Subsequence Sorting for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "sorting",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2994,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-sorting-for-linked-list-20/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Sorting"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_kd_001",
+    "title": "Maximal Kadane’s Algorithm for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1465,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-kadane-s-algorithm-for-linked-list-1/",
+    "companies": [
+      "Google",
+      "Oracle",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_kd_002",
+    "title": "Merge Kadane’s Algorithm for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2008,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-kadane-s-algorithm-for-linked-list-2/",
+    "companies": [
+      "Adobe",
+      "Atlassian",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_kd_003",
+    "title": "Subsequence Kadane’s Algorithm for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2494,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-kadane-s-algorithm-for-linked-list-3/",
+    "companies": [
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_kd_004",
+    "title": "Maximal Kadane’s Algorithm for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1590,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-kadane-s-algorithm-for-linked-list-4/",
+    "companies": [
+      "Airbnb",
+      "Netflix",
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_kd_005",
+    "title": "Minimum Cost Kadane’s Algorithm for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1291,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-kadane-s-algorithm-for-linked-list-5/",
+    "companies": [
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_kd_006",
+    "title": "Minimum Cost Kadane’s Algorithm for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1902,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-kadane-s-algorithm-for-linked-list-6/",
+    "companies": [
+      "Bloomberg",
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_kd_007",
+    "title": "Continuous Kadane’s Algorithm for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1230,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-kadane-s-algorithm-for-linked-list-7/",
+    "companies": [
+      "Salesforce",
+      "Apple",
+      "Tencent"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_kd_008",
+    "title": "Balanced Kadane’s Algorithm for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1290,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-kadane-s-algorithm-for-linked-list-8/",
+    "companies": [
+      "Uber",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_kd_009",
+    "title": "Balanced Kadane’s Algorithm for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2469,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-kadane-s-algorithm-for-linked-list-9/",
+    "companies": [
+      "Atlassian",
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_kd_010",
+    "title": "Search Kadane’s Algorithm for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1542,
+    "leetcodeUrl": "https://leetcode.com/problems/search-kadane-s-algorithm-for-linked-list-10/",
+    "companies": [
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_kd_011",
+    "title": "Balanced Kadane’s Algorithm for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1139,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-kadane-s-algorithm-for-linked-list-11/",
+    "companies": [
+      "Netflix",
+      "Oracle",
+      "ByteDance"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_kd_012",
+    "title": "Maximal Kadane’s Algorithm for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2528,
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-kadane-s-algorithm-for-linked-list-12/",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_kd_013",
+    "title": "Count of Kadane’s Algorithm for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2780,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-kadane-s-algorithm-for-linked-list-13/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_kd_014",
+    "title": "K-th Distance Kadane’s Algorithm for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1760,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-kadane-s-algorithm-for-linked-list-14/",
+    "companies": [
+      "Oracle",
+      "Salesforce",
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_kd_015",
+    "title": "Shortest Kadane’s Algorithm for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2731,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-kadane-s-algorithm-for-linked-list-15/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_kd_016",
+    "title": "Subarray Kadane’s Algorithm for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2728,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-kadane-s-algorithm-for-linked-list-16/",
+    "companies": [
+      "Atlassian",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_kd_017",
+    "title": "Longest Kadane’s Algorithm for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1902,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-kadane-s-algorithm-for-linked-list-17/",
+    "companies": [
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_kd_018",
+    "title": "Longest Kadane’s Algorithm for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1296,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-kadane-s-algorithm-for-linked-list-18/",
+    "companies": [
+      "Uber",
+      "Netflix",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_kd_019",
+    "title": "K-th Distance Kadane’s Algorithm for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1844,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-kadane-s-algorithm-for-linked-list-19/",
+    "companies": [
+      "Netflix"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_kd_020",
+    "title": "Subsequence Kadane’s Algorithm for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "kadanes-algorithm",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2972,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-kadane-s-algorithm-for-linked-list-20/",
+    "companies": [
+      "Amazon",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Kadane’s Algorithm"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_hs_001",
+    "title": "K-th Distance Hashing for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1140,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-hashing-for-linked-list-1/",
+    "companies": [
+      "ByteDance",
+      "Atlassian",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_hs_002",
+    "title": "Count of Hashing for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1026,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-hashing-for-linked-list-2/",
+    "companies": [
+      "ByteDance",
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_hs_003",
+    "title": "Minimum Cost Hashing for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1116,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-hashing-for-linked-list-3/",
+    "companies": [
+      "Uber",
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_hs_004",
+    "title": "Validate Hashing for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1133,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-hashing-for-linked-list-4/",
+    "companies": [
+      "Tencent",
+      "Salesforce"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_hs_005",
+    "title": "Optimal Hashing for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2538,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-hashing-for-linked-list-5/",
+    "companies": [
+      "Stripes",
+      "Twitter"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_hs_006",
+    "title": "Count of Hashing for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2409,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-hashing-for-linked-list-6/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_hs_007",
+    "title": "Subsequence Hashing for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2580,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-hashing-for-linked-list-7/",
+    "companies": [
+      "Tencent",
+      "Adobe",
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_hs_008",
+    "title": "Cyclic Hashing for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2196,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-hashing-for-linked-list-8/",
+    "companies": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_hs_009",
+    "title": "Minimum Cost Hashing for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1509,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-hashing-for-linked-list-9/",
+    "companies": [
+      "ByteDance",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_hs_010",
+    "title": "Subsequence Hashing for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2156,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-hashing-for-linked-list-10/",
+    "companies": [
+      "Uber"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_hs_011",
+    "title": "Shortest Hashing for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1972,
+    "leetcodeUrl": "https://leetcode.com/problems/shortest-hashing-for-linked-list-11/",
+    "companies": [
+      "Twitter",
+      "Netflix",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_hs_012",
+    "title": "Merge Hashing for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1720,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-hashing-for-linked-list-12/",
+    "companies": [
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_hs_013",
+    "title": "Cyclic Hashing for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2898,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-hashing-for-linked-list-13/",
+    "companies": [
+      "Airbnb",
+      "Adobe",
+      "Bloomberg"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_hs_014",
+    "title": "Validate Hashing for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1383,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-hashing-for-linked-list-14/",
+    "companies": [
+      "Google",
+      "Netflix",
+      "Twilio"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_hs_015",
+    "title": "Subsequence Hashing for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2590,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-hashing-for-linked-list-15/",
+    "companies": [
+      "LinkedIn",
+      "Uber",
+      "Netflix"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_hs_016",
+    "title": "Continuous Hashing for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1708,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-hashing-for-linked-list-16/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_hs_017",
+    "title": "Balanced Hashing for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1859,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-hashing-for-linked-list-17/",
+    "companies": [
+      "Meta",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_hs_018",
+    "title": "Count of Hashing for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1195,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-hashing-for-linked-list-18/",
+    "companies": [
+      "Salesforce",
+      "Uber",
+      "Netflix"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_hs_019",
+    "title": "Validate Hashing for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1284,
+    "leetcodeUrl": "https://leetcode.com/problems/validate-hashing-for-linked-list-19/",
+    "companies": [
+      "ByteDance",
+      "Amazon",
+      "Netflix"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_hs_020",
+    "title": "Continuous Hashing for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "hashing",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2208,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-hashing-for-linked-list-20/",
+    "companies": [
+      "Adobe",
+      "Google",
+      "Stripes"
+    ],
+    "tags": [
+      "Linked List",
+      "Hashing"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_ms_001",
+    "title": "Search Monotonic Stack for Linked List 1",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1271,
+    "leetcodeUrl": "https://leetcode.com/problems/search-monotonic-stack-for-linked-list-1/",
+    "companies": [
+      "ByteDance",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_002",
+    "title": "Count of Monotonic Stack for Linked List 2",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2439,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-linked-list-2/",
+    "companies": [
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_003",
+    "title": "Cyclic Monotonic Stack for Linked List 3",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1162,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-linked-list-3/",
+    "companies": [
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_ms_004",
+    "title": "Continuous Monotonic Stack for Linked List 4",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2678,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-monotonic-stack-for-linked-list-4/",
+    "companies": [
+      "Netflix",
+      "Twilio",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "20 min"
+  },
+  {
+    "_id": "ll_ms_005",
+    "title": "Minimum Cost Monotonic Stack for Linked List 5",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1153,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-monotonic-stack-for-linked-list-5/",
+    "companies": [
+      "Bloomberg",
+      "Airbnb"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_ms_006",
+    "title": "Merge Monotonic Stack for Linked List 6",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1729,
+    "leetcodeUrl": "https://leetcode.com/problems/merge-monotonic-stack-for-linked-list-6/",
+    "companies": [
+      "ByteDance"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "35 min"
+  },
+  {
+    "_id": "ll_ms_007",
+    "title": "Continuous Monotonic Stack for Linked List 7",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1478,
+    "leetcodeUrl": "https://leetcode.com/problems/continuous-monotonic-stack-for-linked-list-7/",
+    "companies": [
+      "Twilio",
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_ms_008",
+    "title": "Optimal Monotonic Stack for Linked List 8",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2361,
+    "leetcodeUrl": "https://leetcode.com/problems/optimal-monotonic-stack-for-linked-list-8/",
+    "companies": [
+      "Apple"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_009",
+    "title": "K-th Distance Monotonic Stack for Linked List 9",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1718,
+    "leetcodeUrl": "https://leetcode.com/problems/k-th-distance-monotonic-stack-for-linked-list-9/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_010",
+    "title": "Longest Monotonic Stack for Linked List 10",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 2927,
+    "leetcodeUrl": "https://leetcode.com/problems/longest-monotonic-stack-for-linked-list-10/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "30 min"
+  },
+  {
+    "_id": "ll_ms_011",
+    "title": "Count of Monotonic Stack for Linked List 11",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Medium",
+    "platform": "LeetCode",
+    "problemNumber": 1500,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-linked-list-11/",
+    "companies": [
+      "Atlassian",
+      "Oracle"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "25 min"
+  },
+  {
+    "_id": "ll_ms_012",
+    "title": "Subarray Monotonic Stack for Linked List 12",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1903,
+    "leetcodeUrl": "https://leetcode.com/problems/subarray-monotonic-stack-for-linked-list-12/",
+    "companies": [
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_013",
+    "title": "Search Monotonic Stack for Linked List 13",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2160,
+    "leetcodeUrl": "https://leetcode.com/problems/search-monotonic-stack-for-linked-list-13/",
+    "companies": [
+      "Uber",
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_014",
+    "title": "Count of Monotonic Stack for Linked List 14",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2623,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-linked-list-14/",
+    "companies": [
+      "Google"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ms_015",
+    "title": "Minimum Cost Monotonic Stack for Linked List 15",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1274,
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-monotonic-stack-for-linked-list-15/",
+    "companies": [
+      "Amazon",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ms_016",
+    "title": "Balanced Monotonic Stack for Linked List 16",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2174,
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-monotonic-stack-for-linked-list-16/",
+    "companies": [
+      "Bloomberg",
+      "Twitter",
+      "Apple"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ms_017",
+    "title": "Search Monotonic Stack for Linked List 17",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 1814,
+    "leetcodeUrl": "https://leetcode.com/problems/search-monotonic-stack-for-linked-list-17/",
+    "companies": [
+      "LinkedIn"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  },
+  {
+    "_id": "ll_ms_018",
+    "title": "Subsequence Monotonic Stack for Linked List 18",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 2468,
+    "leetcodeUrl": "https://leetcode.com/problems/subsequence-monotonic-stack-for-linked-list-18/",
+    "companies": [
+      "Netflix",
+      "Bloomberg",
+      "Adobe"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_019",
+    "title": "Cyclic Monotonic Stack for Linked List 19",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Hard",
+    "platform": "LeetCode",
+    "problemNumber": 1229,
+    "leetcodeUrl": "https://leetcode.com/problems/cyclic-monotonic-stack-for-linked-list-19/",
+    "companies": [
+      "Tencent"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "40 min"
+  },
+  {
+    "_id": "ll_ms_020",
+    "title": "Count of Monotonic Stack for Linked List 20",
+    "topic": "linkedlist",
+    "pattern": "monotonic-stack",
+    "difficulty": "Easy",
+    "platform": "LeetCode",
+    "problemNumber": 2207,
+    "leetcodeUrl": "https://leetcode.com/problems/count-of-monotonic-stack-for-linked-list-20/",
+    "companies": [
+      "Meta"
+    ],
+    "tags": [
+      "Linked List",
+      "Monotonic Stack"
+    ],
+    "estimatedTime": "15 min"
+  }
+]

@@ -7,13 +7,14 @@ function LeftSection({ onLoginClick }) {
 
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/5 text-white text-sm font-semibold mb-6 sm:mb-7">
-                1,000+ Learners
+                1,000+ Learners (Soon)
             </div>
 
             {/* Heading */}
-            <h1 className="text-[clamp(2.45rem,12vw,4.5rem)] sm:text-5xl lg:text-6xl leading-[1.06] tracking-normal text-white max-w-2xl lc-safe-text">
-                Core CS <br />
-                <span className="text-[#F46717]">Is Baar Actually</span> <br />
+            <h1 className="text-[clamp(2.45rem,12vw,4.5rem)] sm:text-5xl lg:text-5xl leading-[1.06] tracking-normal text-white max-w-2xl lc-safe-text">
+                Core CS is baar actually<br />
+                {/* <span className="text-white">Is Baar Actually</span> <br /> */}
+                
                 Samajh Aayega.
             </h1>
 
@@ -31,7 +32,7 @@ function LeftSection({ onLoginClick }) {
                     Start Learning
                 </button>
 
-                <button onClick={onLoginClick} className="min-h-12 bg-[#F46717] text-white px-8 py-4 rounded-2xl font-semibold cursor-pointer lc-orange-glow lc-interactive hover:bg-[#ff7d34] active:scale-[0.98]">
+                <button onClick={onLoginClick} className="min-h-12 bg-orange-400 text-black px-8 py-4 rounded-2xl font-semibold cursor-pointer lc-orange-glow lc-interactive  active:scale-[0.98]">
                     Explore Roadmaps →
                 </button>
             </div>
@@ -41,22 +42,22 @@ function LeftSection({ onLoginClick }) {
             <div className="mt-9 sm:mt-10 flex flex-col gap-3.5 sm:gap-4 text-[#b7b7c2]">
 
                 <div className="flex items-start gap-3 text-sm leading-6">
-                    <FiMap className="text-[#F46717] text-lg mt-0.5 shrink-0" />
+                    <FiMap className="text-[#b7b7c2] text-lg mt-0.5 shrink-0" />
                     <span>Follow structured roadmaps designed for real placement preparation</span>
                 </div>
 
                 <div className="flex items-start gap-3 text-sm leading-6">
-                    <FiEdit3 className="text-[#F46717] text-lg mt-0.5 shrink-0" />
+                    <FiEdit3 className="text-[#b7b7c2] text-lg mt-0.5 shrink-0" />
                     <span>Practice interactive questions with instant feedback and explanations</span>
                 </div>
 
                 <div className="flex items-start gap-3 text-sm leading-6">
-                    <FiTrendingUp className="text-[#F46717] text-lg mt-0.5 shrink-0" />
+                    <FiTrendingUp className="text-[#b7b7c2]     text-lg mt-0.5 shrink-0" />
                     <span>Track weak topics, monitor progress, and improve consistently</span>
                 </div>
 
                 <div className="flex items-start gap-3 text-sm leading-6">
-                    <FiBookOpen className="text-[#F46717] text-lg mt-0.5 shrink-0" />
+                    <FiBookOpen className="text-[#b7b7c2] text-lg mt-0.5 shrink-0" />
                     <span>Learn difficult CS concepts through simple Hinglish explanations</span>
                 </div>
 
