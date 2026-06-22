@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { useAuth } from "../../../context/AuthContext";
 import { consistencyService } from "../../../services/consistencyService";
 
@@ -8,6 +8,13 @@ function ConsistencyBar({ userId: userIdProp }) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(Boolean(userId));
     const [selectedYear, setSelectedYear] = useState("current"); // "current" or "previous"
+    const scrollRef = useRef(null);
+
+    useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft = scrollRef.current.scrollWidth;
+        }
+    }, [data, loading]);
 
     useEffect(() => {
         if (!userId) {
@@ -58,38 +65,33 @@ function ConsistencyBar({ userId: userIdProp }) {
             date.setFullYear(new Date().getFullYear() - 1);
             date.setMonth(11); // December of previous year
         }
-        for (let i = 12; i >= 0; i--) {
+        for (let i = 11; i >= 0; i--) {
             const d = new Date(date.getFullYear(), date.getMonth() - i, 1);
             const label = d.toLocaleDateString("en-US", { month: "short" });
-            result.push(label);
+            const year = d.getFullYear();
+            const monthVal = d.getMonth();
+            const daysCount = new Date(year, monthVal + 1, 0).getDate();
+            result.push({
+                label,
+                year,
+                monthVal,
+                daysCount,
+            });
         }
         return result;
     }, [selectedYear]);
 
-    const activityDays = useMemo(() => {
-        const heatmap = data?.heatmap || [];
-        const totalCells = months.length * 28;
-
-        return Array.from({ length: totalCells }, (_, index) => {
-            const heatmapIndex = heatmap.length - totalCells + index;
-            const day = heatmapIndex >= 0 ? heatmap[heatmapIndex] : null;
-
-            return {
-                key: day?.date || `empty-${index}`,
-                solved: (day?.problemsSolved || 0) > 0,
-            };
-        });
-    }, [data?.heatmap, months.length]);
-
-    const getActivity = (monthIndex, dayIndex) => {
-        const day = activityDays[(monthIndex * 28) + dayIndex];
-
-        if (loading) {
-            return "bg-white/10 animate-pulse";
+    const activityMap = useMemo(() => {
+        const map = new Map();
+        if (data?.heatmap) {
+            data.heatmap.forEach((day) => {
+                if (day.date) {
+                    map.set(day.date, day);
+                }
+            });
         }
-
-        return day?.solved ? "bg-green-500" : "bg-white/10";
-    };
+        return map;
+    }, [data?.heatmap]);
 
     const totalSolved = data?.heatmap?.reduce((total, day) => total + (day.problemsSolved || 0), 0) || 0;
     const totalActiveDays = user?.stats?.totalActiveDays || data?.activeDays || 0;
@@ -196,6 +198,7 @@ function ConsistencyBar({ userId: userIdProp }) {
 
             {/* Heatmap */}
             <div
+                ref={scrollRef}
                 className="
                     flex
                     gap-6
@@ -204,50 +207,80 @@ function ConsistencyBar({ userId: userIdProp }) {
                     z-10
                 "
             >
-                {months.map((month, monthIndex) => (
-                    <div
-                        key={month}
-                        className="
-                            flex
-                            flex-col
-                            items-center
-                            gap-3
-                            flex-shrink-0
-                        "
-                    >
-                        {/* Grid */}
+                {months.map((monthObj) => {
+                    const startDayOfWeek = new Date(monthObj.year, monthObj.monthVal, 1).getDay();
+                    const emptyArray = Array.from({ length: startDayOfWeek });
+                    const daysArray = Array.from({ length: monthObj.daysCount }, (_, i) => i + 1);
+                    return (
                         <div
+                            key={`${monthObj.year}-${monthObj.monthVal}`}
                             className="
-                                grid
-                                grid-cols-4
-                                gap-[5px]
+                                flex
+                                flex-col
+                                items-center
+                                gap-3
+                                flex-shrink-0
                             "
                         >
-                            {[...Array(28)].map((_, index) => (
-                                <div
-                                    key={activityDays[(monthIndex * 28) + index]?.key || `${month}-${index}`}
-                                    className={`
-                                        w-3
-                                        h-3
-                                        rounded-[2px]
-                                        ${getActivity(monthIndex, index)}
-                                    `}
-                                />
-                            ))}
-                        </div>
+                            {/* Grid */}
+                            <div
+                                className="
+                                    grid
+                                    grid-flow-col
+                                    gap-[5px]
+                                "
+                                style={{ gridTemplateRows: "repeat(7, minmax(0, 1fr))" }}
+                            >
+                                {emptyArray.map((_, index) => (
+                                    <div
+                                        key={`empty-${monthObj.year}-${monthObj.monthVal}-${index}`}
+                                        className="w-3 h-3 bg-transparent"
+                                    />
+                                ))}
+                                {daysArray.map((dayVal) => {
+                                    const yearStr = monthObj.year;
+                                    const monthStr = String(monthObj.monthVal + 1).padStart(2, '0');
+                                    const dayStr = String(dayVal).padStart(2, '0');
+                                    const dateKey = `${yearStr}-${monthStr}-${dayStr}`;
+                                    
+                                    const dayData = activityMap.get(dateKey);
+                                    const isSolved = (dayData?.problemsSolved || 0) > 0;
+                                    
+                                    let bgClass = "bg-white/10";
+                                    if (loading) {
+                                        bgClass = "bg-white/10 animate-pulse";
+                                    } else if (isSolved) {
+                                        bgClass = "bg-green-500";
+                                    }
+                                    
+                                    return (
+                                        <div
+                                            key={dateKey}
+                                            className={`
+                                                w-3
+                                                h-3
+                                                rounded-[2px]
+                                                ${bgClass}
+                                            `}
+                                            title={`${dateKey}: ${dayData?.problemsSolved || 0} solved`}
+                                        />
+                                    );
+                                })}
+                            </div>
 
-                        {/* Month */}
-                        <p
-                            className="
-                                text-gray-400
-                                text-sm
-                                font-medium
-                            "
-                        >
-                            {month}
-                        </p>
-                    </div>
-                ))}
+                            {/* Month */}
+                            <p
+                                className="
+                                    text-gray-400
+                                    text-sm
+                                    font-medium
+                                "
+                            >
+                                {monthObj.label}
+                            </p>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
