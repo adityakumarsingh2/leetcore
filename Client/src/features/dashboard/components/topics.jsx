@@ -366,8 +366,8 @@ function Topics() {
                                 className={`
                                     relative
                                     w-[250px]
-                                    sm:w-[280px]
-                                    min-h-[196px]
+                                    sm:w-[260px]
+                                    min-h-[152px]
                                     flex-shrink-0
                                     snap-center
                                     rounded-2xl
@@ -412,7 +412,7 @@ function Topics() {
                                     "
                                 />
 
-                                {/* Lock Overlay */}
+                                {/* Lock Overlay
                                 <div
                                     className="
                                         absolute
@@ -427,7 +427,7 @@ function Topics() {
                                     "
                                 >
 
-                                    {/* Lock Icon */}
+                                    
                                     <div
                                         className="
                                             w-14
@@ -468,7 +468,7 @@ function Topics() {
                                         New content is currently being built.
                                     </p>
 
-                                </div>
+                                </div> */}
 
                                 {/* Content */}
                                 <div className="relative z-10">
@@ -504,13 +504,14 @@ function Topics() {
                                         relative
                                         z-10
                                         w-full
-                                        min-h-11
-                                        rounded-xl
+                                        min-h-9
+                                        rounded-lg
                                         text-sm
                                         font-semibold
                                         opacity-70
                                         cursor-not-allowed
                                         border
+                                        mt-2
                                         border-white/10
                                         ${section.buttonColor}
                                         text-black/80

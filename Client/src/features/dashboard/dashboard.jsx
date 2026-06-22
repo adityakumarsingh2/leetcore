@@ -3,82 +3,54 @@ import Dashmain from "./components/dashmain";
 import DashRightNavBar from "./components/dashrightnavbar";
 
 function Dashboard() {
-
     return (
+        <div className="w-full min-h-screen bg-[#070709] overflow-hidden">
 
-        <div
-            className="
-                w-full
-                min-h-screen
-                bg-[#070709]
-                flex
-                flex-col
-                md:flex-row
-                gap-2
-                sm:gap-3
-                p-2
-                sm:p-3
-                overflow-x-hidden
-            "
-        >
-
-            {/* Left Navbar */}
+            {/* Fixed Left Navbar */}
             <div
                 className="
-                    w-full
-                    md:w-[85px]
-                    lg:w-[90px]
-                    md:h-[calc(100svh-24px)]
-                    flex-shrink-0
+                    fixed
+                    left-2
+                    top-2
+                    w-[90px]
+                    h-[calc(100svh-16px)]
+                    z-50
                 "
             >
                 <DashLeftNavBar />
             </div>
 
-            {/* Main Section */}
+            {/* Content Area */}
             <div
                 className="
-                    flex-1
-                    min-h-[calc(100svh-96px)]
-                    md:h-[calc(100svh-24px)]
-                    overflow-y-auto
-                    rounded-2xl
-                    md:rounded-3xl
-                    border
-                    border-white/8
-                    bg-[#111113]/78
-                    backdrop-blur-xl
-                    shadow-[0_20px_70px_rgba(0,0,0,0.22)]
+                    ml-[90px]
+                    flex
+                    
+                    p-2
+                    min-h-screen
                 "
             >
-                <Dashmain />
-            </div>
-
-            {/* Right Sidebar */}
-            <div
-                className="
-                    hidden
-                    xl:block
-                    w-[320px]
-                    2xl:w-[360px]
-                    h-[calc(100svh-24px)]
-                    overflow-y-auto
-                    rounded-3xl
-                    border
-                    border-white/8
-                    bg-[#111113]/78
-                    backdrop-blur-xl
-                    shadow-[0_20px_70px_rgba(0,0,0,0.22)]
-                    flex-shrink-0
-                "
-            >
-                <DashRightNavBar />
+                {/* Main Section */}
+                <div className="flex-1 overflow-y-auto">
+                    <Dashmain />
+                </div>
+                {/* Right Sidebar */}
+                <div
+                    className="
+                        hidden
+                        xl:block
+                        w-[320px]
+                        2xl:w-[360px]
+                        flex-shrink-0
+                        -ml-4
+                    "
+                >
+                    <DashRightNavBar />
+                </div>
             </div>
 
         </div>
-
     );
-
 }
 
 export default Dashboard;
