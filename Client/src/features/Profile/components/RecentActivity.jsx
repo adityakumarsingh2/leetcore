@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
-import { CheckSquare, List, Code, MessageSquare, ChevronRight } from "lucide-react";
+import { CheckSquare, Award, ChevronRight, Play, ExternalLink } from "lucide-react";
 import { questionService } from "../../../services/questionService";
 
 export default function RecentActivity({ userId }) {
     const [recentSolved, setRecentSolved] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loadingRecent, setLoadingRecent] = useState(true);
+    const [recommendedQuestion, setRecommendedQuestion] = useState(null);
+    const [loadingRec, setLoadingRec] = useState(true);
     const [activeTab, setActiveTab] = useState("recent");
 
     useEffect(() => {
         if (!userId) return;
 
         let mounted = true;
+        
+        // Fetch recent solved questions
         const fetchRecentSolved = async () => {
-            setLoading(true);
+            setLoadingRecent(true);
             try {
                 const response = await questionService.getRecentSolved();
                 if (mounted && response.data?.success) {
@@ -22,12 +26,30 @@ export default function RecentActivity({ userId }) {
                 console.error("Failed to load recent solved questions:", error);
             } finally {
                 if (mounted) {
-                    setLoading(false);
+                    setLoadingRecent(false);
+                }
+            }
+        };
+
+        // Fetch recommended next question
+        const fetchRecommendation = async () => {
+            setLoadingRec(true);
+            try {
+                const response = await questionService.getRecommendation();
+                if (mounted && response.data?.success) {
+                    setRecommendedQuestion(response.data.recommendedQuestion);
+                }
+            } catch (error) {
+                console.error("Failed to load recommended question:", error);
+            } finally {
+                if (mounted) {
+                    setLoadingRec(false);
                 }
             }
         };
 
         fetchRecentSolved();
+        fetchRecommendation();
 
         return () => {
             mounted = false;
@@ -53,9 +75,7 @@ export default function RecentActivity({ userId }) {
 
     const tabs = [
         { id: "recent", label: "Recent AC", icon: <CheckSquare size={14} /> },
-        { id: "list", label: "List", icon: <List size={14} /> },
-        { id: "solutions", label: "Solutions", icon: <Code size={14} /> },
-        { id: "discuss", label: "Discuss", icon: <MessageSquare size={14} /> },
+        { id: "recommendation", label: "Recommendation", icon: <Award size={14} /> },
     ];
 
     return (
@@ -96,59 +116,138 @@ export default function RecentActivity({ userId }) {
             </div>
 
             {/* Content Body */}
-            {activeTab !== "recent" ? (
-                <div className="text-center py-8 text-white/30 text-xs">
-                    No items in this tab.
-                </div>
-            ) : loading ? (
-                /* Skeleton Loader */
-                <div className="space-y-3">
-                    {[...Array(5)].map((_, i) => (
-                        <div
-                            key={i}
-                            className="flex items-center justify-between p-3.5 bg-white/5 border border-white/5 rounded-xl animate-pulse"
-                        >
-                            <div className="h-4 bg-white/10 rounded w-1/3" />
-                            <div className="h-3 bg-white/10 rounded w-16" />
-                        </div>
-                    ))}
-                </div>
-            ) : recentSolved.length === 0 ? (
-                <div className="text-center py-8 text-white/30 text-xs">
-                    No recent solved questions found.
-                </div>
+            {activeTab === "recent" ? (
+                loadingRecent ? (
+                    /* Skeleton Loader for Recent */
+                    <div className="space-y-3">
+                        {[...Array(5)].map((_, i) => (
+                            <div
+                                key={i}
+                                className="flex items-center justify-between p-3.5 bg-white/5 border border-white/5 rounded-xl animate-pulse"
+                            >
+                                <div className="h-4 bg-white/10 rounded w-1/3" />
+                                <div className="h-3 bg-white/10 rounded w-16" />
+                            </div>
+                        ))}
+                    </div>
+                ) : recentSolved.length === 0 ? (
+                    <div className="text-center py-8 text-white/30 text-xs">
+                        No recent solved questions found.
+                    </div>
+                ) : (
+                    /* Recent AC List */
+                    <div className="space-y-2">
+                        {recentSolved.map((item) => (
+                            <div
+                                key={item.problemId}
+                                className="
+                                    flex 
+                                    items-center 
+                                    justify-between 
+                                    p-3.5 
+                                    bg-white/3
+                                    border 
+                                    border-white/5 
+                                    rounded-xl 
+                                    hover:bg-white/5
+                                    hover:border-white/10
+                                    transition-all
+                                    duration-150
+                                    group 
+                                    cursor-pointer
+                                "
+                            >
+                                <span className="text-sm text-white/80 group-hover:text-white font-medium transition-colors">
+                                    {item.title}
+                                </span>
+                                <span className="text-xs text-white/40 font-light">
+                                    {formatTimeAgo(item.solvedAt)}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                )
             ) : (
-                /* Recent AC List */
-                <div className="space-y-2">
-                    {recentSolved.map((item) => (
-                        <div
-                            key={item.problemId}
+                /* Recommendation Tab */
+                loadingRec ? (
+                    /* Skeleton Loader for Recommendation */
+                    <div className="p-4 bg-white/3 border border-white/5 rounded-xl animate-pulse">
+                        <div className="h-5 bg-white/10 rounded w-1/2 mb-3" />
+                        <div className="h-4 bg-white/10 rounded w-1/4 mb-4" />
+                        <div className="h-10 bg-white/10 rounded w-full" />
+                    </div>
+                ) : !recommendedQuestion ? (
+                    <div className="text-center py-8 text-white/30 text-xs">
+                        Congratulations! You have completed all DSA questions.
+                    </div>
+                ) : (
+                    /* Recommended Question Display Card */
+                    <div className="p-5 bg-white/3 border border-white/5 rounded-xl hover:border-white/10 transition duration-150 relative overflow-hidden flex flex-col gap-4">
+                        <div className="flex justify-between items-start flex-wrap gap-2">
+                            <div>
+                                <span className="text-[10px] text-[#F46717] font-bold uppercase tracking-wider bg-[#F46717]/10 px-2.5 py-0.5 rounded-full border border-[#F46717]/20">
+                                    SOLVE NEXT
+                                </span>
+                                <h3 className="text-lg font-bold text-white mt-2 leading-snug">
+                                    {recommendedQuestion.problemNumber ? `${recommendedQuestion.problemNumber}. ` : ""}{recommendedQuestion.title}
+                                </h3>
+                                <p className="text-xs text-white/50 mt-1 capitalize font-medium">
+                                    {recommendedQuestion.topic} Topic • {recommendedQuestion.pattern?.replace(/-/g, " ")} Pattern
+                                </p>
+                            </div>
+
+                            <span className={`
+                                px-2.5 py-0.5 rounded-full text-xs font-semibold border
+                                ${recommendedQuestion.difficulty === "Easy"
+                                    ? "text-emerald-400 bg-emerald-500/10 border-emerald-500/20"
+                                    : recommendedQuestion.difficulty === "Hard"
+                                    ? "text-rose-400 bg-rose-500/10 border-rose-500/20"
+                                    : "text-amber-400 bg-amber-500/10 border-amber-500/20"
+                                }
+                            `}>
+                                {recommendedQuestion.difficulty}
+                            </span>
+                        </div>
+
+                        {recommendedQuestion.estimatedTime && (
+                            <div className="flex items-center gap-1.5 text-xs text-white/40">
+                                <span>Estimated time:</span>
+                                <span className="text-white/60 font-semibold">{recommendedQuestion.estimatedTime}</span>
+                            </div>
+                        )}
+
+                        <a
+                            href={recommendedQuestion.leetcodeUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="
-                                flex 
+                                inline-flex 
                                 items-center 
-                                justify-between 
-                                p-3.5 
-                                bg-white/3
-                                border 
-                                border-white/5 
+                                justify-center 
+                                gap-2 
+                                w-full 
+                                px-4 
+                                py-3 
                                 rounded-xl 
-                                hover:bg-white/5
-                                hover:border-white/10
-                                transition-all
-                                duration-150
-                                group 
+                                bg-orange-500 
+                                text-white 
+                                font-bold 
+                                text-sm 
+                                hover:bg-orange-600 
+                                transition-all 
+                                duration-150 
+                                shadow-lg 
+                                shadow-orange-500/20
                                 cursor-pointer
+                                select-none
                             "
                         >
-                            <span className="text-sm text-white/80 group-hover:text-white font-medium transition-colors">
-                                {item.title}
-                            </span>
-                            <span className="text-xs text-white/40 font-light">
-                                {formatTimeAgo(item.solvedAt)}
-                            </span>
-                        </div>
-                    ))}
-                </div>
+                            <Play size={14} fill="currentColor" />
+                            Practice on LeetCode
+                            <ExternalLink size={12} className="opacity-70 ml-0.5" />
+                        </a>
+                    </div>
+                )
             )}
         </div>
     );
