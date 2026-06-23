@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CheckSquare, Award, ChevronRight, Play, ExternalLink } from "lucide-react";
+import { CheckSquare, Award, ChevronRight, Play, ExternalLink, X, Search } from "lucide-react";
 import { questionService } from "../../../services/questionService";
 
 export default function RecentActivity({ userId }) {
@@ -8,6 +8,26 @@ export default function RecentActivity({ userId }) {
     const [recommendedQuestion, setRecommendedQuestion] = useState(null);
     const [loadingRec, setLoadingRec] = useState(true);
     const [activeTab, setActiveTab] = useState("recent");
+
+    const [showModal, setShowModal] = useState(false);
+    const [allSubmissions, setAllSubmissions] = useState([]);
+    const [loadingAll, setLoadingAll] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const handleOpenModal = async () => {
+        setShowModal(true);
+        setLoadingAll(true);
+        try {
+            const response = await questionService.getRecentSolved({ all: true });
+            if (response.data?.success) {
+                setAllSubmissions(response.data.recentSolved || []);
+            }
+        } catch (error) {
+            console.error("Failed to fetch all submissions:", error);
+        } finally {
+            setLoadingAll(false);
+        }
+    };
 
     useEffect(() => {
         if (!userId) return;
@@ -78,6 +98,12 @@ export default function RecentActivity({ userId }) {
         { id: "recommendation", label: "Recommendation", icon: <Award size={14} /> },
     ];
 
+    const filteredSubmissions = allSubmissions.filter(item => 
+        item.title?.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        item.topic?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.pattern?.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
         <div className="w-full rounded-xl bg-[#1F1F22] border border-white/5 p-6 relative min-h-[220px]">
             {/* Tab Header */}
@@ -109,7 +135,10 @@ export default function RecentActivity({ userId }) {
                     })}
                 </div>
 
-                <button className="text-xs text-white/40 hover:text-white transition flex items-center gap-0.5 cursor-pointer">
+                <button 
+                    onClick={handleOpenModal}
+                    className="text-xs text-white/40 hover:text-white transition flex items-center gap-0.5 cursor-pointer bg-transparent border-none outline-none font-semibold"
+                >
                     View all submissions
                     <ChevronRight size={12} />
                 </button>
@@ -248,6 +277,111 @@ export default function RecentActivity({ userId }) {
                         </a>
                     </div>
                 )
+            )}
+            {/* Submissions History Modal */}
+            {showModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm px-4">
+                    <div className="w-full max-w-xl rounded-2xl border border-white/10 bg-[#141416] p-6 text-white shadow-2xl relative flex flex-col max-h-[85vh] animate-in fade-in duration-200">
+                        <div className="flex items-start justify-between gap-4 mb-4 flex-shrink-0">
+                            <div>
+                                <h2 className="text-xl font-bold">Solved History</h2>
+                                <p className="text-xs text-white/40 mt-1">Complete record of your accepted submissions ({allSubmissions.length} total)</p>
+                            </div>
+                            <button
+                                type="button"
+                                onClick={() => { setShowModal(false); setSearchTerm(""); }}
+                                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white cursor-pointer"
+                            >
+                                <X size={16} />
+                            </button>
+                        </div>
+                        
+                        {/* Search Bar */}
+                        <div className="relative mb-4 flex-shrink-0">
+                            <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/40" />
+                            <input
+                                type="text"
+                                placeholder="Search by title, topic, or pattern..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="w-full bg-white/5 border border-white/10 rounded-xl py-2 px-10 text-sm text-white placeholder-white/35 focus:outline-none focus:border-white/20 focus:bg-white/8 transition-all"
+                            />
+                        </div>
+
+                        {/* List Area */}
+                        <div className="overflow-y-auto space-y-2 pr-1 flex-1 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+                            {loadingAll ? (
+                                <div className="space-y-3 py-4">
+                                    {[...Array(5)].map((_, i) => (
+                                        <div key={i} className="flex items-center justify-between p-3.5 bg-white/3 border border-white/5 rounded-xl animate-pulse">
+                                            <div className="h-4 bg-white/10 rounded w-1/3" />
+                                            <div className="h-3 bg-white/10 rounded w-16" />
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : filteredSubmissions.length === 0 ? (
+                                <div className="text-center py-8 text-white/30 text-xs">
+                                    {searchTerm ? "No matching solved questions found." : "No solved questions found."}
+                                </div>
+                            ) : (
+                                filteredSubmissions.map((item) => (
+                                    <a
+                                        key={item.problemId}
+                                        href={item.leetcodeUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="
+                                            flex 
+                                            items-center 
+                                            justify-between 
+                                            p-3.5 
+                                            bg-white/3
+                                            border 
+                                            border-white/5 
+                                            rounded-xl 
+                                            hover:bg-white/5
+                                            hover:border-white/10
+                                            transition-all
+                                            duration-150
+                                            group 
+                                            cursor-pointer
+                                        "
+                                    >
+                                        <div className="flex flex-col gap-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">
+                                                    {item.problemNumber ? `${item.problemNumber}. ` : ""}{item.title}
+                                                </span>
+                                                <ExternalLink size={12} className="opacity-0 group-hover:opacity-60 text-white/60 transition-opacity" />
+                                            </div>
+                                            <div className="flex items-center gap-2 text-[10px] font-medium text-white/40">
+                                                <span className="capitalize">{item.topic?.replace(/-/g, " ")}</span>
+                                                <span>•</span>
+                                                <span className="capitalize">{item.pattern?.replace(/-/g, " ")}</span>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-col items-end gap-1.5">
+                                            <span className={`
+                                                px-2 py-0.5 rounded-full text-[10px] font-semibold border
+                                                ${item.difficulty === "Easy"
+                                                    ? "text-emerald-400 bg-emerald-500/10 border-emerald-500/20"
+                                                    : item.difficulty === "Hard"
+                                                    ? "text-rose-400 bg-rose-500/10 border-rose-500/20"
+                                                    : "text-amber-400 bg-amber-500/10 border-amber-500/20"
+                                                }
+                                            `}>
+                                                {item.difficulty}
+                                            </span>
+                                            <span className="text-[10px] text-white/30 font-light">
+                                                {formatTimeAgo(item.solvedAt)}
+                                            </span>
+                                        </div>
+                                    </a>
+                                ))
+                            )}
+                        </div>
+                    </div>
+                </div>
             )}
         </div>
     );

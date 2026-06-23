@@ -5,7 +5,7 @@ function Milestone() {
     const { user } = useAuth();
 
     return (
-        <div className="w-full p-5">
+        <div className="w-full min-w-0 p-5">
             <UserBadges userId={user?._id} compact />
         </div>
     );

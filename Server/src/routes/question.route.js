@@ -490,10 +490,12 @@ router.get("/recent-solved", optionalAuth, async (req, res) => {
             return res.status(401).json({ success: false, message: "User not logged in" });
         }
 
-        const solvedList = await SolvedProblem.find({ userId })
-            .sort({ solvedAt: -1 })
-            .limit(10)
-            .lean();
+        const all = req.query.all === "true";
+        let query = SolvedProblem.find({ userId }).sort({ solvedAt: -1 });
+        if (!all) {
+            query = query.limit(10);
+        }
+        const solvedList = await query.lean();
 
         const loadedQuestionsCache = {};
         const getQuestionDetails = (topic, problemId) => {
@@ -523,6 +525,9 @@ router.get("/recent-solved", optionalAuth, async (req, res) => {
                 title: qDetails?.title || "Unknown Problem",
                 topic: item.topic,
                 pattern: item.pattern,
+                difficulty: qDetails?.difficulty || "Medium",
+                leetcodeUrl: qDetails?.leetcodeUrl || "#",
+                problemNumber: qDetails?.problemNumber,
                 solvedAt: item.solvedAt || item.createdAt
             };
         });
