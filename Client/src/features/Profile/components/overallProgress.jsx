@@ -80,7 +80,7 @@ function OverallProgress() {
                     flex-shrink-0
                 "
             >
-                <div className="relative w-[180px] h-[180px] sm:w-[200px] sm:h-[200px]">
+                <div className="relative h-[160px] w-[160px] sm:h-[180px] sm:w-[180px] 2xl:h-[200px] 2xl:w-[200px]">
                     <svg viewBox="0 0 300 300" className="transform -rotate-90">
                         {/* Background Ring */}
                         <circle
@@ -160,10 +160,12 @@ function OverallProgress() {
                     z-10
                     grid
                     grid-cols-2
-                    sm:grid-cols-3
+                    2xl:grid-cols-3
                     gap-2
                     w-full
-                    lg:max-w-[480px]
+                    min-w-0
+                    lg:max-w-[420px]
+                    2xl:max-w-[480px]
                     max-h-[280px]
                     overflow-y-auto
                     pr-2

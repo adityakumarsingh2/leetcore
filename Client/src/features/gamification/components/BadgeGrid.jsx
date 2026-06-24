@@ -3,7 +3,7 @@ import BadgeCard from "./BadgeCard";
 function BadgeGrid({ badges = [], loading = false, emptyLabel = "No badges earned yet.", onBadgeClick }) {
     if (loading) {
         return (
-            <div className="flex flex-wrap gap-3 items-center">
+            <div className="flex min-w-0 flex-wrap gap-3 items-center">
                 {Array.from({ length: 4 }).map((_, index) => (
                     <div key={index} className="w-12 h-12 rounded-full border border-white/5 bg-white/5 animate-pulse" />
                 ))}
@@ -21,7 +21,7 @@ function BadgeGrid({ badges = [], loading = false, emptyLabel = "No badges earne
     }
 
     return (
-        <div className="flex flex-wrap gap-3 items-center justify-start">
+        <div className="flex min-w-0 max-w-full flex-wrap gap-3 items-center justify-start">
             {badges.map((item) => {
                 const badge = item.badgeId || item;
                 const key = badge?._id || badge?.slug;

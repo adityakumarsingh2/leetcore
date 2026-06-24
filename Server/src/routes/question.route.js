@@ -482,4 +482,200 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
     }
 });
 
+// Route to get recently solved problems
+router.get("/recent-solved", optionalAuth, async (req, res) => {
+    try {
+        const userId = req.user?.id || req.query.userId;
+        if (!userId) {
+            return res.status(401).json({ success: false, message: "User not logged in" });
+        }
+
+        const all = req.query.all === "true";
+        let query = SolvedProblem.find({ userId }).sort({ solvedAt: -1 });
+        if (!all) {
+            query = query.limit(10);
+        }
+        const solvedList = await query.lean();
+
+        const loadedQuestionsCache = {};
+        const getQuestionDetails = (topic, problemId) => {
+            const normTopic = normalizeTopicName(topic);
+            if (!normTopic) return null;
+            
+            if (!loadedQuestionsCache[normTopic]) {
+                const jsonPath = path.join(__dirname, "..", "data", "questions", `${normTopic}question.json`);
+                if (fs.existsSync(jsonPath)) {
+                    try {
+                        loadedQuestionsCache[normTopic] = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
+                    } catch (err) {
+                        console.error(`Error reading questions file for ${normTopic}:`, err);
+                        loadedQuestionsCache[normTopic] = [];
+                    }
+                } else {
+                    loadedQuestionsCache[normTopic] = [];
+                }
+            }
+            return loadedQuestionsCache[normTopic].find(q => q._id === problemId);
+        };
+
+        const recentSolved = solvedList.map(item => {
+            const qDetails = getQuestionDetails(item.topic, item.problemId);
+            return {
+                problemId: item.problemId,
+                title: qDetails?.title || "Unknown Problem",
+                topic: item.topic,
+                pattern: item.pattern,
+                difficulty: qDetails?.difficulty || "Medium",
+                leetcodeUrl: qDetails?.leetcodeUrl || "#",
+                problemNumber: qDetails?.problemNumber,
+                solvedAt: item.solvedAt || item.createdAt
+            };
+        });
+
+        return res.status(200).json({
+            success: true,
+            recentSolved
+        });
+    } catch (error) {
+        console.error("Error in get recent-solved:", error);
+        return res.status(500).json({ success: false, message: "Internal server error" });
+    }
+});
+
+// Route to get next recommended question
+router.get("/recommendation", optionalAuth, async (req, res) => {
+    try {
+        const userId = req.user?.id || req.query.userId;
+        if (!userId) {
+            return res.status(401).json({ success: false, message: "User not logged in" });
+        }
+
+        const lastSolved = await SolvedProblem.findOne({ userId })
+            .sort({ solvedAt: -1, createdAt: -1 })
+            .lean();
+
+        const topicsOrder = [
+            "array",
+            "string",
+            "hashing",
+            "binarysearch",
+            "linkedlist",
+            "stack",
+            "queue",
+            "recursion",
+            "backtracking",
+            "trees",
+            "binarysearchtree",
+            "heappriorityqueue",
+            "graphs",
+            "trie",
+            "greedy",
+            "dynamicprogramming",
+            "bitmanipulation"
+        ];
+
+        const loadQuestions = (topic) => {
+            const normTopic = normalizeTopicName(topic);
+            const jsonPath = path.join(__dirname, "..", "data", "questions", `${normTopic}question.json`);
+            if (fs.existsSync(jsonPath)) {
+                try {
+                    return JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
+                } catch (err) {
+                    console.error(`Error reading ${normTopic} question file:`, err);
+                    return [];
+                }
+            }
+            return [];
+        };
+
+        let recommendedQuestion = null;
+
+        if (!lastSolved) {
+            // Recommendation fallback: first question of the first topic
+            const firstTopicQuestions = loadQuestions(topicsOrder[0]);
+            if (firstTopicQuestions.length > 0) {
+                recommendedQuestion = {
+                    ...firstTopicQuestions[0],
+                    topic: topicsOrder[0],
+                };
+            }
+        } else {
+            // Load questions of current topic
+            const currentTopicQuestions = loadQuestions(lastSolved.topic);
+            const lastSolvedIdx = currentTopicQuestions.findIndex(q => q._id === lastSolved.problemId);
+
+            if (lastSolvedIdx !== -1 && lastSolvedIdx < currentTopicQuestions.length - 1) {
+                // If it is not the last question, recommend the next question in the topic
+                recommendedQuestion = {
+                    ...currentTopicQuestions[lastSolvedIdx + 1],
+                    topic: lastSolved.topic
+                };
+            } else {
+                // If it IS the last question of the topic, search for the next unsolved question in subsequent topics
+                const currentTopicIdx = topicsOrder.indexOf(lastSolved.topic);
+                let found = false;
+
+                for (let i = currentTopicIdx + 1; i < topicsOrder.length; i++) {
+                    const nextTopic = topicsOrder[i];
+                    const nextQuestions = loadQuestions(nextTopic);
+                    
+                    // Fetch solved problem IDs for this user in this topic
+                    const solvedList = await SolvedProblem.find({ userId, topic: nextTopic }).select("problemId").lean();
+                    const solvedSet = new Set(solvedList.map(p => p.problemId));
+
+                    const unsolved = nextQuestions.find(q => !solvedSet.has(q._id));
+                    if (unsolved) {
+                        recommendedQuestion = {
+                            ...unsolved,
+                            topic: nextTopic
+                        };
+                        found = true;
+                        break;
+                    }
+                }
+
+                // If not found in subsequent topics, loop back from the beginning of all topics to find any unsolved question
+                if (!found) {
+                    for (let i = 0; i <= currentTopicIdx; i++) {
+                        const nextTopic = topicsOrder[i];
+                        const nextQuestions = loadQuestions(nextTopic);
+                        const solvedList = await SolvedProblem.find({ userId, topic: nextTopic }).select("problemId").lean();
+                        const solvedSet = new Set(solvedList.map(p => p.problemId));
+
+                        const unsolved = nextQuestions.find(q => !solvedSet.has(q._id));
+                        if (unsolved) {
+                            recommendedQuestion = {
+                                ...unsolved,
+                                topic: nextTopic
+                            };
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+
+                // Ultimate fallback: if everything is solved, recommend the very first question of the first topic
+                if (!found) {
+                    const firstTopicQuestions = loadQuestions(topicsOrder[0]);
+                    if (firstTopicQuestions.length > 0) {
+                        recommendedQuestion = {
+                            ...firstTopicQuestions[0],
+                            topic: topicsOrder[0],
+                        };
+                    }
+                }
+            }
+        }
+
+        return res.status(200).json({
+            success: true,
+            recommendedQuestion
+        });
+
+    } catch (error) {
+        console.error("Error in get recommendation:", error);
+        return res.status(500).json({ success: false, message: "Internal server error" });
+    }
+});
+
 export default router;
