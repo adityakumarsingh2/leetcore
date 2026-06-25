@@ -491,8 +491,16 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
     }
 });
 
+const recentSolvedLimiter = rateLimit({
+    windowMs: 60 * 1000,
+    max: 60,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: { success: false, message: "Too many requests, please try again later." }
+});
+
 // Route to get recently solved problems
-router.get("/recent-solved", optionalAuth, async (req, res) => {
+router.get("/recent-solved", recentSolvedLimiter, optionalAuth, async (req, res) => {
     try {
         const userId = req.user?.id || req.query.userId;
         if (!userId) {
