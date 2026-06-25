@@ -8,6 +8,7 @@ import sponsorshipRouter from "./routes/sponsorship.route.js";
 import questionRouter from "./routes/question.route.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import csurf from "csurf";
 import errorMiddleware from "./middleware/error.middleware.js";
 import mongoose from "mongoose";
 
@@ -33,6 +34,19 @@ app.use(cors({
 }));
 app.use(express.json());
 
+const csrfProtection = csurf({
+    cookie: {
+        httpOnly: true,
+        sameSite: "lax",
+        secure: process.env.NODE_ENV === "production",
+    },
+});
+
+app.use(csrfProtection);
+
+app.get("/api/v1/csrf-token", (req, res) => {
+    res.status(200).json({ csrfToken: req.csrfToken() });
+});
 
 app.get("/api/v1/health", (req, res) => {
     res.status(200).json({
