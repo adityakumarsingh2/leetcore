@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import DashLeftNavBar from "../dashboard/components/dashleftnavbar";
 import apiClient from "../../services/apiClient";
+import { useAuth } from "../../context/AuthContext";
 
 const formatPattern = (pattern = "") =>
   pattern
@@ -84,6 +85,7 @@ const getFallbackDetails = (question, topicName) => {
 
 function ProblemDetail() {
   const { topic, problemId } = useParams();
+  const { setUser } = useAuth();
   const topicName = decodeURIComponent(topic || "");
   const decodedProblemId = decodeURIComponent(problemId || "");
   const [question, setQuestion] = useState(null);
@@ -254,6 +256,25 @@ function ProblemDetail() {
         response.data?.message ||
           "This solution will save in your GitHub with repo name Leetcore-submission"
       );
+
+      if (response.data?.solved) {
+        setQuestion((prevQuestion) =>
+          prevQuestion ? { ...prevQuestion, solved: true } : prevQuestion
+        );
+      }
+
+      if (response.data?.stats) {
+        setUser((prevUser) => {
+          if (!prevUser) return prevUser;
+
+          return {
+            ...prevUser,
+            xp: response.data.xp,
+            level: response.data.level,
+            stats: response.data.stats
+          };
+        });
+      }
     } catch (err) {
       console.error("Failed to submit solution:", err);
       const shouldReconnect = err.response?.status === 409 || err.response?.status === 403;

@@ -129,6 +129,97 @@ async function getOrCreateSubmissionRepo(githubClient, owner) {
     return repoResponse.data;
 }
 
+async function markProblemSolved({ user, userId, problemId, topic, pattern }) {
+    const normalizedTopic = normalizeTopicName(topic);
+    const normalizedPattern = normalizePatternSlug(pattern);
+    const existingSolved = await SolvedProblem.findOne({ userId, problemId });
+
+    if (existingSolved) {
+        return {
+            solved: true,
+            alreadySolved: true,
+            stats: user.stats,
+            xp: user.xp,
+            level: user.level
+        };
+    }
+
+    await SolvedProblem.create({
+        userId,
+        problemId,
+        topic: normalizedTopic,
+        pattern: normalizedPattern
+    });
+
+    const date = toDateKey();
+    const existingActivity = await UserActivity.findOne({ userId, date });
+    const wasNewActiveDay = !existingActivity;
+    const nextProblemsSolved = Math.max((existingActivity?.problemsSolved || 0) + 1, 0);
+    const nextStudyMinutes = existingActivity?.studyMinutes || 0;
+    const nextSessionsCount = existingActivity?.sessionsCount || 0;
+    const consistencyScore = calculateDailyConsistencyScore({
+        studyMinutes: nextStudyMinutes,
+        problemsSolved: nextProblemsSolved,
+        sessionsCount: nextSessionsCount
+    });
+    const nextStreak = wasNewActiveDay
+        ? getNextStreak(user.stats?.lastActiveDate, user.stats?.currentStreak, date)
+        : user.stats?.currentStreak || existingActivity?.streakCount || 0;
+
+    await UserActivity.findOneAndUpdate(
+        { userId, date },
+        {
+            $set: {
+                active: true,
+                problemsSolved: nextProblemsSolved,
+                streakCount: nextStreak,
+                consistencyScore,
+                completionRate: consistencyScore
+            },
+            $inc: {
+                xpEarned: 15
+            }
+        },
+        {
+            new: true,
+            upsert: true,
+            setDefaultsOnInsert: true
+        }
+    );
+
+    if (wasNewActiveDay) {
+        user.stats.totalActiveDays += 1;
+        user.stats.currentStreak = nextStreak;
+        user.stats.maxStreak = Math.max(user.stats.maxStreak || 0, nextStreak);
+        user.stats.lastActiveDate = date;
+    }
+
+    user.stats.totalProblemsSolved = Math.max((user.stats.totalProblemsSolved || 0) + 1, 0);
+    user.xp = Math.max((user.xp || 0) + 15, 0);
+
+    await checkAndAwardBadges(user, topic, pattern);
+
+    user.level = calculateLevel(user.xp, user.stats.totalProblemsSolved);
+
+    const { startDate, endDate } = getRangeBounds(30, date);
+    const activeDaysInWindow = await UserActivity.countDocuments({
+        userId,
+        active: true,
+        date: { $gte: startDate, $lte: endDate }
+    });
+    user.stats.consistencyPercentage = Math.round((activeDaysInWindow / 30) * 100);
+
+    await user.save();
+
+    return {
+        solved: true,
+        alreadySolved: false,
+        stats: user.stats,
+        xp: user.xp,
+        level: user.level
+    };
+}
+
 const ALLOWED_TOPIC_FILE_PREFIXES = new Set([
     "array",
     "string",
@@ -632,6 +723,14 @@ router.post("/submit-solution", authMiddleware, async (req, res) => {
             }
         );
 
+        const progress = await markProblemSolved({
+            user,
+            userId,
+            problemId,
+            topic,
+            pattern: question.pattern,
+        });
+
         return res.status(200).json({
             success: true,
             message: "This solution will save in your GitHub with repo name Leetcore-submission",
@@ -639,6 +738,11 @@ router.post("/submit-solution", authMiddleware, async (req, res) => {
             repoUrl: repo.html_url,
             fileName,
             fileUrl: fileResponse.data?.content?.html_url,
+            solved: progress.solved,
+            alreadySolved: progress.alreadySolved,
+            stats: progress.stats,
+            xp: progress.xp,
+            level: progress.level,
         });
     } catch (error) {
         const statusCode = error.response?.status;
