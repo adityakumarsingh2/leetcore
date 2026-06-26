@@ -46,7 +46,7 @@ function TopicProgress({ topics = [], loading = false }) {
                         <Link
                             key={index}
                             to={`/dashboard/dsa/Practice/${encodeURIComponent(topic.topic)}`}
-                            className="group flex flex-col justify-between p-3.5 rounded-xl bg-[#121215]/50 border border-white/[0.05] hover:border-orange-500/20 hover:bg-white/[0.03] transition-all duration-200 shadow-sm"
+                            className="group flex flex-col justify-between p-3.5 rounded-xl bg-[#121215]/50 border border-white/[0.05] hover:border-orange-500/30 hover:shadow-[0_0_12px_rgba(249,115,22,0.08)] hover:bg-white/[0.03] transition-all duration-200 shadow-sm"
                         >
                             {/* Header details */}
                             <div className="flex justify-between items-baseline gap-2 min-w-0">
@@ -64,7 +64,7 @@ function TopicProgress({ topics = [], loading = false }) {
                             {/* Minimal Progress Bar */}
                             <div className="w-full bg-white/[0.04] h-1.5 rounded-full overflow-hidden border border-white/[0.01] mt-2">
                                 <div
-                                    className="bg-orange-500 h-full rounded-full transition-all duration-500 ease-out"
+                                    className="bg-gradient-to-r from-orange-500 to-amber-400 h-full rounded-full transition-all duration-500 ease-out"
                                     style={{ width: `${solvedPct}%` }}
                                 />
                             </div>

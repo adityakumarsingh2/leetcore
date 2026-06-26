@@ -181,7 +181,7 @@ export default function RecentActivity({ userId }) {
                     <div className="p-5 bg-white/3 border border-white/5 rounded-xl hover:border-white/10 transition duration-150 relative overflow-hidden flex flex-col gap-4">
                         <div className="flex justify-between items-start flex-wrap gap-2">
                             <div>
-                                <span className="text-[10px] text-[#F46717] font-bold uppercase tracking-wider bg-[#F46717]/10 px-2.5 py-0.5 rounded-full border border-[#F46717]/20">
+                                <span className="text-[10px] text-[#f97316] bg-[#f97316]/10 border border-[#f97316]/20 font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-[0_0_8px_rgba(249,115,22,0.08)]">
                                     SOLVE NEXT
                                 </span>
                                 <h3 className="text-lg font-bold text-white mt-2 leading-snug">
@@ -225,11 +225,14 @@ export default function RecentActivity({ userId }) {
                                 px-4 
                                 py-3 
                                 rounded-xl 
-                                bg-orange-500 
+                                bg-gradient-to-r 
+                                from-orange-500 
+                                to-rose-500 
                                 text-white 
                                 font-bold 
                                 text-sm 
-                                hover:bg-orange-600 
+                                hover:from-orange-600 
+                                hover:to-rose-600 
                                 transition-all 
                                 duration-150 
                                 shadow-lg 

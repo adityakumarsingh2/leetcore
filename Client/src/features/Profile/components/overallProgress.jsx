@@ -94,16 +94,16 @@ function OverallProgress({ progressData, loading }) {
 
     return (
         <div className="w-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-5 sm:p-6 text-white shadow-lg backdrop-blur-md relative overflow-hidden transition-all duration-300">
-            <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 w-full h-full max-w-4xl mx-auto">
                 
                 {/* Left Side: Circular Centerpiece */}
                 <div className="relative flex items-center justify-center flex-shrink-0">
-                    <div className="relative h-[115px] w-[115px] xl:h-[125px] xl:w-[125px]">
+                    <div className="relative h-[145px] w-[145px] xl:h-[165px] xl:w-[165px]">
                         <svg viewBox="0 0 200 200" className="transform -rotate-90 w-full h-full">
                             <defs>
-                                <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="sunsetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" stopColor="#f97316" />
-                                    <stop offset="100%" stopColor="#ea580c" />
+                                    <stop offset="100%" stopColor="#ec4899" />
                                 </linearGradient>
                             </defs>
                             {/* Background Circle */}
@@ -113,7 +113,7 @@ function OverallProgress({ progressData, loading }) {
                                 r="75"
                                 fill="none"
                                 stroke="rgba(255,255,255,0.03)"
-                                strokeWidth="10"
+                                strokeWidth="12"
                             />
                             {/* Animated Progress Ring */}
                             <circle
@@ -121,8 +121,8 @@ function OverallProgress({ progressData, loading }) {
                                 cy="100"
                                 r="75"
                                 fill="none"
-                                stroke="url(#orangeGrad)"
-                                strokeWidth="10"
+                                stroke="url(#sunsetGrad)"
+                                strokeWidth="12"
                                 strokeLinecap="round"
                                 strokeDasharray={strokeDasharray}
                                 strokeDashoffset={strokeDashoffset}
@@ -132,13 +132,13 @@ function OverallProgress({ progressData, loading }) {
 
                         {/* Center Content */}
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                            <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                            <h3 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-none">
                                 {totalSolved}
-                                <span className="text-[10px] sm:text-[11px] text-neutral-500 font-medium ml-0.5">
+                                <span className="text-xs sm:text-sm text-neutral-500 font-medium ml-0.5">
                                     /{totalQuestions}
                                 </span>
                             </h3>
-                            <p className="text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-widest text-orange-500 mt-0.5">
+                            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-orange-400 mt-2">
                                 {percentage}%
                             </p>
                         </div>
@@ -146,25 +146,32 @@ function OverallProgress({ progressData, loading }) {
                 </div>
 
                 {/* Right Side: Compressed Metrics */}
-                <div className="flex-1 w-full space-y-3.5">
+                <div className="flex-1 w-full space-y-5 max-w-md">
                     
                     {/* Level Details & Progress Bar */}
-                    <div className="space-y-2">
-                        <div className="flex justify-between items-baseline text-xs sm:text-sm">
-                            <div className="flex items-center gap-1.5">
-                                <span className="font-bold text-white">Level {level}</span>
-                                <span className="text-[10px] sm:text-[11px] text-neutral-400 font-medium">• {xp} XP</span>
+                    <div className="space-y-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm">
+                            <div className="flex items-center gap-2">
+                                <div className="px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/25 text-orange-400 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-[0_0_8px_rgba(249,115,22,0.08)]">
+                                    Level {level}
+                                </div>
+                                <span className="text-xs sm:text-sm font-semibold px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/25 text-indigo-400 uppercase tracking-wider">
+                                    {xp} XP
+                                </span>
                             </div>
-                            <span className="text-[10px] sm:text-[11px] text-neutral-400 font-semibold">
-                                {problemsNeededForNext} {problemsNeededForNext === 1 ? "problem" : "problems"} to Level {level + 1}
+                            <span className="text-xs sm:text-sm text-neutral-400 font-semibold flex items-center gap-1">
+                                <span className="text-orange-400 font-bold text-sm sm:text-base">{problemsNeededForNext}</span>
+                                <span>{problemsNeededForNext === 1 ? "problem" : "problems"} to Level {level + 1}</span>
                             </span>
                         </div>
                         {/* Sleek level progress bar */}
-                        <div className="w-full bg-white/[0.04] h-1.5 rounded-full overflow-hidden border border-white/[0.01]">
-                            <div
-                                className="bg-orange-500 h-full rounded-full transition-all duration-700 ease-out"
-                                style={{ width: `${levelProgressPercent}%` }}
-                            />
+                        <div className="relative">
+                            <div className="w-full bg-white/[0.04] h-2.5 rounded-full overflow-hidden border border-white/[0.01]">
+                                <div
+                                    className="bg-gradient-to-r from-orange-500 to-rose-500 h-full rounded-full transition-all duration-700 ease-out shadow-[0_0_10px_rgba(244,63,94,0.25)]"
+                                    style={{ width: `${levelProgressPercent}%` }}
+                                />
+                            </div>
                         </div>
                     </div>
 
@@ -172,21 +179,21 @@ function OverallProgress({ progressData, loading }) {
                     <div className="h-px bg-white/[0.03]" />
 
                     {/* Stats List (Difficulty Breakdown & Streak) */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] sm:text-xs font-semibold">
+                    <div className="flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm font-semibold">
                         {/* Difficulty breakdown */}
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-4">
                             <div className="flex items-center gap-1.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span className="text-neutral-400">Easy</span>
                                 <span className="text-white ml-0.5">{difficultyStats.easy}</span>
                             </div>
                             <div className="flex items-center gap-1.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                                <span className="w-2 h-2 rounded-full bg-amber-500" />
                                 <span className="text-neutral-400">Med</span>
                                 <span className="text-white ml-0.5">{difficultyStats.medium}</span>
                             </div>
                             <div className="flex items-center gap-1.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                                <span className="w-2 h-2 rounded-full bg-rose-500" />
                                 <span className="text-neutral-400">Hard</span>
                                 <span className="text-white ml-0.5">{difficultyStats.hard}</span>
                             </div>
@@ -194,10 +201,10 @@ function OverallProgress({ progressData, loading }) {
 
                         {/* Streak */}
                         <div className="flex items-center gap-1.5">
-                            <Flame size={13} className="text-orange-500 flex-shrink-0" />
+                            <Flame size={15} className="text-orange-500 flex-shrink-0 animate-pulse" />
                             <span className="text-neutral-400">Streak:</span>
                             <span className="text-white">{currentStreak}d</span>
-                            <span className="text-[9px] text-neutral-500 font-normal ml-0.5">
+                            <span className="text-[10px] sm:text-xs text-neutral-500 font-normal ml-0.5">
                                 (Max: {maxStreak}d)
                             </span>
                         </div>

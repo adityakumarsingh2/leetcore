@@ -42,10 +42,10 @@ function UserDetail() {
                         {username}
                     </p>
                     <div className="flex items-center gap-2 mt-2">
-                        <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-[#F46717]/10 text-[#F46717] border border-[#F46717]/20 uppercase tracking-wider">
+                        <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/25 uppercase tracking-wider shadow-[0_0_8px_rgba(249,115,22,0.08)]">
                             Level {level}
                         </span>
-                        <span className="text-[9px] text-neutral-500 font-medium">
+                        <span className="text-[9px] font-semibold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/25 uppercase tracking-wider">
                             {xp} XP
                         </span>
                     </div>
