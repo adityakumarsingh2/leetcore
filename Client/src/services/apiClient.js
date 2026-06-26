@@ -1,9 +1,10 @@
 import axios from "axios";
 
 const AUTH_TOKEN_KEY = "leetcore_auth_token";
+const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
 const apiClient = axios.create({
-    baseURL: `${import.meta.env.VITE_API_URL || "http://localhost:4000"}/api/v1`,
+    baseURL: `${apiUrl}/api/v1`,
     withCredentials: true,
     headers: {
         "Content-Type": "application/json",
@@ -11,26 +12,40 @@ const apiClient = axios.create({
 });
 
 let csrfToken = null;
+let csrfTokenPromise = null;
+
+const fetchCsrfToken = () => {
+    if (!csrfTokenPromise) {
+        // Fetch CSRF token using standard axios to avoid request interceptor recursion
+        csrfTokenPromise = axios.get(`${apiUrl}/api/v1/csrf-token`, {
+            withCredentials: true
+        }).then(response => {
+            csrfToken = response.data.csrfToken;
+            csrfTokenPromise = null;
+            return csrfToken;
+        }).catch(err => {
+            csrfTokenPromise = null;
+            throw err;
+        });
+    }
+    return csrfTokenPromise;
+};
 
 apiClient.interceptors.request.use(async (config) => {
+    // 1. Attach Auth Token
     const token = localStorage.getItem(AUTH_TOKEN_KEY);
-
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
 
-    // Fetch and attach CSRF token for mutating requests
-    const method = config.method?.toLowerCase();
+    // 2. Fetch and attach CSRF token for mutating requests (POST, PUT, DELETE, PATCH)
+    const method = config.method ? config.method.toLowerCase() : "";
     if (["post", "put", "delete", "patch"].includes(method)) {
         if (!csrfToken) {
             try {
-                const response = await axios.get(
-                    `${config.baseURL || "http://localhost:4000/api/v1"}/csrf-token`,
-                    { withCredentials: true }
-                );
-                csrfToken = response.data.csrfToken;
+                await fetchCsrfToken();
             } catch (err) {
-                console.error("Failed to fetch CSRF token:", err);
+                console.error("Failed to fetch CSRF token on mutating request:", err);
             }
         }
         if (csrfToken) {
@@ -49,13 +64,11 @@ apiClient.interceptors.response.use(
         const originalRequest = error.config;
         if (error.response?.status === 403 && !originalRequest._retry) {
             originalRequest._retry = true;
+            csrfToken = null;
+            csrfTokenPromise = null;
             try {
-                const response = await axios.get(
-                    `${originalRequest.baseURL || "http://localhost:4000/api/v1"}/csrf-token`,
-                    { withCredentials: true }
-                );
-                csrfToken = response.data.csrfToken;
-                originalRequest.headers["X-CSRF-Token"] = csrfToken;
+                const newToken = await fetchCsrfToken();
+                originalRequest.headers["X-CSRF-Token"] = newToken;
                 return apiClient(originalRequest);
             } catch (err) {
                 console.error("Failed to refresh CSRF token on retry:", err);

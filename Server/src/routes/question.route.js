@@ -318,36 +318,234 @@ const patternMetadata = {
     }
 };
 
+// Helper to check topic completion on server
+async function isTopicComplete(userId, topicName) {
+    const normTopic = topicName.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const jsonPath = path.join(__dirname, "..", "data", "questions", `${normTopic}question.json`);
+    if (!fs.existsSync(jsonPath)) return false;
+    try {
+        const totalCount = JSON.parse(fs.readFileSync(jsonPath, "utf-8")).length;
+        const solvedCount = await SolvedProblem.countDocuments({ userId, topic: normTopic });
+        return totalCount > 0 && solvedCount >= totalCount;
+    } catch (err) {
+        return false;
+    }
+}
+
+// 19 Predefined badges to check and award
+const SERVER_BADGE_DEFINITIONS = [
+    {
+        name: "The Initiator",
+        slug: "initiator",
+        description: "Solve 20 tracked problems.",
+        category: "study",
+        rarity: "common",
+        xpReward: 100,
+        check: async (userId, stats) => stats.solved >= 20
+    },
+    {
+        name: "Problem Solver",
+        slug: "problem-solver",
+        description: "Solve 50 tracked problems.",
+        category: "study",
+        rarity: "common",
+        xpReward: 200,
+        check: async (userId, stats) => stats.solved >= 50
+    },
+    {
+        name: "DSA Explorer",
+        slug: "dsa-explorer",
+        description: "Solve 100 tracked problems.",
+        category: "study",
+        rarity: "rare",
+        xpReward: 400,
+        check: async (userId, stats) => stats.solved >= 100
+    },
+    {
+        name: "Algorithm Addict",
+        slug: "algo-addict",
+        description: "Solve 250 tracked problems.",
+        category: "study",
+        rarity: "rare",
+        xpReward: 600,
+        check: async (userId, stats) => stats.solved >= 250
+    },
+    {
+        name: "Core Master",
+        slug: "core-master",
+        description: "Solve 500 tracked problems.",
+        category: "study",
+        rarity: "epic",
+        xpReward: 1000,
+        check: async (userId, stats) => stats.solved >= 500
+    },
+    {
+        name: "LeetCore Legend",
+        slug: "leetcore-legend",
+        description: "Solve 1000 tracked problems.",
+        category: "study",
+        rarity: "legendary",
+        xpReward: 2000,
+        check: async (userId, stats) => stats.solved >= 1000
+    },
+    {
+        name: "Week Warrior",
+        slug: "week-warrior",
+        description: "Maintain a 7-day learning streak.",
+        category: "streak",
+        rarity: "rare",
+        xpReward: 250,
+        check: async (userId, stats) => stats.streak >= 7
+    },
+    {
+        name: "Consistency Champion",
+        slug: "consistency-champion",
+        description: "Maintain a 14-day learning streak.",
+        category: "streak",
+        rarity: "rare",
+        xpReward: 500,
+        check: async (userId, stats) => stats.streak >= 14
+    },
+    {
+        name: "Unbreakable",
+        slug: "unbreakable",
+        description: "Maintain a 30-day learning streak.",
+        category: "streak",
+        rarity: "epic",
+        xpReward: 1000,
+        check: async (userId, stats) => stats.streak >= 30
+    },
+    {
+        name: "Iron Discipline",
+        slug: "iron-discipline",
+        description: "Maintain a 60-day learning streak.",
+        category: "streak",
+        rarity: "epic",
+        xpReward: 1800,
+        check: async (userId, stats) => stats.streak >= 60
+    },
+    {
+        name: "Annual Warrior",
+        slug: "annual-warrior",
+        description: "Maintain a 365-day learning streak.",
+        category: "streak",
+        rarity: "legendary",
+        xpReward: 5000,
+        check: async (userId, stats) => stats.streak >= 365
+    },
+    {
+        name: "Array Master",
+        slug: "array-master",
+        description: "Master all questions in the Arrays topic.",
+        category: "problem-solving",
+        rarity: "rare",
+        xpReward: 500,
+        check: async (userId, stats) => isTopicComplete(userId, "Array")
+    },
+    {
+        name: "String Specialist",
+        slug: "string-specialist",
+        description: "Master all questions in the Strings topic.",
+        category: "problem-solving",
+        rarity: "rare",
+        xpReward: 500,
+        check: async (userId, stats) => isTopicComplete(userId, "String")
+    },
+    {
+        name: "Linked List Expert",
+        slug: "linked-list-expert",
+        description: "Master all questions in the Linked List topic.",
+        category: "problem-solving",
+        rarity: "rare",
+        xpReward: 500,
+        check: async (userId, stats) => isTopicComplete(userId, "Linked List")
+    },
+    {
+        name: "Stack Sensei",
+        slug: "stack-sensei",
+        description: "Master all questions in the Stack topic.",
+        category: "problem-solving",
+        rarity: "rare",
+        xpReward: 500,
+        check: async (userId, stats) => isTopicComplete(userId, "Stack")
+    },
+    {
+        name: "Queue Commander",
+        slug: "queue-commander",
+        description: "Master all questions in the Queue topic.",
+        category: "problem-solving",
+        rarity: "rare",
+        xpReward: 500,
+        check: async (userId, stats) => isTopicComplete(userId, "Queue")
+    },
+    {
+        name: "Tree Explorer",
+        slug: "tree-explorer",
+        description: "Master all questions in the Trees topic.",
+        category: "problem-solving",
+        rarity: "rare",
+        xpReward: 500,
+        check: async (userId, stats) => isTopicComplete(userId, "Trees")
+    },
+    {
+        name: "Graph Navigator",
+        slug: "graph-navigator",
+        description: "Master all questions in the Graphs topic.",
+        category: "problem-solving",
+        rarity: "epic",
+        xpReward: 800,
+        check: async (userId, stats) => isTopicComplete(userId, "Graphs")
+    },
+    {
+        name: "DP Architect",
+        slug: "dp-architect",
+        description: "Master all questions in the Dynamic Programming topic.",
+        category: "problem-solving",
+        rarity: "epic",
+        xpReward: 1000,
+        check: async (userId, stats) => isTopicComplete(userId, "Dynamic Programming")
+    }
+];
+
 // Helper function to check and award badges to the user
 async function checkAndAwardBadges(user, topic, pattern) {
     const userId = user._id;
-    const normalizedTopic = normalizeTopicName(topic);
+    const solved = user.stats?.totalProblemsSolved || 0;
+    const streak = Math.max(user.stats?.maxStreak || 0, user.stats?.currentStreak || 0);
+    const stats = { solved, streak };
 
-    // 1. Check Topic Completion Badge
-    try {
-        if (!normalizedTopic || !ALLOWED_TOPIC_FILE_PREFIXES.has(normalizedTopic)) {
-            return;
-        }
+    for (const badgeDef of SERVER_BADGE_DEFINITIONS) {
+        try {
+            // Optimization: If it's a topic completion badge, only check if it matches the current topic
+            if (badgeDef.category === "problem-solving") {
+                const normTopic = topic.toLowerCase().replace(/[^a-z0-9]/g, "");
+                let isMatch = false;
+                if (normTopic === "array" && badgeDef.slug === "array-master") isMatch = true;
+                else if (normTopic === "string" && badgeDef.slug === "string-specialist") isMatch = true;
+                else if (normTopic === "linkedlist" && badgeDef.slug === "linked-list-expert") isMatch = true;
+                else if (normTopic === "stack" && badgeDef.slug === "stack-sensei") isMatch = true;
+                else if (normTopic === "queue" && badgeDef.slug === "queue-commander") isMatch = true;
+                else if (normTopic === "trees" && badgeDef.slug === "tree-explorer") isMatch = true;
+                else if (normTopic === "graphs" && badgeDef.slug === "graph-navigator") isMatch = true;
+                else if (normTopic === "dynamicprogramming" && badgeDef.slug === "dp-architect") isMatch = true;
 
-        const jsonPath = path.join(__dirname, "..", "data", "questions", `${normalizedTopic}question.json`);
-        if (fs.existsSync(jsonPath)) {
-            const totalCount = JSON.parse(fs.readFileSync(jsonPath, "utf-8")).length;
-            const solvedCount = await SolvedProblem.countDocuments({ userId, topic: normalizedTopic });
+                if (!isMatch) {
+                    continue;
+                }
+            }
 
-            if (solvedCount === totalCount && totalCount > 0) {
-                // User has completed the topic!
-                const badgeSlug = `${normalizedTopic}-completion`;
-                let badge = await Badge.findOne({ slug: badgeSlug });
+            const qualifies = await badgeDef.check(userId, stats);
+            if (qualifies) {
+                let badge = await Badge.findOne({ slug: badgeDef.slug });
                 if (!badge) {
-                    const topicTitle = topic.charAt(0).toUpperCase() + topic.slice(1);
                     badge = await Badge.create({
-                        name: `${topicTitle} Master`,
-                        slug: badgeSlug,
-                        description: `Completed all curated problems in the ${topicTitle} topic!`,
-                        category: "problem-solving",
-                        rarity: "epic",
-                        xpReward: 500,
-                        image: `/badges/${normalizedTopic}-master.png`
+                        name: badgeDef.name,
+                        slug: badgeDef.slug,
+                        description: badgeDef.description,
+                        category: badgeDef.category,
+                        rarity: badgeDef.rarity,
+                        xpReward: badgeDef.xpReward,
+                        image: `/badges/${badgeDef.slug}.png`
                     });
                 }
 
@@ -356,60 +554,12 @@ async function checkAndAwardBadges(user, topic, pattern) {
                 if (!alreadyEarned) {
                     user.badges.push({ badgeId: badge._id, earnedAt: new Date() });
                     user.xp += badge.xpReward || 0;
-                    console.log(`Awarded topic completion badge "${badge.name}" to ${user.username}`);
+                    console.log(`Awarded badge "${badge.name}" to ${user.username}`);
                 }
             }
+        } catch (err) {
+            console.error(`Error checking/awarding badge ${badgeDef.slug}:`, err);
         }
-    } catch (err) {
-        console.error("Error awarding topic completion badge:", err);
-    }
-
-    // 2. Check Streak Badges (7 days, 50 days)
-    const currentStreak = user.stats?.currentStreak || 0;
-    try {
-        if (currentStreak >= 7) {
-            let badge = await Badge.findOne({ slug: "streak-7-days" });
-            if (!badge) {
-                badge = await Badge.create({
-                    name: "7 Days Streak",
-                    slug: "streak-7-days",
-                    description: "Stay active and solve questions for 7 days in a row!",
-                    category: "streak",
-                    rarity: "rare",
-                    xpReward: 250,
-                    image: "/badges/seven-day-flame.png"
-                });
-            }
-            const alreadyEarned = user.badges.some(b => b.badgeId.toString() === badge._id.toString());
-            if (!alreadyEarned) {
-                user.badges.push({ badgeId: badge._id, earnedAt: new Date() });
-                user.xp += badge.xpReward || 0;
-                console.log(`Awarded 7 Days Streak badge to ${user.username}`);
-            }
-        }
-
-        if (currentStreak >= 50) {
-            let badge = await Badge.findOne({ slug: "streak-50-days" });
-            if (!badge) {
-                badge = await Badge.create({
-                    name: "50 Days Streak",
-                    slug: "streak-50-days",
-                    description: "Incredible dedication! Stay active and solve questions for 50 days in a row!",
-                    category: "streak",
-                    rarity: "legendary",
-                    xpReward: 1000,
-                    image: "/badges/streak-50-days.png"
-                });
-            }
-            const alreadyEarned = user.badges.some(b => b.badgeId.toString() === badge._id.toString());
-            if (!alreadyEarned) {
-                user.badges.push({ badgeId: badge._id, earnedAt: new Date() });
-                user.xp += badge.xpReward || 0;
-                console.log(`Awarded 50 Days Streak badge to ${user.username}`);
-            }
-        }
-    } catch (err) {
-        console.error("Error awarding streak badges:", err);
     }
 }
 
@@ -843,26 +993,53 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
             ? getNextStreak(user.stats?.lastActiveDate, user.stats?.currentStreak, date)
             : user.stats?.currentStreak || existingActivity?.streakCount || 0;
 
-        const activity = await UserActivity.findOneAndUpdate(
-            { userId, date },
-            {
-                $set: {
-                    active: true,
-                    problemsSolved: nextProblemsSolved,
-                    streakCount: nextStreak,
-                    consistencyScore,
-                    completionRate: consistencyScore
+        let activity;
+        try {
+            activity = await UserActivity.findOneAndUpdate(
+                { userId, date },
+                {
+                    $set: {
+                        active: true,
+                        problemsSolved: nextProblemsSolved,
+                        streakCount: nextStreak,
+                        consistencyScore,
+                        completionRate: consistencyScore
+                    },
+                    $inc: {
+                        xpEarned: xpDelta
+                    }
                 },
-                $inc: {
-                    xpEarned: xpDelta
+                {
+                    new: true,
+                    upsert: true,
+                    setDefaultsOnInsert: true
                 }
-            },
-            {
-                new: true,
-                upsert: true,
-                setDefaultsOnInsert: true
+            );
+        } catch (updateError) {
+            if (updateError.code === 11000) {
+                // Gracefully handle compound index duplicate key error on concurrent upsert operations
+                activity = await UserActivity.findOneAndUpdate(
+                    { userId, date },
+                    {
+                        $set: {
+                            active: true,
+                            problemsSolved: nextProblemsSolved,
+                            streakCount: nextStreak,
+                            consistencyScore,
+                            completionRate: consistencyScore
+                        },
+                        $inc: {
+                            xpEarned: xpDelta
+                        }
+                    },
+                    {
+                        new: true
+                    }
+                );
+            } else {
+                throw updateError;
             }
-        );
+        }
 
         if (wasNewActiveDay) {
             user.stats.totalActiveDays += 1;
@@ -871,7 +1048,8 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
             user.stats.lastActiveDate = date;
         }
 
-        user.stats.totalProblemsSolved = Math.max((user.stats.totalProblemsSolved || 0) + deltaSolved, 0);
+        const actualSolvedCount = await SolvedProblem.countDocuments({ userId });
+        user.stats.totalProblemsSolved = actualSolvedCount;
         user.xp = Math.max((user.xp || 0) + xpDelta, 0);
 
         // Call checkAndAwardBadges to award topic-completion or streak badges
@@ -892,13 +1070,15 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
         user.stats.consistencyPercentage = Math.round((activeDaysInWindow / 30) * 100);
 
         await user.save();
+        await user.populate("badges.badgeId");
 
         return res.status(200).json({
             success: true,
             solved,
             stats: user.stats,
             xp: user.xp,
-            level: user.level
+            level: user.level,
+            badges: user.badges
         });
 
     } catch (error) {
@@ -921,6 +1101,9 @@ router.get("/recent-solved", recentSolvedLimiter, optionalAuth, async (req, res)
         const userId = req.user?.id || req.query.userId;
         if (!userId) {
             return res.status(401).json({ success: false, message: "User not logged in" });
+        }
+        if (typeof userId !== "string") {
+            return res.status(400).json({ success: false, message: "Invalid userId" });
         }
 
         const all = req.query.all === "true";

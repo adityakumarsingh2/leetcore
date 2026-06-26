@@ -45,6 +45,9 @@ function Practice() {
                     bg-white/8
                     backdrop-blur-xl
                     p-6
+                    flex
+                    flex-col
+                    gap-6
                 "
             >
                 <div>

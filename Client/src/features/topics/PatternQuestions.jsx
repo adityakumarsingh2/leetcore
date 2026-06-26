@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   AlertCircle,
+  ArrowLeft,
   Award,
   Check,
   ChevronRight,
@@ -115,7 +116,7 @@ function QuestionListContent({ topicNameOverride }) {
     return () => {
       isMounted = false;
     };
-  }, [topicName, patternName]);
+  }, [topicName, patternName, user?._id]);
 
   const handleToggleSolve = async (problemId, questionPattern) => {
     if (!user) {
@@ -149,7 +150,8 @@ function QuestionListContent({ topicNameOverride }) {
             ...prevUser,
             xp: response.data.xp,
             level: response.data.level,
-            stats: response.data.stats
+            stats: response.data.stats,
+            badges: response.data.badges || prevUser.badges
           };
         });
       }
@@ -226,12 +228,22 @@ function QuestionListContent({ topicNameOverride }) {
         </div>
       )}
 
+      {/* Navigation Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-white/50 font-medium">
         <Link to="/dashboard" className="hover:text-orange-400 transition-colors">
           Dashboard
         </Link>
         <ChevronRight size={12} />
-        <span className="text-orange-300">{topicName}</span>
+        {patternName ? (
+          <Link
+            to={`/dashboard/dsa/Practice/${encodeURIComponent(topicName)}`}
+            className="hover:text-orange-400 transition-colors"
+          >
+            {topicName}
+          </Link>
+        ) : (
+          <span className="text-orange-300">{topicName}</span>
+        )}
         {patternName && (
           <>
             <ChevronRight size={12} />
@@ -240,14 +252,25 @@ function QuestionListContent({ topicNameOverride }) {
         )}
       </div>
 
+      {/* Header Block */}
       <div className="flex flex-col lg:flex-row gap-6 justify-between items-start lg:items-center">
         <div>
-          <h1 className="text-3xl font-black text-white tracking-tight">
-            {patternName ? formatPattern(patternName) : `${topicName} Practice`}
-          </h1>
+          <div className="flex items-center gap-3">
+            {patternName && (
+              <Link
+                to={`/dashboard/dsa/Practice/${encodeURIComponent(topicName)}`}
+                className="p-2 rounded-xl bg-white/5 border border-white/10 hover:border-orange-500/30 hover:bg-orange-500/10 text-white/70 hover:text-white transition-all"
+              >
+                <ArrowLeft size={16} />
+              </Link>
+            )}
+            <h1 className="text-3xl font-black text-white tracking-tight">
+              {patternName ? formatPattern(patternName) : `${topicName} Practice`}
+            </h1>
+          </div>
           <p className="mt-2 text-white/60 text-sm max-w-2xl">
             {patternName
-              ? `Solve curated ${formatPattern(patternName)} questions for this topic.`
+              ? `Solve curated ${formatPattern(patternName)} questions to build muscle memory for this pattern.`
               : "Start directly with 25 curated questions. Open any problem to see details, examples, hints, and your answer notepad."}
           </p>
         </div>

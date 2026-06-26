@@ -16,17 +16,17 @@ function UserDetail() {
         })
         : "This season";
 
-    const profileStats = data?.stats || user?.stats || {};
+    const profileStats = user?.stats || data?.stats || {};
     const totalSolved = profileStats.totalProblemsSolved || 0;
     const currentStreak = profileStats.currentStreak || 0;
-    const level = data?.stats?.level || user?.level || 1;
-    const xp = data?.stats?.xp || user?.xp || 0;
+    const level = user?.level || data?.stats?.level || 1;
+    const xp = user?.xp || data?.stats?.xp || 0;
 
     return (
         <div className="h-full flex flex-col p-6 text-white font-sans">
             {/* User Identity Section */}
             <div className="flex items-center gap-4">
-                <div className="w-21 h-21 rounded-lg bg-neutral-900 border border-white/10 overflow-hidden flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 rounded-lg bg-neutral-900 border border-white/10 overflow-hidden flex items-center justify-center flex-shrink-0">
                     {user?.avatar ? (
                         <img src={user.avatar} alt={displayName} className="w-full h-full object-cover" />
                     ) : (
@@ -42,10 +42,10 @@ function UserDetail() {
                         {username}
                     </p>
                     <div className="flex items-center gap-2 mt-2">
-                        <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-[#F46717]/10 text-[#F46717] border border-[#F46717]/20 uppercase tracking-wider">
+                        <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/25 uppercase tracking-wider shadow-[0_0_8px_rgba(249,115,22,0.08)]">
                             Level {level}
                         </span>
-                        <span className="text-[9px] text-neutral-500 font-medium">
+                        <span className="text-[9px] font-semibold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/25 uppercase tracking-wider">
                             {xp} XP
                         </span>
                     </div>
