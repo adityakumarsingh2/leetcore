@@ -62,6 +62,14 @@ function OverallProgress({ progressData, loading }) {
     const totalProblemsForNextLevel = nextLevelTarget - currentLevelMin;
     const levelProgressPercent = Math.min(100, Math.max(0, (problemsInCurrentLevel / totalProblemsForNextLevel) * 100));
     const problemsNeededForNext = nextLevelTarget - totalSolved;
+
+    // Dynamic solid colors (Orange/Amber -> Light Green)
+    // 30 is Orange/Amber, 120 is Light Green
+    const circleHue = 30 + (120 - 30) * (percentage / 100);
+    const circleColor = `hsl(${circleHue}, 90%, 55%)`;
+
+    const barHue = 30 + (120 - 30) * (levelProgressPercent / 100);
+    const barColor = `hsl(${barHue}, 90%, 55%)`;
     
     // XP
     const xp = user?.xp || dashboardData?.stats?.xp || 0;
@@ -92,7 +100,7 @@ function OverallProgress({ progressData, loading }) {
     const maxStreak = dashboardData?.stats?.maxStreak || user?.stats?.maxStreak || 0;
 
     return (
-        <div className="w-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-5 sm:p-6 text-white shadow-lg backdrop-blur-md relative overflow-hidden transition-all duration-300">
+        <div className="w-full h-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-5 sm:p-6 text-white shadow-lg backdrop-blur-md relative overflow-hidden transition-all duration-300">
             {/* Soft glowing ambient radial gradients */}
             <div className="absolute top-0 right-0 w-36 h-36 bg-orange-500/[0.02] rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-36 h-36 bg-indigo-500/[0.02] rounded-full blur-3xl pointer-events-none" />
@@ -103,13 +111,6 @@ function OverallProgress({ progressData, loading }) {
                 <div className="relative flex items-center justify-center flex-shrink-0">
                     <div className="relative h-[145px] w-[145px] xl:h-[165px] xl:w-[165px]">
                         <svg viewBox="0 0 200 200" className="transform -rotate-90 w-full h-full">
-                            <defs>
-                                <linearGradient id="sunsetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stopColor="#6366f1" /> {/* Indigo */}
-                                    <stop offset="50%" stopColor="#d946ef" /> {/* Fuchsia */}
-                                    <stop offset="100%" stopColor="#f97316" /> {/* Orange */}
-                                </linearGradient>
-                            </defs>
                             {/* Background Circle */}
                             <circle
                                 cx="100"
@@ -125,7 +126,7 @@ function OverallProgress({ progressData, loading }) {
                                 cy="100"
                                 r="75"
                                 fill="none"
-                                stroke="url(#sunsetGrad)"
+                                stroke={circleColor}
                                 strokeWidth="12"
                                 strokeLinecap="round"
                                 strokeDasharray={strokeDasharray}
@@ -142,7 +143,10 @@ function OverallProgress({ progressData, loading }) {
                                     /{totalQuestions}
                                 </span>
                             </h3>
-                            <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest bg-gradient-to-r from-indigo-400 via-pink-400 to-orange-400 bg-clip-text text-transparent mt-2">
+                            <p
+                                className="text-[10px] sm:text-xs font-black uppercase tracking-widest mt-2"
+                                style={{ color: circleColor }}
+                            >
                                 {percentage}%
                             </p>
                         </div>
@@ -163,17 +167,26 @@ function OverallProgress({ progressData, loading }) {
                                     {xp} XP
                                 </span>
                             </div>
-                            <span className="text-xs sm:text-sm text-neutral-400 font-semibold flex items-center gap-1">
-                                <span className="text-pink-400 font-bold text-sm sm:text-base">{problemsNeededForNext}</span>
+                             <span className="text-xs sm:text-sm text-neutral-400 font-semibold flex items-center gap-1">
+                                <span
+                                    className="font-bold text-sm sm:text-base transition-colors duration-500"
+                                    style={{ color: barColor }}
+                                >
+                                    {problemsNeededForNext}
+                                </span>
                                 <span>{problemsNeededForNext === 1 ? "problem" : "problems"} to Level {level + 1}</span>
                             </span>
                         </div>
                         {/* Sleek level progress bar */}
                         <div className="relative">
                             <div className="w-full bg-white/[0.04] h-2.5 rounded-full overflow-hidden border border-white/[0.01]">
-                                <div
-                                    className="bg-gradient-to-r from-indigo-500 via-purple-500 to-orange-500 h-full rounded-full transition-all duration-700 ease-out shadow-[0_0_12px_rgba(244,63,94,0.2)]"
-                                    style={{ width: `${levelProgressPercent}%` }}
+                                 <div
+                                    className="h-full rounded-full transition-all duration-700 ease-out"
+                                    style={{
+                                        width: `${levelProgressPercent}%`,
+                                        backgroundColor: barColor,
+                                        boxShadow: `0 0 12px ${barColor}40`
+                                    }}
                                 />
                             </div>
                         </div>

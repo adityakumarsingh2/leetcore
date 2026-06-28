@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Loader2 } from "lucide-react";
-import DashLeftNavBar from "../dashboard/components/dashleftnavbar";
+import DashboardPageShell from "../dashboard/components/DashboardPageShell";
 import apiClient from "../../services/apiClient";
 import { useAuth } from "../../context/AuthContext";
 import ProblemDescription from "./components/ProblemDescription";
@@ -448,12 +448,7 @@ function ProblemDetail() {
         : "text-amber-400 bg-amber-500/10 border-amber-500/20";
 
   return (
-    <div className="w-full min-h-screen bg-[#070709] flex flex-col md:flex-row gap-3 p-3 overflow-x-hidden">
-      <div className="w-full md:w-[85px] lg:w-[90px] md:h-[calc(100vh-24px)] flex-shrink-0">
-        <DashLeftNavBar />
-      </div>
-
-      <main className="flex-1 min-h-[calc(100vh-112px)] md:h-[calc(100vh-24px)] flex flex-col rounded-2xl md:rounded-3xl border border-white/5 bg-[#0e0e11]/85 backdrop-blur-xl p-5 overflow-hidden">
+    <DashboardPageShell className="p-5 overflow-hidden flex flex-col" contentClass="border-white/5 bg-[#0e0e11]/85 backdrop-blur-xl">
         {loading ? (
           <div className="min-h-[60vh] flex flex-col items-center justify-center gap-3">
             <Loader2 className="w-10 h-10 text-orange-500 animate-spin" />
@@ -534,8 +529,7 @@ function ProblemDetail() {
             </div>
           </div>
         )}
-      </main>
-    </div>
+    </DashboardPageShell>
   );
 }
 

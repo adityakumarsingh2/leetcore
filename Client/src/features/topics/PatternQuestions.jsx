@@ -11,7 +11,7 @@ import {
   Loader2,
   Search
 } from "lucide-react";
-import DashLeftNavBar from "../dashboard/components/dashleftnavbar";
+import DashboardPageShell from "../dashboard/components/DashboardPageShell";
 import apiClient from "../../services/apiClient";
 import { useAuth } from "../../context/AuthContext";
 
@@ -471,15 +471,9 @@ function PatternQuestions({ embedded = false, topicNameOverride }) {
   }
 
   return (
-    <div className="w-full min-h-screen bg-[#070709] flex flex-col md:flex-row gap-3 p-3 overflow-x-hidden">
-      <div className="w-full md:w-[85px] lg:w-[90px] md:h-[calc(100vh-24px)] flex-shrink-0">
-        <DashLeftNavBar />
-      </div>
-
-      <main className="flex-1 min-h-[calc(100vh-112px)] md:h-[calc(100vh-24px)] overflow-y-auto rounded-2xl md:rounded-3xl border border-white/5 bg-white/5 backdrop-blur-xl p-6">
-        <QuestionListContent topicNameOverride={topicNameOverride} />
-      </main>
-    </div>
+    <DashboardPageShell className="p-6" contentClass="border-white/5 bg-white/5 backdrop-blur-xl">
+      <QuestionListContent topicNameOverride={topicNameOverride} />
+    </DashboardPageShell>
   );
 }
 

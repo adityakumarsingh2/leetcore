@@ -358,7 +358,7 @@ function Milestone({ progressData, loading: progressLoading }) {
     const secondaryBadges = finalBadgeCollection.slice(3, 9);
 
     return (
-        <div className="w-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-5 text-white shadow-lg backdrop-blur-md relative overflow-hidden transition-all duration-300 flex flex-col justify-between">
+        <div className="w-full h-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-5 text-white shadow-lg backdrop-blur-md relative overflow-hidden transition-all duration-300 flex flex-col justify-between">
             <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/[0.02] rounded-full blur-2xl pointer-events-none" />
             
             {/* Header */}
