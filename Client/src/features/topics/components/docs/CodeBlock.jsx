@@ -5,7 +5,7 @@ function CodeBlock({ code, tone = "default" }) {
     tone === "wrong" ? "bg-red-950/15" : tone === "correct" ? "bg-emerald-950/15" : "bg-[#070708]";
 
   return (
-    <pre className={`overflow-x-auto rounded-lg ${border} ${glow} border p-4 text-xs leading-6 text-orange-50 shadow-inner sm:text-sm`}>
+    <pre className={`overflow-x-auto rounded-lg ${border} ${glow} border p-4 text-xs leading-6 text-zinc-200 shadow-inner sm:text-sm`}>
       <code>{code}</code>
     </pre>
   );

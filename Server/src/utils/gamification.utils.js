@@ -34,7 +34,11 @@ export const getNextStreak = (lastActiveDate, currentStreak, todayKey = toDateKe
 
 export const formatConsistencyWindow = ({ activities = [], days = 30, endDateKey = toDateKey() }) => {
     const keys = getDateRangeKeys(days, endDateKey);
-    const activityMap = new Map(activities.map((activity) => [activity.date, activity]));
+    const activityMap = new Map(
+        activities
+            .filter((activity) => activity && activity.date)
+            .map((activity) => [toDateKey(activity.date), activity])
+    );
     const daysData = keys.map((date) => {
         const activity = activityMap.get(date);
         const consistencyScore = activity?.consistencyScore || 0;

@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import User from "../models/User.models.js";
 import UserActivity from "../models/useractivity.models.js";
 import ApiError from "../utils/ApiError.js";
@@ -12,6 +13,9 @@ import {
 } from "../utils/gamification.utils.js";
 
 const getUserOrThrow = async (userId) => {
+    if (!userId || userId === "undefined" || !mongoose.Types.ObjectId.isValid(userId)) {
+        throw new ApiError(400, "Invalid user ID");
+    }
     const user = await User.findById(userId);
 
     if (!user) {

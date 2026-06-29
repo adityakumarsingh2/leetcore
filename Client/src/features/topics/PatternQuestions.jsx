@@ -271,7 +271,7 @@ function QuestionListContent({ topicNameOverride }) {
           <p className="mt-2 text-white/60 text-sm max-w-2xl">
             {patternName
               ? `Solve curated ${formatPattern(patternName)} questions to build muscle memory for this pattern.`
-              : "Start directly with 25 curated questions. Open any problem to see details, examples, hints, and your answer notepad."}
+              : `Start directly with ${stats.total} curated questions. Open any problem to see details, examples, hints, and your answer notepad.`}
           </p>
         </div>
 

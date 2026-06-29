@@ -25,7 +25,7 @@ function WhyLearnSection({ section }) {
               className="rounded-lg border border-white/10 bg-white/[0.035] p-4 transition cursor-default "
             >
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-orange-300/20 bg-orange-500/14 text-orange-200">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white/70">
                   <Icon size={19} />
                 </div>
                 <div className="flex-1 min-w-0">

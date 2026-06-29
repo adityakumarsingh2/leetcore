@@ -24,7 +24,7 @@ function RecommendedVideosSection({ section }) {
                 href={video.url}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-md border border-orange-300/25 bg-orange-500/10 px-3 py-2 text-sm font-semibold text-orange-100 transition hover:bg-orange-500/18"
+                className="mt-4 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10 hover:text-white"
               >
                 Open
                 <ArrowUpRight size={15} />
