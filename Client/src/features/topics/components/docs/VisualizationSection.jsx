@@ -153,27 +153,37 @@ function ArrayRow({ label, values, indexLabel, valueLabel }) {
   return (
     <div className="rounded-lg border border-white/10 bg-black/22 p-4">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/44">{label}</p>
-      <div className="grid grid-cols-[72px_1fr] gap-3 text-xs">
-        <span className="pt-2 text-white/52">{indexLabel}</span>
-        <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${Math.max(values.length, 1)}, minmax(42px, 1fr))` }}>
-          {values.map((_, index) => (
-            <span key={`index-${index}`} className="text-center font-mono text-white/64">{index}</span>
-          ))}
+      
+      <div className="grid grid-cols-[64px_1fr] gap-4 items-center">
+        {/* Left Labels */}
+        <div className="flex flex-col gap-[30px] text-[10px] font-bold uppercase tracking-wider text-white/33 select-none">
+          <span>{indexLabel}</span>
+          <span>{valueLabel}</span>
         </div>
-        <span className="pt-3 text-white/52">{valueLabel}</span>
-        <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${Math.max(values.length, 1)}, minmax(42px, 1fr))` }}>
-          {values.map((value, index) => (
-            <Motion.div
-              layout
-              key={`${value}-${index}`}
-              initial={{ opacity: 0, scale: 0.82 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.82 }}
-              className="flex h-12 items-center justify-center rounded-md border border-white/15 bg-[#111113] font-mono text-sm text-white/90"
-            >
-              {value}
-            </Motion.div>
-          ))}
+        
+        {/* Right Scrollable Values */}
+        <div className="overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+          <div className="flex gap-2 min-w-max pb-1">
+            {values.map((value, index) => (
+              <div key={`${value}-${index}`} className="flex flex-col items-center gap-2 w-12 flex-shrink-0">
+                <span className="font-mono text-white/48 text-[10px]">{index}</span>
+                <Motion.div
+                  layout
+                  initial={{ opacity: 0, scale: 0.82 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.82 }}
+                  className="flex h-12 w-full items-center justify-center rounded-md border border-white/15 bg-[#111113] font-mono text-sm font-semibold text-white/90"
+                >
+                  {value}
+                </Motion.div>
+              </div>
+            ))}
+            {values.length === 0 && (
+              <div className="flex items-center justify-center h-16 w-full text-white/30 text-xs italic">
+                Empty
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
