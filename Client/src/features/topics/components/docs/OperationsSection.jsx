@@ -18,7 +18,7 @@ function OperationsSection({ section }) {
                 <tr key={row.operation} className="transition cursor-default">
                   <td className="px-4 py-3 font-semibold text-white">{row.operation}</td>
                   <td className="px-4 py-3">{row.description}</td>
-                  <td className="px-4 py-3 font-mono text-orange-200">{row.stl}</td>
+                  <td className="px-4 py-3 font-mono text-white/80">{row.stl}</td>
                   <td className="px-4 py-3 font-mono">{row.complexity}</td>
                 </tr>
               ))}
@@ -29,7 +29,7 @@ function OperationsSection({ section }) {
           <h3 className="font-semibold text-white">{section.panelTitle}</h3>
           <div className="mt-4 grid grid-cols-2 gap-2 xl:grid-cols-1">
             {section.functions.map((item) => (
-              <span key={item} className="rounded-md border border-white/10 bg-black/24 px-3 py-2 font-mono text-xs text-orange-100">
+              <span key={item} className="rounded-md border border-white/10 bg-black/24 px-3 py-2 font-mono text-xs text-white/80">
                 {item}
               </span>
             ))}

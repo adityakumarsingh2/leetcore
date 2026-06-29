@@ -15,7 +15,7 @@ function DefinitionSection({ section }) {
           </div>
         </div>
       ) : (
-        <p className="p-5 text-sm leading-8 text-orange-50 sm:text-sm text-white/68">
+        <p className="p-5 text-sm leading-8 text-white/68">
           {section.content}
         </p>
       )}

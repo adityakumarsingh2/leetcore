@@ -25,7 +25,7 @@ function InternalWorkingSection({ section }) {
                       <td key={i} className="py-3 bg-white/[0.02]">{val}</td>
                     ))}
                   </tr>
-                  <tr className="text-orange-200/70">
+                  <tr className="text-white/50">
                     <td className="py-2 text-left text-white/50">Address</td>
                     {section.array.memory.addresses.map((addr, i) => (
                       <td key={i} className="py-2">{addr}</td>
@@ -58,7 +58,7 @@ function InternalWorkingSection({ section }) {
               <span className="text-xs text-white/50">Growth Pattern (Capacity):</span>
               <div className="mt-2 flex flex-wrap gap-2">
                 {section.vector.growthPattern?.map((cap, i) => (
-                  <span key={i} className="rounded bg-[#f46717]/10 border border-[#f46717]/20 px-2.5 py-1 text-xs font-mono text-orange-200">
+                  <span key={i} className="rounded bg-white/[0.04] border border-white/10 px-2.5 py-1 text-xs font-mono text-white/80">
                     {cap}
                   </span>
                 ))}
@@ -66,7 +66,7 @@ function InternalWorkingSection({ section }) {
             </div>
             <p className="mt-4 text-sm leading-6 text-white/64">{section.vector.capacityExplanation}</p>
             {section.vector.reallocation && (
-              <div className="mt-4 rounded border border-[#f46717]/25 bg-[#f46717]/5 p-3 text-xs font-mono text-orange-200/90">
+              <div className="mt-4 rounded border border-white/10 bg-white/[0.02] p-3 text-xs font-mono text-white/70">
                 Vector automatically reallocates memory: {section.vector.reallocation.oldCapacity} → {section.vector.reallocation.newCapacity} when full.
               </div>
             )}
@@ -100,8 +100,8 @@ function InternalWorkingSection({ section }) {
             ))}
           </div>
           {section.formula && (
-            <div className="mt-5 rounded-lg border border-orange-300/25 bg-black/28 p-4">
-              <p className="font-mono text-sm text-orange-100">{section.formula.label}</p>
+            <div className="mt-5 rounded-lg border border-white/10 bg-black/28 p-4">
+              <p className="font-mono text-sm text-white/90">{section.formula.label}</p>
               <p className="mt-3 font-mono text-lg font-semibold text-[#f46717]">{section.formula.example}</p>
             </div>
           )}

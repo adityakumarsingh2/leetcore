@@ -11,7 +11,7 @@ function PracticeRoadmapSection({ section }) {
                 <h3 className="text-lg font-semibold text-white">{group.level}</h3>
                 <p className="mt-1 text-sm text-white/48">{group.count} Questions</p>
               </div>
-              <span className="rounded-full border border-orange-300/25 bg-orange-500/10 px-3 py-1 text-xs font-semibold text-orange-100">
+              <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-white/80">
                 {group.progress}%
               </span>
             </div>
@@ -21,7 +21,7 @@ function PracticeRoadmapSection({ section }) {
             <ul className="mt-4 space-y-2 text-sm leading-6 text-white/62">
               {group.questions.map((question) => (
                 <li key={`${group.level}-${question}`} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-300" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-500" />
                   <span>{question}</span>
                 </li>
               ))}

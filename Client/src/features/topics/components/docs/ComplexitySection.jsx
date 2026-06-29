@@ -30,7 +30,7 @@ function ComplexitySection({ section }) {
                 {isSimpleTable ? (
                   <>
                     <td className="px-4 py-3 font-semibold text-white">{row.situation}</td>
-                    <td className="px-4 py-3 text-orange-200">{row.choice}</td>
+                    <td className="px-4 py-3 text-white/80">{row.choice}</td>
                   </>
                 ) : isComparisonTable ? (
                   <>

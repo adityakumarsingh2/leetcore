@@ -18,7 +18,7 @@ function LearnCardsSection({ section }) {
               transition={{ delay: index * 0.05, duration: 0.3 }}
               className="rounded-lg border border-white/10 bg-black/24 p-4"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-orange-300/20 bg-orange-500/15 text-orange-200">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/70">
                 <Icon size={22} />
               </div>
               <h3 className="mt-4 text-base font-semibold text-white">{item.title}</h3>
@@ -32,7 +32,7 @@ function LearnCardsSection({ section }) {
                   className="h-full rounded-full bg-[#f46717]"
                 />
               </div>
-              <p className="mt-2 text-right text-[11px] text-orange-200">{item.progress}%</p>
+              <p className="mt-2 text-right text-[11px] text-white/60">{item.progress}%</p>
             </Motion.article>
           );
         })}

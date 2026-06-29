@@ -35,7 +35,7 @@ function ArrayRow({ label, values, indexLabel, valueLabel }) {
               initial={{ opacity: 0, scale: 0.82 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.82 }}
-              className="flex h-12 items-center justify-center rounded-md border border-orange-300/18 bg-[#111113] font-mono text-sm text-orange-200"
+              className="flex h-12 items-center justify-center rounded-md border border-white/15 bg-[#111113] font-mono text-sm text-white/90"
             >
               {value}
             </Motion.div>

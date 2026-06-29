@@ -16,7 +16,7 @@ function RealLifeExampleSection({ section }) {
                 </h4>
                 <p className="mt-3 text-sm leading-6 text-white/66">{data.description}</p>
                 {data.diagram && (
-                  <pre className="mt-4 overflow-x-auto rounded border border-white/5 bg-black/40 p-3 font-mono text-xs text-orange-200">
+                  <pre className="mt-4 overflow-x-auto rounded border border-white/5 bg-black/40 p-3 font-mono text-xs text-zinc-300">
                     {data.diagram}
                   </pre>
                 )}

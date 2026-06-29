@@ -1,6 +1,7 @@
 import express from "express";
 import fs from "fs";
 import path from "path";
+import mongoose from "mongoose";
 import { fileURLToPath } from "url";
 import jwt from "jsonwebtoken";
 import axios from "axios";
@@ -50,6 +51,7 @@ const progressRateLimiter = rateLimit({
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const SUBMISSION_REPO_NAME = "Leetcore-submission";
+const PRACTICE_LIMIT = 25; // Centralized limit for practice questions per topic
 
 // Helper to normalize topic name to match files
 function normalizeTopicName(topic) {
@@ -67,12 +69,18 @@ function normalizePatternSlug(pattern) {
         .replace(/^-+|-+$/g, "");
 }
 
+function isSafePath(targetPath, baseDir) {
+    const resolvedTarget = path.resolve(targetPath).toLowerCase();
+    const resolvedBase = path.resolve(baseDir).toLowerCase() + path.sep;
+    return resolvedTarget.startsWith(resolvedBase);
+}
+
 function getQuestionsFilePath(topic) {
     const normalizedTopic = normalizeTopicName(topic);
     const baseQuestionsDir = path.resolve(__dirname, "..", "data", "questions");
     const jsonPath = path.resolve(baseQuestionsDir, `${normalizedTopic}question.json`);
 
-    if (jsonPath !== baseQuestionsDir && !jsonPath.startsWith(baseQuestionsDir + path.sep)) {
+    if (!isSafePath(jsonPath, baseQuestionsDir)) {
         return null;
     }
 
@@ -207,7 +215,7 @@ async function markProblemSolved({ user, userId, problemId, topic, pattern }) {
     });
 
     const date = toDateKey();
-    const existingActivity = await UserActivity.findOne({ userId, date });
+    const existingActivity = await UserActivity.findOne({ userId: new mongoose.Types.ObjectId(userId), date });
     const wasNewActiveDay = !existingActivity;
     const nextProblemsSolved = Math.max((existingActivity?.problemsSolved || 0) + 1, 0);
     const nextStudyMinutes = existingActivity?.studyMinutes || 0;
@@ -222,7 +230,7 @@ async function markProblemSolved({ user, userId, problemId, topic, pattern }) {
         : user.stats?.currentStreak || existingActivity?.streakCount || 0;
 
     await UserActivity.findOneAndUpdate(
-        { userId, date },
+        { userId: new mongoose.Types.ObjectId(userId), date },
         {
             $set: {
                 active: true,
@@ -365,9 +373,17 @@ async function isTopicComplete(userId, topicName) {
     const jsonPath = path.join(__dirname, "..", "data", "questions", `${normTopic}question.json`);
     if (!fs.existsSync(jsonPath)) return false;
     try {
-        const totalCount = JSON.parse(fs.readFileSync(jsonPath, "utf-8")).length;
-        const solvedCount = await SolvedProblem.countDocuments({ userId, topic: normTopic });
-        return totalCount > 0 && solvedCount >= totalCount;
+        const questions = JSON.parse(fs.readFileSync(jsonPath, "utf-8")).slice(0, PRACTICE_LIMIT);
+        const questionIds = questions.map(q => q._id).filter(Boolean);
+        const totalCount = questionIds.length;
+        if (totalCount === 0) return false;
+
+        const solvedCount = await SolvedProblem.countDocuments({
+            userId,
+            topic: normTopic,
+            problemId: { $in: questionIds }
+        });
+        return solvedCount >= totalCount;
     } catch (err) {
         return false;
     }
@@ -709,7 +725,7 @@ router.get("/progress", progressRateLimiter, optionalAuth, async (req, res) => {
 
         for (const t of topics) {
             const normTopic = normalizeTopicName(t.topic);
-            const questions = readTopicQuestions(t.topic);
+            const questions = readTopicQuestions(t.topic).slice(0, PRACTICE_LIMIT);
             const currentQuestionIds = questions.map((question) => question._id).filter(Boolean);
             const total = currentQuestionIds.length;
             totalQuestionsAll += total;
@@ -757,7 +773,7 @@ router.get("/", optionalAuth, async (req, res) => {
         const baseQuestionsDir = path.resolve(__dirname, "..", "data", "questions");
         const jsonPath = path.resolve(baseQuestionsDir, `${normalizedTopic}question.json`);
 
-        if (jsonPath !== baseQuestionsDir && !jsonPath.startsWith(baseQuestionsDir + path.sep)) {
+        if (!isSafePath(jsonPath, baseQuestionsDir)) {
             return res.status(403).json({ success: false, message: "Invalid topic path" });
         }
 
@@ -770,7 +786,7 @@ router.get("/", optionalAuth, async (req, res) => {
 
         const filteredQuestions = normalizedPattern
             ? questions.filter(q => normalizePatternSlug(q.pattern) === normalizedPattern)
-            : questions.slice(0, 25);
+            : questions.slice(0, PRACTICE_LIMIT);
 
         // Annotate questions with solved status
         let solvedSet = new Set();
@@ -818,7 +834,7 @@ router.get("/detail/:problemId", optionalAuth, async (req, res) => {
         const baseQuestionsDir = path.resolve(__dirname, "..", "data", "questions");
         const jsonPath = path.resolve(baseQuestionsDir, `${normalizedTopic}question.json`);
 
-        if (jsonPath !== baseQuestionsDir && !jsonPath.startsWith(baseQuestionsDir + path.sep)) {
+        if (!isSafePath(jsonPath, baseQuestionsDir)) {
             return res.status(403).json({ success: false, message: "Invalid topic path" });
         }
 
@@ -872,7 +888,7 @@ router.post("/run-solution", runSolutionLimiter, authMiddleware, async (req, res
         const baseQuestionsDir = path.resolve(__dirname, "..", "data", "questions");
         const jsonPath = path.resolve(baseQuestionsDir, `${normalizedTopic}question.json`);
 
-        if (jsonPath !== baseQuestionsDir && !jsonPath.startsWith(baseQuestionsDir + path.sep)) {
+        if (!isSafePath(jsonPath, baseQuestionsDir)) {
             return res.status(403).json({ success: false, message: "Invalid topic path" });
         }
 
@@ -923,16 +939,10 @@ router.post("/submit-solution", submitSolutionLimiter, authMiddleware, async (re
         }
 
         const normalizedTopic = normalizeTopicName(topic);
-        const trimmedTopic = typeof topic === "string" ? topic.trim() : "";
-
-        if (!normalizedTopic || normalizedTopic !== trimmedTopic.toLowerCase()) {
-            return res.status(400).json({ success: false, message: "Invalid topic format" });
-        }
-
         const baseQuestionsDir = path.resolve(__dirname, "..", "data", "questions");
         const jsonPath = path.resolve(baseQuestionsDir, `${normalizedTopic}question.json`);
 
-        if (jsonPath !== baseQuestionsDir && !jsonPath.startsWith(baseQuestionsDir + path.sep)) {
+        if (!isSafePath(jsonPath, baseQuestionsDir)) {
             return res.status(403).json({ success: false, message: "Invalid topic path" });
         }
 
@@ -1091,7 +1101,7 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
 
         // --- Gamification & Streak updates ---
         const date = toDateKey();
-        const existingActivity = await UserActivity.findOne({ userId, date });
+        const existingActivity = await UserActivity.findOne({ userId: new mongoose.Types.ObjectId(userId), date });
         const wasNewActiveDay = !existingActivity;
 
         const deltaSolved = solved ? 1 : -1;
@@ -1114,7 +1124,7 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
         let activity;
         try {
             activity = await UserActivity.findOneAndUpdate(
-                { userId, date },
+                { userId: new mongoose.Types.ObjectId(userId), date },
                 {
                     $set: {
                         active: true,
@@ -1137,7 +1147,7 @@ router.post("/toggle-solve", authMiddleware, async (req, res) => {
             if (updateError.code === 11000) {
                 // Gracefully handle compound index duplicate key error on concurrent upsert operations
                 activity = await UserActivity.findOneAndUpdate(
-                    { userId, date },
+                    { userId: new mongoose.Types.ObjectId(userId), date },
                     {
                         $set: {
                             active: true,
