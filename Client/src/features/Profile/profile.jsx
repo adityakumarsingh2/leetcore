@@ -41,7 +41,7 @@ function Profile() {
     }, [user?._id]);
 
     return (
-        <DashboardPageShell className="pt-0 pl-0 pr-2 pb-6 flex flex-col lg:flex-row gap-6 lg:gap-8" plain={true} bgClass="bg-[#070709]">
+        <DashboardPageShell className="pt-1 pl-0 pr-0 sm:pr-2 pb-6 flex flex-col lg:flex-row gap-5 lg:gap-7" plain={true} bgClass="bg-[#070709]">
             {/* Left Column: User Detail Card wrapper */}
             <div
                 className="
@@ -53,9 +53,9 @@ function Profile() {
                         rounded-2xl
                         md:rounded-3xl
                         border
-                        border-white/[0.05]
-                        bg-[#121215]/60
-                        shadow-lg
+                        border-white/[0.08]
+                        bg-[#121215]/68
+                        shadow-[0_18px_55px_rgba(0,0,0,0.22)]
                         backdrop-blur-md
                         overflow-hidden
                         flex-shrink-0
@@ -69,13 +69,13 @@ function Profile() {
                 className="
                        flex-1
                        min-w-0
-                       space-y-6
-                       lg:space-y-8
+                       space-y-5
+                       lg:space-y-6
                        h-fit
                     "
             >
                 {/* Row 1: Overall Progress & Badges Earned (Side-by-side) */}
-                <div className="grid grid-cols-1 xl:grid-cols-[1.35fr_1fr] gap-6 w-full min-w-0 items-stretch">
+                <div className="grid grid-cols-1 xl:grid-cols-[1.35fr_1fr] gap-5 lg:gap-6 w-full min-w-0 items-stretch">
                     <OverallProgress progressData={progressData} loading={progressLoading} />
                     <Milestone progressData={progressData} loading={progressLoading} />
                 </div>
@@ -95,4 +95,3 @@ function Profile() {
 }
 
 export default Profile;
-

@@ -55,7 +55,7 @@ export default function HorizontalCarousel({
             {/* Left Edge Gradient Fade */}
             <div 
                 className={`
-                    absolute left-0 top-0 bottom-0 w-12 
+                    absolute left-0 top-0 bottom-0 w-10 sm:w-14 
                     bg-gradient-to-r ${gradientColor} via-transparent to-transparent 
                     pointer-events-none z-10 transition-opacity duration-300 
                     ${showLeftArrow ? "opacity-100" : "opacity-0"}
@@ -65,7 +65,7 @@ export default function HorizontalCarousel({
             {/* Right Edge Gradient Fade */}
             <div 
                 className={`
-                    absolute right-0 top-0 bottom-0 w-12 
+                    absolute right-0 top-0 bottom-0 w-10 sm:w-14 
                     bg-gradient-to-l ${gradientColor} via-transparent to-transparent 
                     pointer-events-none z-10 transition-opacity duration-300 
                     ${showRightArrow ? "opacity-100" : "opacity-0"}
@@ -77,8 +77,8 @@ export default function HorizontalCarousel({
                 type="button"
                 onClick={() => scroll("left")}
                 className={`
-                    absolute left-3 top-1/2 -translate-y-1/2 z-20 
-                    w-11 h-11 rounded-full 
+                    absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-20 
+                    w-10 h-10 sm:w-11 sm:h-11 rounded-full 
                     bg-black/60 border border-white/10 
                     flex items-center justify-center 
                     text-white/80 hover:text-white 
@@ -97,8 +97,8 @@ export default function HorizontalCarousel({
                 type="button"
                 onClick={() => scroll("right")}
                 className={`
-                    absolute right-3 top-1/2 -translate-y-1/2 z-20 
-                    w-11 h-11 rounded-full 
+                    absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-20 
+                    w-10 h-10 sm:w-11 sm:h-11 rounded-full 
                     bg-black/60 border border-white/10 
                     flex items-center justify-center 
                     text-white/80 hover:text-white 
@@ -119,7 +119,7 @@ export default function HorizontalCarousel({
                     flex ${gapClass} 
                     overflow-x-auto overflow-y-hidden 
                     scroll-smooth scrollbar-hide
-                    px-8 py-4 -my-4
+                    px-4 sm:px-8 py-4 -my-4
                     ${className}
                 `}
                 style={{

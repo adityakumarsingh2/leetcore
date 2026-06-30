@@ -80,7 +80,7 @@ function OverallProgress({ progressData, loading }) {
 
     if (loading || statsLoading) {
         return (
-            <div className="w-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-6 text-white flex flex-col items-center justify-center min-h-[140px] shadow-lg backdrop-blur-md animate-pulse">
+            <div className="w-full bg-[#121215]/60 border border-white/[0.08] rounded-2xl p-6 text-white flex flex-col items-center justify-center min-h-[140px] shadow-[0_18px_55px_rgba(0,0,0,0.2)] backdrop-blur-md animate-pulse">
                 <Loader2 className="w-5 h-5 text-neutral-500 animate-spin" />
             </div>
         );
@@ -90,7 +90,7 @@ function OverallProgress({ progressData, loading }) {
     const maxStreak = dashboardData?.stats?.maxStreak || user?.stats?.maxStreak || 0;
 
     return (
-        <div className="w-full h-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-5 sm:p-6 text-white shadow-lg backdrop-blur-md relative overflow-hidden transition-all duration-300">
+        <div className="w-full h-full bg-[#121215]/68 border border-white/[0.08] rounded-2xl p-5 sm:p-6 text-white shadow-[0_18px_55px_rgba(0,0,0,0.2)] backdrop-blur-md relative overflow-hidden transition-all duration-300">
             {/* Soft glowing ambient radial gradients */}
             <div className="absolute top-0 right-0 w-36 h-36 bg-orange-500/[0.02] rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-36 h-36 bg-white/[0.01] rounded-full blur-3xl pointer-events-none" />

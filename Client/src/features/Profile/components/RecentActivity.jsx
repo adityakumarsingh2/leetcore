@@ -79,7 +79,7 @@ export default function RecentActivity({ userId }) {
     ];
 
     return (
-        <div className="w-full rounded-2xl bg-[#121215]/60 border border-white/[0.05] shadow-lg backdrop-blur-md p-6 relative min-h-[220px]">
+        <div className="w-full rounded-2xl bg-[#121215]/68 border border-white/[0.08] shadow-[0_18px_55px_rgba(0,0,0,0.2)] backdrop-blur-md p-5 sm:p-6 relative min-h-[220px]">
             {/* Tab Header */}
             <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-4 flex-wrap gap-4">
                 <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 p-1 rounded-xl">
@@ -96,6 +96,7 @@ export default function RecentActivity({ userId }) {
                                     text-xs 
                                     font-semibold 
                                     transition-all 
+                                    cursor-pointer
                                     flex 
                                     items-center 
                                     gap-2

@@ -3,7 +3,7 @@ import Dashmainnavbar from "../../../components/layout/dashnavbar";
 import Topics from "./topics";
 function Dashmain() {
     return (
-        <div>
+        <div className="min-w-0">
             <Dashmainnavbar />
             
             <Topics />

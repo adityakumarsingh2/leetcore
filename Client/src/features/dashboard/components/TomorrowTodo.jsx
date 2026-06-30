@@ -43,17 +43,17 @@ function TomorrowTodo() {
     };
 
     return (
-        <section className="w-[94%] mx-auto rounded-3xl border border-white/10 bg-[#111113] p-5 shadow-[0_16px_45px_rgba(0,0,0,0.18)]">
+        <section className="w-[94%] mx-auto rounded-3xl lc-panel p-5">
             <div className="flex items-start justify-between gap-3">
                 <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/35">
+                    <p className="lc-kicker">
                         Next Day
                     </p>
                     <h2 className="mt-1 text-sm font-semibold text-white">
                         To-Do List
                     </h2>
                 </div>
-                <span className="rounded-full border border-white/10 px-2.5 py-1 text-[11px] font-medium text-white/45">
+                <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] font-medium text-white/45 tabular-nums">
                     {todos.length} tasks
                 </span>
             </div>
@@ -66,12 +66,12 @@ function TomorrowTodo() {
                         if (event.key === "Enter") addTodo();
                     }}
                     placeholder="Plan tomorrow"
-                    className="min-w-0 flex-1 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-white outline-none placeholder:text-white/30 focus:border-orange-400/60"
+                    className="lc-input min-w-0 flex-1 rounded-2xl px-3 py-2 text-sm outline-none placeholder:text-white/30"
                 />
                 <button
                     type="button"
                     onClick={addTodo}
-                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-orange-400 text-black transition active:scale-95 cursor-pointer"
+                    className="lc-pressable flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-orange-400 text-black cursor-pointer"
                     aria-label="Add to-do"
                     title="Add to-do"
                 >
@@ -88,7 +88,7 @@ function TomorrowTodo() {
                     todos.slice(0, 4).map((todo) => (
                         <div
                             key={todo.id}
-                            className="flex items-center gap-2 rounded-2xl border border-white/5 bg-white/[0.03] px-3 py-2"
+                            className="flex items-center gap-2 rounded-2xl border border-white/5 bg-white/[0.03] px-3 py-2 transition-colors hover:border-white/10 hover:bg-white/[0.045]"
                         >
                             <button
                                 type="button"

@@ -172,16 +172,16 @@ function Topics() {
 
     return (
 
-        <div className="min-h-screen text-white px-2  py-6 sm:py-8">
+        <div className="min-h-screen text-white px-0 sm:px-2 py-5 sm:py-7">
 
             {/* DSA Section */}
             <section
                 id="dsa"
-                className="mb-16"
+                className="mb-14 sm:mb-16 scroll-mt-6"
             >
 
                 <h1
-                    className="text-xl font-semibold mb-5 sm:mb-6 lc-safe-text px-8"
+                    className="px-4 sm:px-8 mb-4 sm:mb-5 text-lg sm:text-xl font-semibold tracking-tight lc-safe-text"
                 >
                     Data Structure and Algorithms <span className="text-zinc-300 font-medium">(Follow the Flow)</span>
                 </h1>
@@ -199,7 +199,7 @@ function Topics() {
                                 relative
                                 w-[244px]
                                 sm:w-[260px]
-                                min-h-[152px]
+                                min-h-[164px]
                                 flex-shrink-0
                                 snap-center
                                 rounded-2xl
@@ -211,6 +211,10 @@ function Topics() {
                                 flex
                                 flex-col
                                 justify-between
+                                border
+                                border-white/10
+                                shadow-[0_18px_48px_rgba(0,0,0,0.2)]
+                                lc-interactive
                                 
                                 
                             "
@@ -234,7 +238,8 @@ function Topics() {
 
                                 <h2
                                     className="
-                                        text-xl
+                                        text-lg
+                                        sm:text-xl
                                         font-bold
                                         text-white
                                         lc-safe-text
@@ -245,9 +250,9 @@ function Topics() {
 
                                 <p
                                     className="
-                                        text-xs
+                                        text-[13px]
                                         text-white/72
-                                        mt-1
+                                        mt-2
                                         leading-relaxed
                                     "
                                 >
@@ -257,15 +262,14 @@ function Topics() {
                             </div>
 
                             {/* Buttons */}
-                            <div className="flex gap-3">
+                            <div className="flex gap-2.5 sm:gap-3 pt-4">
                                 <Link to={getTopicPath("Docs", topic.topic)} className="
                                         relative
                                         z-10
                                         flex-1
                                         min-w-0
-                                        h-8
-                                        mt-4
-                                        rounded-md
+                                        h-9
+                                        rounded-lg
                                         text-sm
                                         font-semibold
                                         flex
@@ -276,8 +280,9 @@ function Topics() {
                                         bg-white
                                         text-black
                                         transition-all
-                                        duration-300
+                                        duration-200
                                         hover:bg-orange-50
+                                        hover:shadow-[0_10px_24px_rgba(0,0,0,0.14)]
                                         active:scale-[0.98]
                                         cursor-pointer
                                     ">
@@ -291,9 +296,8 @@ function Topics() {
                                         z-10
                                         flex-1
                                         min-w-0
-                                        h-8
-                                        mt-4
-                                        rounded-md
+                                        h-9
+                                        rounded-lg
                                         text-sm
                                         font-semibold
                                         flex
@@ -304,8 +308,9 @@ function Topics() {
                                         bg-white/14
                                         text-white
                                         transition-all
-                                        duration-300
+                                        duration-200
                                         hover:bg-white/20
+                                        hover:border-white/30
                                         active:scale-[0.98]
                                         cursor-pointer
                                     ">
@@ -330,12 +335,12 @@ function Topics() {
                 <section
                     key={index}
                     id={section.title.toLowerCase().replaceAll(" ", "-")}
-                    className="mb-14 sm:mb-16"
+                    className="mb-14 sm:mb-16 scroll-mt-6"
                 >
 
                     {/* Title */}
                     <h2
-                        className="text-xl font-semibold mb-5 sm:mb-6 lc-safe-text px-8"
+                        className="px-4 sm:px-8 mb-4 sm:mb-5 text-lg sm:text-xl font-semibold tracking-tight lc-safe-text"
                     >
                         {section.title}
                     </h2>
@@ -353,7 +358,7 @@ function Topics() {
                                     relative
                                     w-[250px]
                                     sm:w-[260px]
-                                    min-h-[152px]
+                                    min-h-[164px]
                                     flex-shrink-0
                                     snap-center
                                     rounded-2xl
@@ -368,6 +373,7 @@ function Topics() {
                                     ${section.cardColor}
                                     shadow-[0_16px_45px_rgba(0,0,0,0.2)]
                                     lc-interactive
+                                    hover:border-white/18
                                 `}
                             >
 
@@ -461,7 +467,8 @@ function Topics() {
 
                                     <h2
                                         className={`
-                                            text-xl
+                                            text-lg
+                                            sm:text-xl
                                             font-bold
                                             ${section.textColor}
                                             lc-safe-text
@@ -472,8 +479,8 @@ function Topics() {
 
                                     <p
                                         className={`
-                                            text-sm
-                                            mt-3
+                                            text-[13px]
+                                            mt-2.5
                                             leading-relaxed
                                             text-white/74
                                         `}

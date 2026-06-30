@@ -4,7 +4,7 @@ import DashRightNavBar from "./components/dashrightnavbar";
 
 function Dashboard() {
     return (
-        <DashboardPageShell className="p-2 flex flex-col lg:flex-row gap-5 lg:gap-0" plain={true}>
+        <DashboardPageShell className="p-1 sm:p-2 flex flex-col lg:flex-row gap-5 xl:gap-4" plain={true}>
             {/* Main Section */}
             <div className="flex-1 min-w-0">
                 <Dashmain />

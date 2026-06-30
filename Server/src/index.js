@@ -1,6 +1,9 @@
 import "dotenv/config";
-import dns from "dns";
-dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
+if (process.env.NODE_ENV !== "production") {
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+}
+
 import app from "./app.js";
 import dbConnect from "./config/Connectdb.js"
 

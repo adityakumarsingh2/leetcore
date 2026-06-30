@@ -99,7 +99,9 @@ function DashLeftNavBar() {
                 md:px-0
                 md:py-6
                 relative
+                z-40
                 shadow-[0_16px_48px_rgba(0,0,0,0.18)]
+                backdrop-blur-xl
             "
         >
 
@@ -107,7 +109,7 @@ function DashLeftNavBar() {
             <div className="flex md:flex-col items-center w-auto md:w-full">
 
                 {/* Logo */}
-                <Link to="/dashboard" className="mr-3 md:mr-0 md:mb-8 shrink-0">
+                <Link to="/dashboard" className="mr-3 md:mr-0 md:mb-8 shrink-0 rounded-2xl">
 
                     <div
                         className="
@@ -115,6 +117,8 @@ function DashLeftNavBar() {
                             h-9
                             rounded-2xl
                             bg-[#111]
+                            border
+                            border-white/10
                             flex
                             items-center
                             justify-center
@@ -168,20 +172,24 @@ function DashLeftNavBar() {
                                     justify-center
                                     gap-1
                                     md:gap-2
-                                    transition-all
-                                    duration-300
+                                    lc-pressable
                                     active:scale-[0.97]
 
                                     ${isActive
                                         ? `
-                                            bg-[#111]
+                                            bg-[#111]/95
                                             text-white
+                                            border
+                                            border-white/10
+                                            shadow-[0_12px_30px_rgba(0,0,0,0.18)]
                                             
                                           `
                                         : `
                                             text-gray-400
                                             hover:text-white
                                             hover:bg-white/5
+                                            border
+                                            border-transparent
                                           `
                                     }
                                 `}
@@ -259,8 +267,11 @@ function DashLeftNavBar() {
                         border-white/10
                         hover:scale-105
                         transition-all
+                        duration-200
                         overflow-hidden
                         active:scale-95
+                        hover:border-white/20
+                        hover:shadow-[0_10px_28px_rgba(0,0,0,0.22)]
                     "
                 >
 
@@ -297,14 +308,15 @@ function DashLeftNavBar() {
                 md:left-[72px]
                 md:right-auto
                 w-[min(calc(100vw-24px),280px)]
-                rounded-[14px]
+                rounded-2xl
                 bg-[#121214]/95
                 border
                 border-white/[0.12]
                 shadow-[0_24px_80px_rgba(0,0,0,0.62)]
-                z-50
+                z-[9999]
                 overflow-hidden
                 backdrop-blur-xl
+                animate-scale-in
             "
                         >
                             <div
@@ -345,7 +357,7 @@ function DashLeftNavBar() {
                                     </div>
 
                                     <div className="min-w-0">
-                                        <p className="text-md font-semibold text-white truncate">
+                                        <p className="text-sm font-semibold text-white truncate">
                                             {displayName}
                                         </p>
                                         <p className="text-xs text-gray-400 truncate">
@@ -365,7 +377,7 @@ function DashLeftNavBar() {
                                             items-center
                                             gap-4
                                             px-6
-                                            py-2
+                                            py-2.5
                                             text-[14px]
                                             font-medium
                                             text-white
@@ -387,7 +399,7 @@ function DashLeftNavBar() {
                                             items-center
                                             gap-4
                                             px-6
-                                            py-2
+                                            py-2.5
                                             text-[14px]
                                             font-medium
                                             text-white
@@ -409,7 +421,7 @@ function DashLeftNavBar() {
                                             items-center
                                             gap-4
                                             px-6
-                                            py-2
+                                            py-2.5
                                             text-[14px]
                                             font-medium
                                             text-white
@@ -431,7 +443,7 @@ function DashLeftNavBar() {
                                             items-center
                                             gap-4
                                             px-6
-                                            py-2
+                                            py-2.5
                                             text-[14px]
                                             font-medium
                                             text-white
@@ -455,12 +467,13 @@ function DashLeftNavBar() {
                                             gap-4
                                             rounded-xl
                                             px-3
-                                            py-1
+                                            py-2.5
                                             text-[14px]
                                             font-medium
                                             text-red-400
                                             hover:bg-red-500/10
                                             transition-colors
+                                            cursor-pointer
                                         "
                                     >
                                         <LogOut size={20} />

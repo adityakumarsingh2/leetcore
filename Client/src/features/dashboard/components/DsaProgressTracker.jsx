@@ -44,10 +44,10 @@ function DsaProgressTracker() {
     const dashOffset = circumference - (circumference * percentage) / 100;
 
     return (
-        <section className="w-[94%] mx-auto rounded-3xl border border-white/10 bg-[#111113] px-5 pt-5 pb-4 shadow-[0_16px_45px_rgba(0,0,0,0.18)]">
+        <section className="w-[94%] mx-auto rounded-3xl lc-panel px-5 pt-5 pb-4">
             <div className="flex items-center justify-between">
                 <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/35">
+                    <p className="lc-kicker">
                         DSA Progress
                     </p>
                     <h2 className="mt-1 text-sm font-semibold text-white">
@@ -78,7 +78,7 @@ function DsaProgressTracker() {
                 </svg>
 
                 <div className="absolute inset-x-0 bottom-1 flex flex-col items-center">
-                    <div className="text-3xl font-semibold tracking-tight text-white">
+                    <div className="text-3xl font-semibold tracking-tight text-white tabular-nums">
                         {loading ? "--" : totalSolved}
                         <span className="text-lg font-medium text-white/35">/{totalQuestions}</span>
                     </div>

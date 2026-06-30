@@ -46,9 +46,9 @@ function Dashmainnavbar() {
     };
 
     return (
-        <div className="w-full text-white py-4 pb-2">
+        <div className="w-full text-white pt-4 sm:pt-5 pb-3">
             {/* Heading */}
-            <h1 className="text-xl mb-3 font-semibold tracking-wide px-8">
+            <h1 className="px-4 sm:px-8 mb-3 text-lg sm:text-xl font-semibold tracking-wide lc-safe-text">
                 Categories
             </h1>
 
@@ -60,9 +60,9 @@ function Dashmainnavbar() {
                         onClick={() => scrollToCategory(item.targetId)}
                         key={index}
                         className="
-                            min-w-[138px]
+                            min-w-[132px]
                             sm:min-w-[150px]
-                            h-[136px]
+                            h-[132px]
                             sm:h-[140px]
                             bg-white/[0.045]
                             border
@@ -75,14 +75,17 @@ function Dashmainnavbar() {
                             lc-interactive
                             cursor-pointer
                             flex-shrink-0
+                            shadow-[0_14px_36px_rgba(0,0,0,0.16)]
+                            hover:border-white/16
+                            hover:bg-white/[0.06]
                         "
                     >
                         {/* Top Capsule */}
                         <div
                             className={`
                                 ${item.bg}
-                                w-[88%]
-                                h-[78px]
+                                w-[86%]
+                                h-[76px]
                                 sm:h-[80px]
                                 rounded-2xl
                                 flex
@@ -96,7 +99,7 @@ function Dashmainnavbar() {
                         </div>
 
                         {/* Title */}
-                        <h2 className="text-base sm:text-lg font-semibold tracking-wide mt-2">
+                        <h2 className="text-sm sm:text-base font-semibold tracking-wide mt-2">
                             {item.title}
                         </h2>
                     </button>

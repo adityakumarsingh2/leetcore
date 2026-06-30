@@ -9,15 +9,12 @@ function RightAds() {
                 w-[94%]
                 mx-auto
                 rounded-3xl
-                border
-                border-white/10
-                bg-[#111113]
+                lc-panel
                 p-6
-                shadow-[0_16px_45px_rgba(0,0,0,0.18)]
             "
         >
             <div className="space-y-2">
-                <h2 className="text-lg font-semibold text-white">
+                <h2 className="text-base font-semibold text-white">
                     Advertise on LeetCore
                 </h2>
 
@@ -39,7 +36,8 @@ function RightAds() {
                     py-3
                     text-sm
                     transition-all
-                    duration-300
+                    duration-200
+                    hover:bg-orange-300
                     active:scale-[0.98]
                     cursor-pointer
                 "

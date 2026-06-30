@@ -100,11 +100,11 @@ export default function Calendar() {
 
 
     return (
-        <div className="w-[94%] mx-auto my-2 bg-[#1A1A1A] border border-white/5 rounded-2xl overflow-hidden text-sm font-sans shadow-lg p-4">
+        <div className="w-[94%] mx-auto bg-[#1A1A1A] border border-white/8 rounded-3xl overflow-hidden text-sm font-sans shadow-[0_16px_45px_rgba(0,0,0,0.18)] p-4">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex flex-col">
-                    <span className="text-white font-semibold text-md leading-tight">Day {today.getDate()}</span>
+                    <span className="text-white font-semibold text-base leading-tight">Day {today.getDate()}</span>
                     <span className="text-white/40 text-xs font-mono mt-0.5">{timeLeft}</span>
                 </div>
 
@@ -112,7 +112,7 @@ export default function Calendar() {
                 <div className="flex items-center gap-2">
                     <button
                         onClick={prevMonth}
-                        className="w-6 h-6 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/50 hover:text-white transition cursor-pointer"
+                        className="w-7 h-7 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/50 hover:text-white transition cursor-pointer"
                     >
                         <ChevronLeft size={14} />
                     </button>
@@ -129,7 +129,7 @@ export default function Calendar() {
 
                     <button
                         onClick={nextMonth}
-                        className="w-6 h-6 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/50 hover:text-white transition cursor-pointer"
+                        className="w-7 h-7 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/50 hover:text-white transition cursor-pointer"
                     >
                         <ChevronRight size={14} />
                     </button>
@@ -146,7 +146,7 @@ export default function Calendar() {
             </div>
 
             {/* Days Grid */}
-            <div className="grid grid-cols-7 gap-1 mb-4">
+            <div className="grid grid-cols-7 gap-1">
                 {cells.map(({ day, type }, idx) => {
                     if (type === "empty") {
                         return <div key={idx} className="aspect-square" />;

@@ -6,23 +6,23 @@ import TomorrowTodo from "./TomorrowTodo";
 
 function Dashrightnavbar() {
     return (
-        <div >
-            <div className="flex justify-center item-center mb-2">
+        <aside className="sticky top-0 space-y-4 pb-4">
+            <div className="flex justify-center items-center">
                 <Calendar />
             </div>
-            <div className="flex justify-center item-center mb-3">
+            <div className="flex justify-center items-center">
                 <DsaProgressTracker />
             </div>
-            <div className="flex justify-center item-center mb-4">
+            <div className="flex justify-center items-center">
                 <Motivation />
             </div>
-            <div className="flex justify-center item-center">
+            <div className="flex justify-center items-center">
                 <TomorrowTodo />
             </div>
-            <div className="flex justify-center item-center mb-4">
+            <div className="flex justify-center items-center">
                 <RightAds />
             </div>
-        </div>
+        </aside>
     );
 }
 
