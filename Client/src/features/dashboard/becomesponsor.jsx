@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { createElement, useState, useEffect } from "react";
 import {
     HeartHandshake, Building2, User, Mail, Phone, MessageSquare, Send,
     CheckCircle, AlertTriangle, ArrowRight, ShieldCheck, Sparkles, Star, Users, BarChart3, Zap
@@ -189,10 +189,10 @@ export default function BecomeSponsorPage() {
                     <div className="space-y-6">
                         {/* Benefits cards */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            {BENEFITS.map(({ icon: Icon, title, text, stat, statLabel }) => (
+                            {BENEFITS.map(({ icon, title, text, stat, statLabel }) => (
                                 <div key={title} className="rounded-2xl border border-white/8 bg-[#111113]/80 p-5 hover:border-[#F46717]/30 transition-colors group">
                                     <div className="w-10 h-10 rounded-xl bg-[#F46717]/10 text-[#F46717] flex items-center justify-center group-hover:scale-105 transition-transform">
-                                        <Icon size={18} />
+                                        {createElement(icon, { size: 18 })}
                                     </div>
                                     <h3 className="mt-4 text-base font-semibold text-white">{title}</h3>
                                     <p className="mt-2 text-xs leading-5 text-white/40">{text}</p>

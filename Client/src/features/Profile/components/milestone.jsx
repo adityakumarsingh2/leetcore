@@ -161,6 +161,28 @@ const PREDEFINED_ACHIEVEMENTS = [
         check: (stats) => stats.isTopicComplete("String")
     },
     {
+        name: "Hashing Hero",
+        slug: "hashing-hero",
+        description: "Master all questions in the Hashing topic.",
+        category: "mastery",
+        rarity: "rare",
+        xpReward: 500,
+        icon: Code,
+        gradient: "from-blue-500/20 to-indigo-500/10 border-blue-500/30 text-blue-400 shadow-[0_0_10px_rgba(59,130,246,0.1)]",
+        check: (stats) => stats.isTopicComplete("Hashing")
+    },
+    {
+        name: "Search Master",
+        slug: "search-master",
+        description: "Master all questions in the Binary Search topic.",
+        category: "mastery",
+        rarity: "rare",
+        xpReward: 500,
+        icon: Target,
+        gradient: "from-violet-500/20 to-purple-500/10 border-violet-500/30 text-violet-400 shadow-[0_0_10px_rgba(139,92,246,0.1)]",
+        check: (stats) => stats.isTopicComplete("Binary Search")
+    },
+    {
         name: "Linked List Expert",
         slug: "linked-list-expert",
         description: "Master all questions in the Linked List topic.",
@@ -192,39 +214,6 @@ const PREDEFINED_ACHIEVEMENTS = [
         icon: ListCollapse,
         gradient: "from-lime-500/20 to-green-500/10 border-lime-500/30 text-lime-400 shadow-[0_0_10px_rgba(132,204,22,0.1)]",
         check: (stats) => stats.isTopicComplete("Queue")
-    },
-    {
-        name: "Tree Explorer",
-        slug: "tree-explorer",
-        description: "Master all questions in the Trees topic.",
-        category: "mastery",
-        rarity: "rare",
-        xpReward: 500,
-        icon: GitFork,
-        gradient: "from-emerald-500/20 to-green-600/10 border-emerald-500/30 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.1)]",
-        check: (stats) => stats.isTopicComplete("Trees")
-    },
-    {
-        name: "Graph Navigator",
-        slug: "graph-navigator",
-        description: "Master all questions in the Graphs topic.",
-        category: "mastery",
-        rarity: "epic",
-        xpReward: 800,
-        icon: Network,
-        gradient: "from-violet-500/20 to-indigo-500/10 border-violet-500/30 text-violet-400 shadow-[0_0_10px_rgba(139,92,246,0.1)]",
-        check: (stats) => stats.isTopicComplete("Graphs")
-    },
-    {
-        name: "DP Architect",
-        slug: "dp-architect",
-        description: "Master all questions in the Dynamic Programming topic.",
-        category: "mastery",
-        rarity: "epic",
-        xpReward: 1000,
-        icon: Zap,
-        gradient: "from-red-500/25 to-rose-500/10 border-red-500/30 text-red-400 shadow-[0_0_10px_rgba(239,68,68,0.15)]",
-        check: (stats) => stats.isTopicComplete("Dynamic Programming")
     }
 ];
 
@@ -369,7 +358,7 @@ function Milestone({ progressData, loading: progressLoading }) {
                 </div>
                 <button
                     onClick={() => setShowGallery(true)}
-                    className="text-xs font-bold text-orange-500/90 hover:text-orange-400 transition-colors flex-shrink-0 cursor-pointer"
+                    className="text-xs font-bold text-neutral-300 transition-colors flex-shrink-0 cursor-pointer"
                 >
                     View All →
                 </button>
@@ -408,9 +397,9 @@ function Milestone({ progressData, loading: progressLoading }) {
                                 <span className="text-[10px] font-bold text-neutral-300 mt-1.5 truncate max-w-full leading-tight">
                                     {badge.name}
                                 </span>
-                                <span className={`text-[8px] font-bold uppercase tracking-wider mt-0.5 ${badge.unlocked ? "text-orange-500/90" : "text-neutral-600"}`}>
-                                    {badge.unlocked ? "Unlocked" : "Locked"}
-                                </span>
+                                 <span className={`text-[8px] font-bold uppercase tracking-wider mt-0.5 ${badge.unlocked ? "text-orange-500/90" : "text-neutral-600"}`}>
+                                     {badge.unlocked ? "Unlocked" : "Locked"}
+                                 </span>
                             </div>
                         );
                     })}

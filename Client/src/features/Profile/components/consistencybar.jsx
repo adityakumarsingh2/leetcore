@@ -166,16 +166,16 @@ function ConsistencyBar({ userId: userIdProp }) {
                     <div className="flex gap-1.5 bg-white/5 border border-white/10 p-1 rounded-xl">
                         <button
                             onClick={() => setSelectedYear("current")}
-                            className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
-                                selectedYear === "current" ? "bg-orange-500 text-white" : "text-white/60 hover:text-white"
+                            className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                                selectedYear === "current" ? "bg-orange-500 text-white shadow-sm" : "text-white/60 hover:text-white"
                             }`}
                         >
                             Current Year
                         </button>
                         <button
                             onClick={() => setSelectedYear("previous")}
-                            className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
-                                selectedYear === "previous" ? "bg-orange-500 text-white" : "text-white/60 hover:text-white"
+                            className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                                selectedYear === "previous" ? "bg-orange-500 text-white shadow-sm" : "text-white/60 hover:text-white"
                             }`}
                         >
                             Previous Year ({new Date().getFullYear() - 1})

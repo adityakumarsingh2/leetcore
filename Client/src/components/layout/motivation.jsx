@@ -8,8 +8,8 @@ function Motivation() {
                 mx-auto
                 rounded-3xl
                 border
-                h-36
-                sm:h-42
+                h-46
+                sm:h-132
                 border-white/10
                 bg-[#111114]
                 text-white

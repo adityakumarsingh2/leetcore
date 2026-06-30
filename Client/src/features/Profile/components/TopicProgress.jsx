@@ -30,7 +30,7 @@ function TopicProgress({ topics = [], loading = false }) {
                 {topics.length > 5 && (
                     <button
                         onClick={() => setShowAll(!showAll)}
-                        className="text-xs font-bold text-orange-500/90 hover:text-orange-400 transition-colors cursor-pointer"
+                        className="text-xs font-bold text-neutral-300  transition-colors cursor-pointer"
                     >
                         {showAll ? "Show Less" : "View All Topics"}
                     </button>
@@ -64,7 +64,7 @@ function TopicProgress({ topics = [], loading = false }) {
                             {/* Minimal Progress Bar */}
                             <div className="w-full bg-white/[0.04] h-1.5 rounded-full overflow-hidden border border-white/[0.01] mt-2">
                                 <div
-                                    className="bg-gradient-to-r from-orange-500 to-amber-400 h-full rounded-full transition-all duration-500 ease-out"
+                                    className="bg-orange-500 h-full rounded-full transition-all duration-500 ease-out"
                                     style={{ width: `${solvedPct}%` }}
                                 />
                             </div>

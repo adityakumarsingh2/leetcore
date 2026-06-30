@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createElement, useState } from "react";
 import {
     MessageSquare, Send, Smile, Star,
     CheckCircle, CheckCircle2, Clock, Lightbulb, Bug, Palette, MoreHorizontal
@@ -74,7 +74,6 @@ export default function FeedbackPage() {
     const [successMsg, setSuccessMsg] = useState("");
     const [errorMsg, setErrorMsg] = useState("");
 
-    const selectedCategory = FEEDBACK_CATEGORIES.find((c) => c.value === category);
     const charsLeft = MAX_CHARS - text.length;
     const canSubmit = rating > 0 && text.trim().length > 10 && !loading;
 
@@ -161,7 +160,7 @@ export default function FeedbackPage() {
                                             <span>What's this about?</span>
                                         </label>
                                         <div className="flex flex-wrap gap-2">
-                                            {FEEDBACK_CATEGORIES.map(({ value, label, icon: Icon, color, bg }) => (
+                                            {FEEDBACK_CATEGORIES.map(({ value, label, icon, color }) => (
                                                 <button
                                                     key={value}
                                                     type="button"
@@ -172,10 +171,10 @@ export default function FeedbackPage() {
                                                             : "border-white/10 bg-white/4 text-white/55 hover:border-white/20 hover:text-white"
                                                     }`}
                                                 >
-                                                    <Icon
-                                                        size={14}
-                                                        className={category === value ? "text-[#F46717]" : color}
-                                                    />
+                                                    {createElement(icon, {
+                                                        size: 14,
+                                                        className: category === value ? "text-[#F46717]" : color,
+                                                    })}
                                                     {label}
                                                 </button>
                                             ))}
@@ -300,10 +299,10 @@ export default function FeedbackPage() {
                                     label: "Issues resolved",
                                     cardClass: "border-[#F46717]/10 bg-[#F46717]/[0.02] hover:border-[#F46717]/30 hover:bg-[#F46717]/[0.04]"
                                 },
-                            ].map(({ icon: Icon, color, iconBg, value, label, cardClass }) => (
+                            ].map(({ icon, color, iconBg, value, label, cardClass }) => (
                                 <div key={label} className={`rounded-2xl border p-4 hover:-translate-y-0.5 transition-all duration-300 cursor-default shadow-sm hover:shadow-md ${cardClass}`}>
                                     <div className={`w-8 h-8 rounded-lg ${iconBg} flex items-center justify-center mb-3`}>
-                                        <Icon size={16} className={color} />
+                                        {createElement(icon, { size: 16, className: color })}
                                     </div>
                                     <p className="text-xl font-semibold">{value}</p>
                                     <p className="text-xs text-white/40 mt-0.5">{label}</p>

@@ -700,23 +700,13 @@ router.get("/progress", progressRateLimiter, optionalAuth, async (req, res) => {
         }
 
         const topics = [
-            { name: "Arrays", topic: "Array" },
+            { name: "Arrays & Vectors", topic: "Array" },
             { name: "Strings", topic: "String" },
             { name: "Hashing", topic: "Hashing" },
             { name: "Binary Search", topic: "Binary Search" },
             { name: "Linked List", topic: "Linked List" },
             { name: "Stack", topic: "Stack" },
-            { name: "Queue", topic: "Queue" },
-            { name: "Recursion", topic: "Recursion" },
-            { name: "Backtracking", topic: "Backtracking" },
-            { name: "Trees", topic: "Trees" },
-            { name: "Binary Search Tree", topic: "Binary Search Tree" },
-            { name: "Heap / PQ", topic: "Heap / Priority Queue" },
-            { name: "Graphs", topic: "Graphs" },
-            { name: "Trie", topic: "Trie" },
-            { name: "Greedy", topic: "Greedy" },
-            { name: "Dynamic Programming", topic: "Dynamic Programming" },
-            { name: "Bit Manipulation", topic: "Bit Manipulation" }
+            { name: "Queue", topic: "Queue" }
         ];
 
         const results = [];

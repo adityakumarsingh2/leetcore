@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { 
     X, Award, Target, Compass, Map, Activity, ShieldCheck, Crown, 
     Flame, Gem, Dumbbell, Trophy, Code, Type, Link as LinkIcon, 

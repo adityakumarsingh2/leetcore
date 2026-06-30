@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createElement, useState } from "react";
 import {
     Bug, Send, CheckCircle2, AlertTriangle,
     Monitor, Smartphone, Tablet, CheckCircle, Clock
@@ -173,7 +173,7 @@ export default function ReportBugPage() {
                                                 <span>Device</span>
                                             </label>
                                             <div className="flex gap-2">
-                                                {DEVICES.map(({ value, label, icon: Icon }) => (
+                                                {DEVICES.map(({ value, label, icon }) => (
                                                     <button
                                                         key={value}
                                                         type="button"
@@ -184,7 +184,7 @@ export default function ReportBugPage() {
                                                                 : "border-white/10 bg-white/4 text-white/55 hover:border-white/20 hover:text-white"
                                                         }`}
                                                     >
-                                                        <Icon size={13} />
+                                                        {createElement(icon, { size: 13 })}
                                                         {label}
                                                     </button>
                                                 ))}

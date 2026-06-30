@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { Play } from "lucide-react";
 import SectionFrame from "./SectionFrame";
@@ -191,7 +191,10 @@ function ArrayRow({ label, values, indexLabel, valueLabel }) {
 }
 
 function VisualizationSection({ section }) {
-  const initialArray = section.initialArray || [10, 20, 30, 40, 50];
+  const initialArray = useMemo(
+    () => section.initialArray || [10, 20, 30, 40, 50],
+    [section.initialArray]
+  );
   const operations = section.operations || ["push_back()", "pop_back()", "insert()", "erase()"];
   const controls = section.controls || {
     operationLabel: "Operation",
@@ -226,11 +229,6 @@ function VisualizationSection({ section }) {
     setReturnValue(preview.returnValue);
   }
 
-  // Reset return value when inputs change
-  useEffect(() => {
-    setReturnValue(null);
-  }, [operation, value, index]);
-
   // Determine if index input is needed for selected operation
   const needsIndex = useMemo(() => {
     const op = operation.toLowerCase();
@@ -254,7 +252,10 @@ function VisualizationSection({ section }) {
           <label className="text-xs font-semibold uppercase tracking-[0.14em] text-white/48">{controls.operationLabel}</label>
           <select
             value={operation}
-            onChange={(event) => setOperation(event.target.value)}
+            onChange={(event) => {
+              setOperation(event.target.value);
+              setReturnValue(null);
+            }}
             className="mt-2 w-full rounded-md border border-white/10 bg-[#141416] px-3 py-2 text-sm text-white"
           >
             {operations.map((item) => (
@@ -267,7 +268,10 @@ function VisualizationSection({ section }) {
                 {controls.valueLabel}
                 <input
                   value={value}
-                  onChange={(event) => setValue(event.target.value)}
+                  onChange={(event) => {
+                    setValue(event.target.value);
+                    setReturnValue(null);
+                  }}
                   type={isStringArray ? "text" : "number"}
                   maxLength={isStringArray ? 10 : undefined}
                   className="mt-2 w-full rounded-md border border-white/10 bg-[#141416] px-3 py-2 text-sm normal-case text-white"
@@ -283,7 +287,10 @@ function VisualizationSection({ section }) {
                 {controls.indexLabel}
                 <input
                   value={index}
-                  onChange={(event) => setIndex(event.target.value)}
+                  onChange={(event) => {
+                    setIndex(event.target.value);
+                    setReturnValue(null);
+                  }}
                   type="number"
                   className="mt-2 w-full rounded-md border border-white/10 bg-[#141416] px-3 py-2 text-sm normal-case text-white"
                 />

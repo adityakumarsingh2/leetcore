@@ -51,25 +51,15 @@ function OverallProgress({ progressData, loading }) {
     const totalQuestions = progressData?.totalQuestions || 0;
     const percentage = totalQuestions > 0 ? parseFloat(((totalSolved / totalQuestions) * 100).toFixed(1)) : 0;
 
-    // Level calculation matching backend formula
-    let level = 1;
-    while (5 * level * (level + 1) <= totalSolved) {
-        level++;
-    }
-    const currentLevelMin = 5 * (level - 1) * level;
+    // Use global user solved count and level to match UserDetail component
+    const actualSolved = user?.stats?.totalProblemsSolved || dashboardData?.stats?.totalProblemsSolved || totalSolved;
+    const level = user?.level || dashboardData?.stats?.level || 1;
+
     const nextLevelTarget = 5 * level * (level + 1);
-    const problemsInCurrentLevel = totalSolved - currentLevelMin;
-    const totalProblemsForNextLevel = nextLevelTarget - currentLevelMin;
-    const levelProgressPercent = Math.min(100, Math.max(0, (problemsInCurrentLevel / totalProblemsForNextLevel) * 100));
-    const problemsNeededForNext = nextLevelTarget - totalSolved;
+    const problemsNeededForNext = nextLevelTarget - actualSolved;
 
-    // Dynamic solid colors (Orange/Amber -> Light Green)
-    // 30 is Orange/Amber, 120 is Light Green
-    const circleHue = 30 + (120 - 30) * (percentage / 100);
-    const circleColor = `hsl(${circleHue}, 90%, 55%)`;
-
-    const barHue = 30 + (120 - 30) * (levelProgressPercent / 100);
-    const barColor = `hsl(${barHue}, 90%, 55%)`;
+    // Clean LeetCore brand orange styling
+    const circleColor = "#2E8B57"; 
     
     // XP
     const xp = user?.xp || dashboardData?.stats?.xp || 0;
@@ -91,7 +81,7 @@ function OverallProgress({ progressData, loading }) {
     if (loading || statsLoading) {
         return (
             <div className="w-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-6 text-white flex flex-col items-center justify-center min-h-[140px] shadow-lg backdrop-blur-md animate-pulse">
-                <Loader2 className="w-5 h-5 text-orange-500 animate-spin" />
+                <Loader2 className="w-5 h-5 text-neutral-500 animate-spin" />
             </div>
         );
     }
@@ -103,7 +93,7 @@ function OverallProgress({ progressData, loading }) {
         <div className="w-full h-full bg-[#121215]/60 border border-white/[0.05] rounded-2xl p-5 sm:p-6 text-white shadow-lg backdrop-blur-md relative overflow-hidden transition-all duration-300">
             {/* Soft glowing ambient radial gradients */}
             <div className="absolute top-0 right-0 w-36 h-36 bg-orange-500/[0.02] rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-36 h-36 bg-indigo-500/[0.02] rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-36 h-36 bg-white/[0.01] rounded-full blur-3xl pointer-events-none" />
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 w-full h-full max-w-4xl mx-auto relative z-10">
                 
@@ -137,7 +127,7 @@ function OverallProgress({ progressData, loading }) {
 
                         {/* Center Content */}
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                            <h3 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-none">
+                            <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight leading-none">
                                 {totalSolved}
                                 <span className="text-xs sm:text-sm text-neutral-500 font-medium ml-0.5">
                                     /{totalQuestions}
@@ -160,17 +150,17 @@ function OverallProgress({ progressData, loading }) {
                     <div className="space-y-3">
                         <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm">
                             <div className="flex items-center gap-2">
-                                <div className="px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/25 text-orange-400 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-[0_0_8px_rgba(249,115,22,0.08)]">
+                                <div className="px-3 py-1 rounded-md   text-neutral-300 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-[0_0_8px_rgba(249,115,22,0.08)]">
                                     Level {level}
                                 </div>
-                                <span className="text-xs sm:text-sm font-semibold px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/25 text-indigo-400 uppercase tracking-wider">
+                                <span className="text-xs sm:text-sm font-semibold px-3 py-1 rounded-md bg-white/5 border border-white/10 text-neutral-400 uppercase tracking-wider">
                                     {xp} XP
                                 </span>
                             </div>
-                             <span className="text-xs sm:text-sm text-neutral-400 font-semibold flex items-center gap-1">
+                             <span className="text-xs mt-2 sm:text-sm text-neutral-400 font-semibold flex items-center gap-1">
                                 <span
-                                    className="font-bold text-sm sm:text-base transition-colors duration-500"
-                                    style={{ color: barColor }}
+                                    className="font-semibold text-neutral-300 text-sm sm:text-base  duration-500"
+                                    
                                 >
                                     {problemsNeededForNext}
                                 </span>
@@ -178,18 +168,17 @@ function OverallProgress({ progressData, loading }) {
                             </span>
                         </div>
                         {/* Sleek level progress bar */}
-                        <div className="relative">
+                        {/* <div className="relative">
                             <div className="w-full bg-white/[0.04] h-2.5 rounded-full overflow-hidden border border-white/[0.01]">
                                  <div
                                     className="h-full rounded-full transition-all duration-700 ease-out"
                                     style={{
                                         width: `${levelProgressPercent}%`,
-                                        backgroundColor: barColor,
-                                        boxShadow: `0 0 12px ${barColor}40`
+                                        backgroundColor: barColor
                                     }}
                                 />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Divider */}
@@ -200,17 +189,17 @@ function OverallProgress({ progressData, loading }) {
                         {/* Difficulty breakdown */}
                         <div className="flex items-center gap-4">
                             <div className="flex items-center gap-1.5">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span className="text-neutral-400">Easy</span>
                                 <span className="text-white ml-0.5">{difficultyStats.easy}</span>
                             </div>
                             <div className="flex items-center gap-1.5">
-                                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                                <span className="w-2 h-2 rounded-full bg-amber-500" />
                                 <span className="text-neutral-400">Med</span>
                                 <span className="text-white ml-0.5">{difficultyStats.medium}</span>
                             </div>
                             <div className="flex items-center gap-1.5">
-                                <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
+                                <span className="w-2 h-2 rounded-full bg-rose-500" />
                                 <span className="text-neutral-400">Hard</span>
                                 <span className="text-white ml-0.5">{difficultyStats.hard}</span>
                             </div>
@@ -218,7 +207,7 @@ function OverallProgress({ progressData, loading }) {
 
                         {/* Streak */}
                         <div className="flex items-center gap-1.5">
-                            <Flame size={15} className="text-orange-500 flex-shrink-0 animate-pulse" />
+                            <Flame size={15} className="text-orange-500 flex-shrink-0" />
                             <span className="text-neutral-400">Streak:</span>
                             <span className="text-white">{currentStreak}d</span>
                             <span className="text-[10px] sm:text-xs text-neutral-500 font-normal ml-0.5">

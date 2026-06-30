@@ -1,6 +1,8 @@
-import { Megaphone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function RightAds() {
+    const navigate = useNavigate();
+
     return (
         <div
             className="
@@ -14,15 +16,6 @@ function RightAds() {
                 shadow-[0_16px_45px_rgba(0,0,0,0.18)]
             "
         >
-            {/* Icon */}
-            {/* <div className="w-12 h-12 rounded-2xl bg-[#F46717]/10 flex items-center justify-center mb-5">
-                <Megaphone
-                    size={22}
-                    className="text-[#F46717]"
-                />
-            </div> */}
-
-            {/* Content */}
             <div className="space-y-2">
                 <h2 className="text-lg font-semibold text-white">
                     Advertise on LeetCore
@@ -34,8 +27,8 @@ function RightAds() {
                 </p>
             </div>
 
-            {/* CTA */}
             <button
+                onClick={() => navigate("/dashboard/become-sponsor")}
                 className="
                     mt-6
                     w-full
@@ -45,16 +38,13 @@ function RightAds() {
                     font-semibold
                     py-3
                     text-sm
-                    font-medium
-                    
                     transition-all
                     duration-300
-                    
                     active:scale-[0.98]
                     cursor-pointer
                 "
             >
-                Run Your Advertise
+                Run Your Advertisement
             </button>
         </div>
     );

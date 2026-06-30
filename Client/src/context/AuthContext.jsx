@@ -10,7 +10,6 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 
-import axios from "axios";
 import apiClient from "../services/apiClient";
 import BadgeEarnedPopup from "../features/gamification/components/BadgeEarnedPopup";
 import LevelUpPopup from "../features/gamification/components/LevelUpPopup";
@@ -48,21 +47,11 @@ const getTokenFromUrl = () => {
     return token;
 };
 
-const getStoredToken = () => localStorage.getItem(AUTH_TOKEN_KEY) || "";
-
-const getAuthHeaders = () => {
-    const token = getStoredToken();
-
-    return token ? { Authorization: `Bearer ${token}` } : {};
-};
-
 export const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
 
     const [loading, setLoading] = useState(true);
-
-    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
     useEffect(() => {
 
@@ -94,7 +83,7 @@ export const AuthProvider = ({ children }) => {
 
         fetchUser();
 
-    }, [apiUrl]);
+    }, []);
 
     const [badgeQueue, setBadgeQueue] = useState([]);
     const [newLevel, setNewLevel] = useState(null);

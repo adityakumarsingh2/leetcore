@@ -172,7 +172,7 @@ function Topics() {
 
     return (
 
-        <div className="min-h-screen text-white py-6 sm:py-8">
+        <div className="min-h-screen text-white px-2  py-6 sm:py-8">
 
             {/* DSA Section */}
             <section

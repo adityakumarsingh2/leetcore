@@ -45,7 +45,7 @@ function UserDetail() {
                         <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/25 uppercase tracking-wider shadow-[0_0_8px_rgba(249,115,22,0.08)]">
                             Level {level}
                         </span>
-                        <span className="text-[9px] font-semibold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/25 uppercase tracking-wider">
+                        <span className="text-[9px] font-semibold px-2 py-0.5 rounded bg-white/5 text-neutral-400 border border-white/10 uppercase tracking-wider">
                             {xp} XP
                         </span>
                     </div>

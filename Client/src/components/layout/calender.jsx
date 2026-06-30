@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { consistencyService } from "../../services/consistencyService";
 
@@ -10,7 +10,7 @@ const MONTHS_SHORT = [
 const DAY_HEADERS = ["S", "M", "T", "W", "T", "F", "S"];
 
 export default function Calendar() {
-    const today = new Date();
+    const today = useMemo(() => new Date(), []);
     const { user } = useAuth();
     const userId = user?._id;
 
@@ -70,7 +70,7 @@ export default function Calendar() {
             }
         };
         fetchConsistency();
-    }, [userId, view.year]);
+    }, [userId, view.year, today]);
 
     const prevMonth = () => {
         setView((v) => (v.month === 0 ? { year: v.year - 1, month: 11 } : { year: v.year, month: v.month - 1 }));
