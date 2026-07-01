@@ -1,5 +1,6 @@
 import { X } from "lucide-react";
 import { useEffect } from "react";
+import { BadgeIcon } from "../../Profile/components/BadgeIcon";
 
 function BadgeModal({ badge, onClose }) {
     useEffect(() => {
@@ -38,6 +39,11 @@ function BadgeModal({ badge, onClose }) {
                     </button>
                 </div>
 
+                {/* Badge Visual Representation */}
+                <div className="flex flex-col items-center justify-center my-6 py-2 bg-black/20 rounded-xl border border-white/[0.03]">
+                    <BadgeIcon slug={badge.slug} size={130} unlocked={badge.unlocked} />
+                </div>
+
                 <p className="mt-4 text-sm leading-6 text-white/65">{badge.description}</p>
 
                 <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
@@ -56,3 +62,4 @@ function BadgeModal({ badge, onClose }) {
 }
 
 export default BadgeModal;
+

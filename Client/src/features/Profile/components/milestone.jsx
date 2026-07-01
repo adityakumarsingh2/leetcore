@@ -9,6 +9,7 @@ import { useAuth } from "../../../context/AuthContext";
 import BadgeModal from "../../gamification/components/BadgeModal";
 import { createPortal } from "react-dom";
 import { useDashboardStats } from "../../gamification/hooks/useDashboardStats";
+import { BadgeIcon } from "./BadgeIcon";
 
 // 19 Local Predefined Badges with Unique Icons and Gradients
 const PREDEFINED_ACHIEVEMENTS = [
@@ -304,12 +305,12 @@ function Milestone({ progressData, loading: progressLoading }) {
                     }
                 `}
             >
-                {/* Left: Icon Comp with Lock overlay */}
-                <div className="relative flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-full bg-black/40 border border-white/5 text-current">
-                    <IconComp size={22} className="transition-transform duration-300 group-hover:scale-105" />
+                {/* Left: BadgeIcon with Lock overlay */}
+                <div className="relative flex-shrink-0 flex items-center justify-center w-11 h-11">
+                    <BadgeIcon slug={badge.slug} size={44} unlocked={badge.unlocked} className="transition-transform duration-300 group-hover:scale-105" />
                     {!badge.unlocked && (
-                        <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/50">
-                            <Lock size={11} className="text-white/60" />
+                        <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/60 backdrop-blur-[0.5px]">
+                            <Lock size={12} className="text-white/80" />
                         </div>
                     )}
                 </div>
@@ -377,20 +378,12 @@ function Milestone({ progressData, loading: progressLoading }) {
                                     type="button"
                                     onClick={() => setSelectedBadge(badge)}
                                     title={`${badge.name}: ${badge.description}`}
-                                    className={`
-                                        group relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full border transition-all duration-300 cursor-pointer
-                                        ${badge.unlocked ? `${badge.gradient} hover:scale-110` : "border-white/5 bg-white/[0.02] text-neutral-600 grayscale opacity-25"}
-                                    `}
+                                    className="group relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 transition-all duration-300 cursor-pointer"
                                 >
-                                    <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8">
-                                        <IconComp
-                                            size={26}
-                                            className="transition-transform duration-300 group-hover:scale-105"
-                                        />
-                                    </div>
+                                    <BadgeIcon slug={badge.slug} size={64} unlocked={badge.unlocked} className="transition-transform duration-300 group-hover:scale-110" />
                                     {!badge.unlocked && (
-                                        <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/30">
-                                            <Lock size={12} className="text-white/60" />
+                                        <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/50 backdrop-blur-[0.5px]">
+                                            <Lock size={14} className="text-white/80" />
                                         </div>
                                     )}
                                 </button>
@@ -418,20 +411,12 @@ function Milestone({ progressData, loading: progressLoading }) {
                                 type="button"
                                 onClick={() => setSelectedBadge(badge)}
                                 title={`${badge.name}: ${badge.description}`}
-                                className={`
-                                    group relative flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full border transition-all duration-300 cursor-pointer
-                                    ${badge.unlocked ? `${badge.gradient} hover:scale-110` : "border-white/5 bg-white/[0.02] text-neutral-600 grayscale opacity-25"}
-                                `}
+                                className="group relative flex items-center justify-center w-9 h-9 transition-all duration-300 cursor-pointer"
                             >
-                                <div className="flex items-center justify-center w-4 h-4 text-current">
-                                    <IconComp
-                                        size={14}
-                                        className="transition-transform duration-300 group-hover:scale-105"
-                                    />
-                                </div>
+                                <BadgeIcon slug={badge.slug} size={36} unlocked={badge.unlocked} className="transition-transform duration-300 group-hover:scale-110" />
                                 {!badge.unlocked && (
-                                    <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/30">
-                                        <Lock size={8} className="text-white/60" />
+                                    <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/50 backdrop-blur-[0.5px]">
+                                        <Lock size={10} className="text-white/80" />
                                     </div>
                                 )}
                             </button>
