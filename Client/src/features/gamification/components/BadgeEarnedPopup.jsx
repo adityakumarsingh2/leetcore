@@ -44,8 +44,11 @@ function BadgeEarnedPopup({ badge, onClose }) {
         className="relative w-full max-w-sm rounded-2xl border border-white/[0.08] bg-[#0c0c0e]/95 p-6 text-white shadow-2xl text-center overflow-hidden animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Soft floating glow background */}
-        <div className={`absolute left-1/2 top-[120px] -translate-x-1/2 w-48 h-48 rounded-full bg-gradient-to-r ${glowColorClass} blur-3xl opacity-20 animate-pulse pointer-events-none`} />
+        {/* Soft swirling glow background (non-blinking) */}
+        <div 
+          className={`absolute left-1/2 top-[120px] -translate-x-1/2 w-48 h-48 rounded-full bg-gradient-to-tr ${glowColorClass} blur-3xl opacity-20 animate-spin pointer-events-none`} 
+          style={{ animationDuration: "15s" }}
+        />
 
         {/* Floating background particles */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
